@@ -1,0 +1,103 @@
+.word-atlas { display:grid; grid-template-columns:minmax(0,69fr) minmax(300px,31fr); height:calc(100dvh - 88px); min-height:470px; background:#f7fbff; color:#092150; }
+.atlas-geography { position:relative; display:flex; flex-direction:column; min-width:0; min-height:0; background:#f0f9ff; overflow:hidden; }
+.atlas-heading { display:flex; align-items:baseline; gap:18px; padding:50px 30px 0; z-index:1; }
+.atlas-heading h1 { font-size:clamp(24px,2.6vw,38px); line-height:1.2; margin:0; font-weight:800; letter-spacing:-1px; white-space:nowrap; }
+.atlas-heading p { margin:0; color:#6981a4; font-size:clamp(11px,1.1vw,16px); font-weight:700; }
+.atlas-scene { flex:1; min-height:0; display:grid; place-items:center; }
+.atlas-world { position:relative; width:min(100%,calc((100dvh - 215px) * 1.2)); aspect-ratio:6 / 5; }
+.atlas-terrain { display:block; width:100%; height:100%; object-fit:cover; user-select:none; }
+.atlas-stops { position:absolute; inset:0; }
+.atlas-stop { position:absolute; transform:translate(-50%,-50%); width:clamp(32px,3.8vw,55px); height:clamp(32px,3.8vw,55px); border:2px solid #0063f2; border-radius:50%; color:#092150; background:#fff; font:800 clamp(13px,1.6vw,22px)/1 'Nunito',sans-serif; cursor:pointer; box-shadow:0 2px 7px #1a548a20; display:grid; place-items:center; transition:background .15s,box-shadow .15s; }
+.atlas-stop:hover { background:#eaf4ff; box-shadow:0 0 0 5px #0063f21a; }
+.atlas-stop[aria-pressed='true'] { color:#fff; background:#0063f2; border:3px solid #fff; box-shadow:0 0 0 2px #78b4ff,0 0 22px #0063f24a; }
+.atlas-stop[data-complete]:not([aria-pressed='true']) { color:#197550; border-color:#61bb8e; background:#effaf3; }
+.atlas-stop small { position:absolute; top:calc(100% + 5px); left:50%; transform:translateX(-50%); min-width:38px; padding:3px 8px; background:#fff; color:#0063f2; border:1px solid #c2ddff; border-radius:20px; font-size:12px; line-height:1; white-space:nowrap; }
+.atlas-map-note { display:flex; align-items:center; gap:8px; padding:5px 30px 16px; margin:0; color:#6c85a8; font-size:12px; }
+.atlas-panel { min-width:0; min-height:0; display:flex; flex-direction:column; padding:34px 28px 16px; border-left:1px solid #d7e7fb; background:#fff; }
+.atlas-panel-heading { display:flex; justify-content:space-between; gap:12px; align-items:center; margin-bottom:22px; }
+.atlas-panel-heading h2 { margin:0; font-size:clamp(18px,1.7vw,26px); line-height:1.2; font-weight:800; white-space:nowrap; }
+.atlas-panel-heading p { margin:0; white-space:nowrap; font-size:12px; color:#6f85a7; }
+.atlas-panel-heading strong { color:#0063f2; font-size:24px; font-weight:800; }
+.atlas-panel-heading strong span { font-size:18px; }
+.atlas-word-list { list-style:none; margin:0; padding:0; display:grid; grid-template-rows:repeat(8,minmax(0,1fr)); gap:10px; flex:1; min-height:0; }
+.atlas-word-list li { min-height:0; }
+.atlas-word { display:flex; align-items:center; gap:15px; width:100%; height:100%; padding:8px 16px; border:1px solid #dce9fa; border-radius:13px; background:#fff; text-align:left; color:#092150; cursor:pointer; }
+.atlas-word-number { font-size:13px; font-weight:700; color:#8399b6; min-width:22px; }
+.atlas-word strong { flex:1; font-size:clamp(15px,1.5vw,22px); font-weight:800; overflow-wrap:anywhere; }
+.atlas-word > svg { flex-shrink:0; color:#97afcf; }
+.atlas-word[data-passed] { background:#f0faef; border-color:#e1f2df; }
+.atlas-word .atlas-passed-icon { color:#37aa68; border-radius:50%; background:#d6f0db; padding:3px; width:25px; height:25px; }
+.atlas-word[data-next] { color:#0063f2; background:#eaf4ff; border-color:#0063f2; }
+.atlas-word[data-next] > svg { color:#0063f2; }
+.atlas-word:hover { border-color:#0063f2; }
+.atlas-panel-footer { padding-top:23px; }
+.atlas-continue { display:flex; align-items:center; justify-content:center; gap:24px; width:100%; min-height:60px; padding:9px 15px; border:0; border-radius:13px; background:#ffdf26; color:#092150; font-size:20px; font-weight:800; cursor:pointer; }
+.atlas-continue small { display:block; font-size:12px; text-align:center; font-weight:600; }
+.atlas-panel-footer > p { margin:8px 0 0; font-size:10px; color:#8094af; text-align:center; }
+.word-atlas button:focus-visible { outline:3px solid #0063f2; outline-offset:4px; }
+.word-atlas button:disabled { opacity:.5; cursor:not-allowed; }
+@media (max-height:740px) and (min-width:761px) {
+  .atlas-panel { padding:24px 20px 10px; }.atlas-panel-heading { margin-bottom:14px; }.atlas-word-list { gap:7px; }.atlas-word { padding:4px 12px; border-radius:10px; }.atlas-panel-footer { padding-top:14px; }.atlas-continue { min-height:48px; font-size:17px; }.atlas-heading { padding-top:44px; }
+}
+@media (max-width:760px) {
+  .word-atlas { grid-template-columns:minmax(0,1fr); height:auto; min-height:0; }.atlas-geography { min-height:320px; }.atlas-heading { padding:44px 18px 0; gap:12px; }.atlas-heading h1 {font-size:24px;}.atlas-heading p {font-size:11px;}.atlas-world { width:min(100%,480px); }.atlas-map-note {padding:4px 18px 12px; font-size:11px;}.atlas-panel {padding:20px 18px; border-left:0; border-top:1px solid #d7e7fb;}.atlas-panel-heading {margin-bottom:14px;}.atlas-word-list {grid-template-rows:repeat(8,48px);gap:8px;}.atlas-word strong {font-size:18px;}.atlas-stop {width:34px;height:34px;font-size:14px;}.atlas-continue {min-height:52px;}
+}
+@media(prefers-reduced-motion:reduce) { .atlas-stop {transition:none;} }
+
+/* Reference-aligned full-bleed atlas. One shared cover transform keeps art and pins aligned. */
+.word-atlas { height:calc(100dvh - clamp(60px,9.07dvh,90px)); min-height:440px; grid-template-columns:minmax(0,69fr) minmax(300px,31fr); }
+.atlas-geography { container-type:size; background:#edf8ff; }
+.atlas-heading { position:absolute; top:6.65%; left:4.2%; padding:0; gap:20px; pointer-events:none; }
+.atlas-heading h1 {font-size:clamp(24px,2.65vw,42px);}
+.atlas-heading p {font-size:clamp(11px,1.25vw,20px);}
+.atlas-scene { position:absolute; inset:0; display:block; }
+.atlas-world { position:absolute; left:50%; top:calc(50% + 12px); width:max(100cqw,calc(100cqh * 1.21286)); height:max(100cqh,calc(100cqw / 1.21286)); aspect-ratio:auto; transform:translate(-50%,-50%); }
+.atlas-terrain { object-fit:fill; }
+.atlas-stop { width:clamp(30px,3.25vw,52px); height:clamp(30px,3.25vw,52px); font-size:clamp(14px,1.4vw,22px); border-width:2px; box-shadow:0 2px 7px #1a548a16; }
+.atlas-map-note {position:absolute;left:4.2%;bottom:3.5%;padding:0;margin:0;z-index:1;font-size:clamp(10px,1vw,15px);}
+.atlas-photo-credit { color:#7c94ae; font-size:9px; margin-left:10px; text-decoration:none; }
+.atlas-photo-credit:hover { text-decoration:underline; }
+.atlas-panel {padding:6.1dvh 2.4vw 4dvh;}
+.atlas-panel-heading { margin-bottom:2.7dvh; }
+.atlas-panel-heading h2 {font-size:clamp(19px,1.9vw,30px);}
+.atlas-panel-heading p {font-size:clamp(11px,1vw,16px);}
+.atlas-panel-heading strong {font-size:clamp(22px,2vw,32px);}
+.atlas-word-list {gap:1dvh;}
+.atlas-word {padding:6px 1.4vw;border-radius:13px;gap:16px;}
+.atlas-word strong {font-size:clamp(16px,1.55vw,24px);}
+.atlas-word-number {font-size:clamp(12px,1.15vw,18px);}
+.atlas-panel-footer {padding-top:4.8dvh;}
+.atlas-continue {min-height:8dvh;font-size:clamp(17px,1.6vw,25px);}
+.atlas-continue small {display:none;}
+.atlas-panel-footer > p {font-size:9px;}
+.atlas-stop[data-progress] {border:0;background:transparent;box-shadow:none;z-index:2;}
+.atlas-stop[data-progress]:hover {background:transparent;box-shadow:none;}
+.atlas-avatar-marker {position:relative;display:block;width:48px;height:60px;margin-top:-23px;animation:atlas-gentle-float 3.8s ease-in-out infinite;}
+.atlas-portrait {position:absolute;top:0;left:0;width:48px;height:48px;border:3px solid #fff;border-radius:50%;box-shadow:0 0 0 2px #0063f2,0 4px 12px #0063f233;overflow:hidden;background:#fff;}
+.atlas-portrait img {width:100%;height:100%;object-fit:cover;object-position:50% 36%;display:block;}
+.atlas-avatar-pin {position:absolute;bottom:0;left:14px;color:#0063f2;filter:drop-shadow(0 1px 0 #fff);}
+.atlas-avatar-number {position:absolute;top:31px;right:-4px;padding:2px 4px;border:1.5px solid #fff;border-radius:7px;color:#fff;background:#0063f2;font-size:10px;line-height:1.1;}
+.atlas-stop[data-progress] > small {top:calc(100% + 7px);font-size:12px;}
+@keyframes atlas-gentle-float {0%,100% {transform:translateY(0);}50% {transform:translateY(-4px);}}
+@media(max-width:1050px) and (min-width:761px) {
+ .atlas-heading {gap:10px;}.atlas-heading h1 {font-size:24px;}.atlas-heading p {font-size:11px;}.atlas-panel {padding-left:20px;padding-right:20px;}.atlas-panel-heading {gap:8px;}.atlas-panel-heading h2 {font-size:19px;}.atlas-portrait {width:42px;height:42px;}.atlas-avatar-marker {width:42px;height:54px;}.atlas-avatar-pin {left:11px;}.atlas-avatar-number {top:27px;}
+}
+@media(max-width:760px) {
+ .word-atlas {height:auto;min-height:0;grid-template-columns:1fr;}.atlas-geography {height:calc(100vw / 1.21286);min-height:330px;}.atlas-heading {top:11%;left:4.2%;gap:10px;}.atlas-heading h1 {font-size:22px;}.atlas-heading p {font-size:10px;}.atlas-map-note {font-size:10px;bottom:2%;}.atlas-photo-credit {font-size:8px;}.atlas-panel {padding:20px 18px;}.atlas-panel-footer {padding-top:18px;}.atlas-continue {min-height:52px;}.atlas-stop {width:30px;height:30px;font-size:13px;}.atlas-avatar-marker {width:36px;height:47px;margin-top:-18px;}.atlas-portrait {width:36px;height:36px;}.atlas-avatar-number {top:24px;font-size:9px;}.atlas-avatar-pin {left:8px;}.atlas-stop[data-progress] > small {font-size:10px;min-width:30px;padding:2px 5px;}
+}
+@media(prefers-reduced-motion:reduce) {.atlas-avatar-marker {animation:none;} }
+.atlas-stop[data-progress] > small {top:calc(100% - 5px);animation:atlas-progress-float 3.8s ease-in-out infinite;}
+@keyframes atlas-progress-float {0%,100% {transform:translateX(-50%) translateY(0);}50% {transform:translateX(-50%) translateY(-4px);}}
+@media(prefers-reduced-motion:reduce) {.atlas-stop[data-progress] > small {animation:none;} }
+
+/* The final sea crossing joins the southern island to the central peninsula. */
+.atlas-final-route { position:absolute; inset:0; width:100%; height:100%; pointer-events:none; overflow:visible; }
+.atlas-final-route path { fill:none; vector-effect:non-scaling-stroke; stroke-linecap:round; }
+.atlas-route-outline { stroke:#4389b6; stroke-width:5px; opacity:.65; }
+.atlas-route-dashes { stroke:#fff; stroke-width:3px; stroke-dasharray:3 6; }
+.atlas-result-score {display:block;margin-top:2px;font-size:12px;color:#27835b;font-weight:700;}
+
+/* Pending-card locks preserve the original map typography and terrain. */
+.atlas-locked-label {display:flex;align-items:center;justify-content:center;flex:1;color:#a0b2cc;}
+.atlas-word[data-locked]:disabled {opacity:1;cursor:default;background:#f6f8fc;border-color:#e6edf7;}
+.atlas-word[data-locked]:disabled:hover {border-color:#e6edf7;}

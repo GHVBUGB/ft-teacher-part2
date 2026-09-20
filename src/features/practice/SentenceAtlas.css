@@ -1,0 +1,18 @@
+.sentence-atlas { grid-template-columns:minmax(0,65fr) minmax(350px,35fr); }
+.sentence-atlas .atlas-geography {background:#f1faf6;}
+.sentence-atlas .atlas-world {top:50%;width:100%;height:100%;transform:translate(-50%,-50%);}
+.sentence-atlas .atlas-terrain {object-fit:fill;}
+.sentence-atlas .atlas-heading {top:8%;gap:16px;}
+.sentence-atlas .atlas-heading h1 {font-size:clamp(24px,2.6vw,38px);}
+.sentence-atlas .atlas-word {gap:10px;padding:6px 13px;}
+.sentence-atlas .atlas-word strong {font-size:clamp(13px,1.15vw,19px);line-height:1.35;overflow-wrap:normal;}
+.sentence-atlas .atlas-panel-footer {padding-top:18px;}
+.sentence-map-back {display:block;margin:9px auto 0;background:none;border:0;color:#557ca5;font-size:12px;cursor:pointer;}
+@media(max-width:760px) {
+ .sentence-atlas {grid-template-columns:1fr;}
+ .sentence-atlas .atlas-geography {height:100vw;min-height:390px;}
+ .sentence-atlas .atlas-heading {top:10%;}
+ .sentence-atlas .atlas-word strong {font-size:15px;}
+ .sentence-atlas .atlas-word-list {grid-template-rows:repeat(8,minmax(56px,auto));}
+}
+.sentence-atlas .atlas-world {width:max(100cqw,calc(100cqh * 1.09076));height:max(100cqh,calc(100cqw / 1.09076));}

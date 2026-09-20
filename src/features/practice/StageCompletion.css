@@ -1,0 +1,222 @@
+.stage-completion {
+  position: relative;
+  min-height: calc(100dvh - 120px);
+  padding: 12px 0 25px;
+  color: #092150;
+  text-align: center;
+  background: #f3fbff;
+  overflow: hidden;
+}
+.completion-title {
+  position: relative;
+  z-index: 1;
+}
+.completion-title h1 {
+  position: relative;
+  display: inline-block;
+  font-size: clamp(34px, 4.4vw, 68px);
+  line-height: 1.25;
+  font-weight: 850;
+  margin: 5px 0 8px;
+}
+.completion-title h1 img {
+  position: absolute;
+  width: 45px;
+  right: -40px;
+  top: -5px;
+}
+.completion-title p {
+  font-size: clamp(18px, 2vw, 30px);
+  font-weight: 750;
+  color: #647ea2;
+  margin: 0;
+}
+.completion-title p strong {
+  color: #0664ff;
+  font-size: 1.15em;
+}
+
+.completion-island {
+  display: block;
+  width: 100%;
+  height: clamp(230px, 36dvh, 430px);
+  object-fit: cover;
+  object-position: center 52%;
+  margin: -8px auto -8px;
+}
+.completion-stages {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+  width: min(92%, 990px);
+  margin: 0 auto;
+  padding: 13px 25px;
+  gap: 25px;
+  border: 1px solid #bbdcff;
+  border-radius: 50px;
+  background: #f9fcff;
+}
+.completion-stages li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex: 1;
+  text-align: left;
+}
+.completion-stages li > svg {
+  width: 36px;
+  height: 36px;
+  color: #0764f5;
+  flex-shrink: 0;
+}
+.completion-stages strong {
+  font-size: 17px;
+  display: block;
+  white-space: nowrap;
+}
+.completion-stages small {
+  font-size: 13px;
+  display: block;
+  color: #7189aa;
+  margin-top: 3px;
+}
+.completion-stages .completion-step-arrow {
+  margin-left: auto;
+  width: 24px;
+  color: #829ac0;
+}
+.completion-actions {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  margin-top: 22px;
+}
+.completion-actions button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
+  min-width: 300px;
+  min-height: 54px;
+  border: 0;
+  border-radius: 50px;
+  background: #ffe323;
+  color: #092150;
+  font-size: 23px;
+  font-weight: 800;
+  cursor: pointer;
+}
+.completion-actions button.completion-back {
+  min-width: 200px;
+  min-height: 36px;
+  border: 1px solid #c6d5e9;
+  background: white;
+  color: #59729b;
+  font-size: 15px;
+}
+.completion-actions button:focus-visible {
+  outline: 3px solid #0063f2;
+  outline-offset: 3px;
+}
+@media (max-width: 700px) {
+  .completion-stages {
+    gap: 8px;
+    padding: 12px;
+  }
+  .completion-stages li {
+    gap: 4px;
+  }
+  .completion-stages li > svg {
+    width: 24px;
+  }
+  .completion-stages strong {
+    font-size: 12px;
+  }
+  .completion-stages small {
+    font-size: 11px;
+  }
+  .completion-stages .completion-step-arrow {
+    display: none;
+  }
+  .completion-title h1 img {
+    width: 26px;
+    right: -24px;
+  }
+  .completion-island {
+    height: 250px;
+  }
+  .completion-actions button {
+    min-width: 240px;
+  }
+}
+.stage-completion {
+  height: calc(100dvh - clamp(60px, 9.07dvh, 90px));
+  min-height: 610px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px 0 14px;
+  box-sizing: border-box;
+}
+.completion-title h1 {
+  font-size: clamp(34px, 4vw, 58px);
+}
+.completion-title p {
+  font-size: 22px;
+}
+.completion-island {
+  flex: 1;
+  min-height: 180px;
+  height: 0;
+  width: 100%;
+  object-fit: contain;
+  object-position: center;
+  margin: 0;
+  mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 15%,
+    black 85%,
+    transparent
+  );
+}
+.completion-stages {
+  flex: none;
+  padding: 10px 22px;
+  max-width: 850px;
+}
+.completion-actions {
+  flex: none;
+  gap: 8px;
+  margin-top: 14px;
+}
+.completion-actions button {
+  font-size: 20px;
+  min-height: 48px;
+}
+.completion-actions button.completion-back {
+  min-height: 30px;
+  font-size: 13px;
+}
+@media (max-width: 700px) {
+  .stage-completion {
+    min-height: 650px;
+    padding-top: 42px;
+  }
+  .completion-title p {
+    font-size: 18px;
+  }
+  .completion-stages {
+    width: 95%;
+  }
+  .completion-stages strong {
+    font-size: 11px;
+  }
+}
+.completion-island{max-width:1000px;object-fit:cover;object-position:center 25%;mask-image:radial-gradient(ellipse 70% 85% at 50% 48%,#000 45%,transparent 100%);}
+
+.completion-preview {margin:0;padding:6px 16px;border:1px solid #b9d2f4;border-radius:20px;background:#f0f6ff;color:#52739d;font-size:12px;}

@@ -1,0 +1,571 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "FT Training Common API (mock)",
+    "description": "Shared mock contract only. No database, login or real assessment. No client write endpoint can set passed.",
+    "version": "0.1.0"
+  },
+  "paths": {
+    "/api/v1/me": {
+      "get": {
+        "summary": "Me",
+        "operationId": "me_api_v1_me_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Envelope_Teacher_"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Unprocessable Entity",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            }
+          },
+          "405": {
+            "description": "Method Not Allowed",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/enrollments": {
+      "get": {
+        "summary": "Enrollments",
+        "operationId": "enrollments_api_v1_enrollments_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Envelope_list_Enrollment__"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Unprocessable Entity",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            }
+          },
+          "405": {
+            "description": "Method Not Allowed",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/enrollments/{enrollment_id}/progress": {
+      "get": {
+        "summary": "Progress",
+        "operationId": "progress_api_v1_enrollments__enrollment_id__progress_get",
+        "parameters": [
+          {
+            "name": "enrollment_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid",
+              "title": "Enrollment Id"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Envelope_ProgressResponse_"
+                }
+              }
+            }
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            },
+            "description": "Unprocessable Entity"
+          },
+          "405": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            },
+            "description": "Method Not Allowed"
+          },
+          "404": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            },
+            "description": "Not Found"
+          }
+        }
+      }
+    },
+    "/api/v1/enrollments/{enrollment_id}/course": {
+      "get": {
+        "summary": "Course",
+        "operationId": "course_api_v1_enrollments__enrollment_id__course_get",
+        "parameters": [
+          {
+            "name": "enrollment_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid",
+              "title": "Enrollment Id"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Envelope_CourseResponse_"
+                }
+              }
+            }
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            },
+            "description": "Unprocessable Entity"
+          },
+          "405": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            },
+            "description": "Method Not Allowed"
+          },
+          "404": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorEnvelope"
+                }
+              }
+            },
+            "description": "Not Found"
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "CourseResponse": {
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "uuid",
+            "title": "Id"
+          },
+          "code": {
+            "type": "string",
+            "title": "Code"
+          },
+          "title": {
+            "type": "string",
+            "title": "Title"
+          },
+          "course_version_id": {
+            "type": "string",
+            "format": "uuid",
+            "title": "Course Version Id"
+          },
+          "version": {
+            "type": "string",
+            "title": "Version"
+          },
+          "locale": {
+            "type": "string",
+            "title": "Locale"
+          },
+          "modules": {
+            "items": {
+              "$ref": "#/components/schemas/ModuleEntry"
+            },
+            "type": "array",
+            "title": "Modules"
+          }
+        },
+        "type": "object",
+        "required": [
+          "id",
+          "code",
+          "title",
+          "course_version_id",
+          "version",
+          "locale",
+          "modules"
+        ],
+        "title": "CourseResponse"
+      },
+      "Enrollment": {
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "uuid",
+            "title": "Id"
+          },
+          "teacher_id": {
+            "type": "string",
+            "format": "uuid",
+            "title": "Teacher Id"
+          },
+          "course_version_id": {
+            "type": "string",
+            "format": "uuid",
+            "title": "Course Version Id"
+          },
+          "run_no": {
+            "type": "integer",
+            "minimum": 1.0,
+            "title": "Run No"
+          },
+          "lifecycle_state": {
+            "type": "string",
+            "const": "active",
+            "title": "Lifecycle State"
+          }
+        },
+        "type": "object",
+        "required": [
+          "id",
+          "teacher_id",
+          "course_version_id",
+          "run_no",
+          "lifecycle_state"
+        ],
+        "title": "Enrollment"
+      },
+      "Envelope_CourseResponse_": {
+        "properties": {
+          "data": {
+            "$ref": "#/components/schemas/CourseResponse"
+          },
+          "request_id": {
+            "type": "string",
+            "format": "uuid",
+            "title": "Request Id"
+          }
+        },
+        "type": "object",
+        "required": [
+          "data",
+          "request_id"
+        ],
+        "title": "Envelope[CourseResponse]"
+      },
+      "Envelope_ProgressResponse_": {
+        "properties": {
+          "data": {
+            "$ref": "#/components/schemas/ProgressResponse"
+          },
+          "request_id": {
+            "type": "string",
+            "format": "uuid",
+            "title": "Request Id"
+          }
+        },
+        "type": "object",
+        "required": [
+          "data",
+          "request_id"
+        ],
+        "title": "Envelope[ProgressResponse]"
+      },
+      "Envelope_Teacher_": {
+        "properties": {
+          "data": {
+            "$ref": "#/components/schemas/Teacher"
+          },
+          "request_id": {
+            "type": "string",
+            "format": "uuid",
+            "title": "Request Id"
+          }
+        },
+        "type": "object",
+        "required": [
+          "data",
+          "request_id"
+        ],
+        "title": "Envelope[Teacher]"
+      },
+      "Envelope_list_Enrollment__": {
+        "properties": {
+          "data": {
+            "items": {
+              "$ref": "#/components/schemas/Enrollment"
+            },
+            "type": "array",
+            "title": "Data"
+          },
+          "request_id": {
+            "type": "string",
+            "format": "uuid",
+            "title": "Request Id"
+          }
+        },
+        "type": "object",
+        "required": [
+          "data",
+          "request_id"
+        ],
+        "title": "Envelope[list[Enrollment]]"
+      },
+      "ErrorDetail": {
+        "properties": {
+          "code": {
+            "type": "string",
+            "title": "Code"
+          },
+          "message": {
+            "type": "string",
+            "title": "Message"
+          },
+          "retryable": {
+            "type": "boolean",
+            "title": "Retryable"
+          }
+        },
+        "type": "object",
+        "required": [
+          "code",
+          "message",
+          "retryable"
+        ],
+        "title": "ErrorDetail"
+      },
+      "ErrorEnvelope": {
+        "properties": {
+          "error": {
+            "$ref": "#/components/schemas/ErrorDetail"
+          },
+          "request_id": {
+            "type": "string",
+            "format": "uuid",
+            "title": "Request Id"
+          }
+        },
+        "type": "object",
+        "required": [
+          "error",
+          "request_id"
+        ],
+        "title": "ErrorEnvelope"
+      },
+      "ModuleEntry": {
+        "properties": {
+          "part_key": {
+            "type": "string",
+            "enum": [
+              "orientation",
+              "practice"
+            ],
+            "title": "Part Key"
+          },
+          "path": {
+            "type": "string",
+            "title": "Path"
+          }
+        },
+        "type": "object",
+        "required": [
+          "part_key",
+          "path"
+        ],
+        "title": "ModuleEntry"
+      },
+      "PartProgress": {
+        "properties": {
+          "part_key": {
+            "type": "string",
+            "enum": [
+              "orientation",
+              "practice"
+            ],
+            "title": "Part Key"
+          },
+          "can_enter": {
+            "type": "boolean",
+            "title": "Can Enter"
+          },
+          "completion_state": {
+            "type": "string",
+            "enum": [
+              "not_started",
+              "in_progress",
+              "completed"
+            ],
+            "title": "Completion State"
+          },
+          "assessment_state": {
+            "type": "string",
+            "enum": [
+              "not_evaluated",
+              "passed",
+              "failed",
+              "needs_review"
+            ],
+            "title": "Assessment State"
+          },
+          "progress_percent": {
+            "anyOf": [
+              {
+                "type": "number",
+                "maximum": 100.0,
+                "minimum": 0.0
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Progress Percent"
+          },
+          "revision": {
+            "type": "integer",
+            "minimum": 0.0,
+            "title": "Revision"
+          },
+          "summary_version": {
+            "type": "integer",
+            "minimum": 1.0,
+            "title": "Summary Version"
+          },
+          "summary": {
+            "additionalProperties": true,
+            "type": "object",
+            "title": "Summary"
+          }
+        },
+        "type": "object",
+        "required": [
+          "part_key",
+          "can_enter",
+          "completion_state",
+          "assessment_state",
+          "revision",
+          "summary_version",
+          "summary"
+        ],
+        "title": "PartProgress"
+      },
+      "ProgressResponse": {
+        "properties": {
+          "enrollment_id": {
+            "type": "string",
+            "format": "uuid",
+            "title": "Enrollment Id"
+          },
+          "course_version_id": {
+            "type": "string",
+            "format": "uuid",
+            "title": "Course Version Id"
+          },
+          "parts": {
+            "items": {
+              "$ref": "#/components/schemas/PartProgress"
+            },
+            "type": "array",
+            "title": "Parts"
+          }
+        },
+        "type": "object",
+        "required": [
+          "enrollment_id",
+          "course_version_id",
+          "parts"
+        ],
+        "title": "ProgressResponse"
+      },
+      "Teacher": {
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "uuid",
+            "title": "Id"
+          },
+          "external_teacher_id": {
+            "type": "string",
+            "title": "External Teacher Id"
+          },
+          "display_name": {
+            "type": "string",
+            "title": "Display Name"
+          },
+          "locale": {
+            "type": "string",
+            "title": "Locale"
+          },
+          "timezone": {
+            "type": "string",
+            "title": "Timezone"
+          }
+        },
+        "type": "object",
+        "required": [
+          "id",
+          "external_teacher_id",
+          "display_name",
+          "locale",
+          "timezone"
+        ],
+        "title": "Teacher"
+      }
+    }
+  }
+}

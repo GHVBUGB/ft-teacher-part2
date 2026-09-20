@@ -1,0 +1,108 @@
+@import 'tailwindcss';
+@import 'tw-animate-css';
+@import 'shadcn/tailwind.css';
+@custom-variant dark (&:is(.dark *));
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--foreground);
+  --color-popover: var(--card);
+  --color-popover-foreground: var(--foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--border);
+  --color-ring: var(--ring);
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 14px;
+  --radius-xl: 18px;
+  --font-sans: 'Nunito', 'PingFang SC', sans-serif;
+}
+:root {
+  --brand-yellow: #ffeb3c;
+  --brand-blue: #0063f2;
+  --brand-blue-hover: #0048b8;
+  --text-primary: #3e3a39;
+  --text-secondary: #66615f;
+  --surface: #fff;
+  --surface-soft: #f4f8ff;
+  --surface-blue: #e8f2ff;
+  --surface-yellow: #fffbd6;
+  --radius-card: 16px;
+  --radius-control: 10px;
+  --background: var(--surface-soft);
+  --foreground: var(--text-primary);
+  --card: var(--surface);
+  --primary: var(--brand-blue);
+  --primary-foreground: #fff;
+  --secondary: var(--surface-blue);
+  --muted: #edf2f8;
+  --muted-foreground: var(--text-secondary);
+  --accent: var(--surface-blue);
+  --destructive: #b42c40;
+  --border: #dbe8f7;
+  --ring: var(--brand-blue);
+  --radius: 10px;
+  --green: #167a63;
+  --purple: var(--brand-blue);
+  --amber: #976400;
+}
+* {
+  box-sizing: border-box;
+  border-color: var(--border);
+}
+body {
+  margin: 0;
+  font-family: 'Nunito', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+  background: var(--background);
+  color: var(--foreground);
+  font-size: 16px;
+  line-height: 1.55;
+}
+button,
+a,
+input {
+  touch-action: manipulation;
+}
+button {
+  cursor: pointer;
+}
+button:disabled {
+  cursor: not-allowed;
+}
+button:focus-visible,
+a:focus-visible {
+  outline: 3px solid var(--ring);
+  outline-offset: 3px;
+}
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.shell-notice {
+  max-width: 720px;
+  margin: 80px auto;
+  padding: 32px;
+  background: white;
+  border-radius: 16px;
+}
+.shell-notice a {
+  color: var(--brand-blue);
+  text-decoration: underline;
+}

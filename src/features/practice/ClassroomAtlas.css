@@ -1,0 +1,48 @@
+/* Classroom presentation; unlock styling never changes assessment records. */
+.word-atlas.classroom-atlas {grid-template-columns:minmax(0,68fr) minmax(320px,32fr);}
+.word-atlas.classroom-atlas .atlas-geography {background:#e1efff;}
+.word-atlas.classroom-atlas .atlas-world {left:0;top:0;width:100%;height:100%;transform:none;aspect-ratio:auto;}
+.word-atlas.classroom-atlas .atlas-terrain {object-fit:cover;object-position:center;}
+.word-atlas.classroom-atlas .atlas-heading {top:10%;left:5%;max-width:70%;text-shadow:none;}
+.word-atlas.classroom-atlas .atlas-heading h1 {font-size:clamp(26px,3vw,44px);}
+.word-atlas.classroom-atlas .atlas-heading p {color:#607fa7;font-size:clamp(12px,1.15vw,17px);}
+.classroom-route {position:absolute;inset:0;width:100%;height:100%;overflow:visible;pointer-events:none;}
+.classroom-route path {fill:none;stroke:#fff;stroke-width:5;vector-effect:non-scaling-stroke;filter:drop-shadow(0 0 2px #7eaff1);}
+.word-atlas.classroom-atlas .atlas-stop {width:clamp(42px,5vw,72px);height:clamp(42px,5vw,72px);border:3px solid #7cb1fa;color:#0063f2;font-size:clamp(20px,2vw,30px);box-shadow:0 0 0 4px #ffffffaa;}
+.word-atlas.classroom-atlas .atlas-stop[data-progress] {border:0;box-shadow:none;background:transparent;}
+.word-atlas.classroom-atlas .atlas-avatar-marker {width:64px;height:77px;margin-top:0;top:-16px;animation:classroom-avatar-bounce 3s ease-in-out infinite;}
+.word-atlas.classroom-atlas .atlas-stop[aria-pressed='true']:not([data-progress]) {background:transparent;color:#0063f2;border-color:#7cb1fa;box-shadow:0 0 0 4px #ffffffaa;}
+.word-atlas.classroom-atlas .atlas-stop[data-progress] > small {top:calc(100% - 17px);animation:classroom-avatar-bounce 3s ease-in-out infinite;}
+@keyframes classroom-avatar-bounce {0%,100% {translate:0 0;}50% {translate:0 -4px;}}
+.word-atlas.classroom-atlas .atlas-portrait {width:64px;height:64px;}
+.word-atlas.classroom-atlas .atlas-avatar-number {top:47px;font-size:12px;}
+.word-atlas.classroom-atlas .atlas-avatar-pin {left:22px;}
+.word-atlas.classroom-atlas .atlas-stop small {font-size:14px;}
+.classroom-partner {position:absolute;z-index:2;left:32%;bottom:23%;width:26%;max-width:270px;padding:15px 17px;background:#fffffff2;border-radius:18px 18px 3px 18px;}
+.classroom-partner span {font-size:13px;font-weight:800;color:#0063f2;}
+.classroom-partner p {margin:5px 0 0;font-size:clamp(13px,1.2vw,18px);font-weight:800;line-height:1.5;}
+.classroom-encouragement {position:absolute;left:5%;bottom:11%;font-size:14px;color:#6487b2;}
+.word-atlas.classroom-atlas .atlas-map-note {left:5%;bottom:3%;background:none;padding:0;}
+.word-atlas.classroom-atlas .atlas-panel {padding:4.5dvh 2.4vw 18px;}
+.word-atlas.classroom-atlas .atlas-word-list {gap:8px;}
+.word-atlas.classroom-atlas .atlas-word strong {font-size:clamp(17px,1.55vw,23px);}
+.word-atlas.classroom-atlas.sentence-atlas .atlas-word strong {font-size:clamp(14px,1.16vw,18px);}
+@media(max-width:1000px){
+ .word-atlas.classroom-atlas {grid-template-columns:1fr;height:auto;}
+ .word-atlas.classroom-atlas .atlas-geography {height:83vw;min-height:360px;}
+ .word-atlas.classroom-atlas .atlas-panel {height:auto;padding:24px;}
+ .word-atlas.classroom-atlas .atlas-word-list {grid-template-rows:repeat(8,minmax(56px,auto));}
+ .classroom-partner {padding:10px;bottom:22%;width:30%;left:29%;}
+ .classroom-encouragement {font-size:11px;bottom:10%;}
+ .word-atlas.classroom-atlas .atlas-avatar-marker {transform:scale(.75);}
+ .word-atlas.classroom-atlas .atlas-stop small {font-size:11px;}
+}
+
+.atlas-actual-passed {display:block;margin-top:3px;font-size:11px;font-weight:400;color:#7286a3;text-align:right;}
+
+.word-atlas.classroom-atlas .atlas-word[data-passed] {background:#f1f9ee;border-color:transparent;color:#10264f;}
+.word-atlas.classroom-atlas .atlas-word[data-passed] strong {color:#10264f;font-weight:800;}
+@media(prefers-reduced-motion:reduce) {
+ .word-atlas.classroom-atlas .atlas-avatar-marker,
+ .word-atlas.classroom-atlas .atlas-stop[data-progress] > small {animation:none;}
+}

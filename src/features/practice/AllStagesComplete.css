@@ -1,0 +1,22 @@
+.all-stages-complete {padding-top:32px;gap:10px;min-height:630px;}
+.all-stages-complete .completion-title h1 {font-size:clamp(32px,4vw,56px);}
+.all-stages-complete .completion-title p {font-size:clamp(15px,1.4vw,22px);}
+.all-stages-complete .completion-island {min-height:100px;max-width:900px;}
+.all-stages-complete .completion-stages {max-width:830px;}
+.all-stages-complete .completion-stages li > svg {color:#27a470;}
+.training-next {display:flex;align-items:center;gap:13px;margin-top:4px;text-align:left;color:#0962ea;}
+.training-next strong {display:block;font-size:19px;color:#132c59;}
+.training-next span {display:block;font-size:13px;color:#6a83a5;}
+.all-stages-complete .completion-actions {margin-top:0;}
+.all-stages-complete .completion-actions > button:first-child {padding:10px 32px;}
+.training-guide {margin:auto;width:min(760px,90%);background:#fff;border:1px solid #dce9f8;border-radius:24px;padding:24px 36px;text-align:left;}
+.training-guide-heading {display:flex;gap:14px;align-items:center;color:#0865ef;border-bottom:1px solid #e5edf8;padding-bottom:15px;}
+.training-guide-heading strong {font-size:22px;color:#132c59;}
+.training-guide-heading p {margin:3px 0 0;font-size:14px;color:#6b819e;}
+.training-guide ol {list-style:none;padding:0;margin:20px 0;display:grid;gap:18px;}
+.training-guide li {display:flex;gap:20px;align-items:flex-start;}
+.training-guide li > span {font:800 24px 'Nunito',sans-serif;color:#0064ff;}
+.training-guide li strong {font-size:17px;}
+.training-guide li p {margin:5px 0 0;color:#6b819e;font-size:14px;}
+.training-link-pending {font-size:12px;color:#8597af;margin-bottom:0;}
+@media(max-width:700px){.training-guide{padding:20px;}.training-guide-heading strong{font-size:18px;}.all-stages-complete{min-height:700px;}}
