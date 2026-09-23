@@ -1,0 +1,34 @@
+import assert from 'node:assert/strict';
+import ts from 'typescript';
+import { readFile, writeFile, mkdtemp, rm } from 'node:fs/promises';
+import { tmpdir } from 'node:os';
+import { join } from 'node:path';
+import { pathToFileURL } from 'node:url';
+const temp=await mkdtemp(join(tmpdir(),'ft-round-'));
+try {
+ const source=await readFile('src/features/practice/lib/assessmentRound.ts','utf8');
+ await writeFile(join(temp,'round.mjs'),ts.transpileModule(source,{compilerOptions:{module:ts.ModuleKind.ESNext,target:ts.ScriptTarget.ES2022}}).outputText);
+ const {createRound,restoreRound,replacementFor,replaceRound}=await import(pathToFileURL(join(temp,'round.mjs')));
+ const bank=[...Array.from({length:41},(_,i)=>({id:'w'+i,text:'w'+i,kind:'word'})),...Array.from({length:58},(_,i)=>({id:'s'+i,text:'s'+i,kind:'sentence'}))];
+ let r=createRound(bank,()=>0.3);let checks=0;
+ const check=(label,fn)=>{fn();checks++;console.log('PASS '+label);};
+ check('30 unique words and 20 unique sentences',()=>{assert.equal(r.ids.length,50);assert.equal(new Set(r.ids).size,50);assert.equal(r.ids.filter(id=>id[0]==='w').length,30);});
+ check('Refresh restores exact order and seen list',()=>assert.deepEqual(restoreRound(JSON.parse(JSON.stringify(r)),bank),r));
+ check('Corrupted duplicate, unknown, cross-kind and incomplete rounds rejected',()=>{assert.equal(restoreRound({...r,ids:r.ids.map(()=>r.ids[0])},bank),null);assert.equal(restoreRound({...r,ids:['unknown',...r.ids.slice(1)]},bank),null);assert.equal(restoreRound({...r,ids:[...r.ids].reverse()},bank),null);assert.equal(restoreRound({...r,seen:[]},bank),null);});
+ check('Insufficient pool refuses to silently reduce exam size',()=>assert.throws(()=>createRound(bank.slice(0,20))));
+ const status={items:{}};const first=r.ids[0];
+ check('Unread items cannot be replaced',()=>assert.equal(replacementFor(r,bank,status,first),null));
+ status.items[first]={passed:false,attemptCount:1};let next=replacementFor(r,bank,status,first,()=>0.5);
+ check('Replacement is same kind, outside round and unseen',()=>{assert.ok(next.startsWith('w'));assert.ok(!r.ids.includes(next));assert.ok(!r.seen.includes(next));});
+ const before=r;r=replaceRound(r,first,next);
+ check('Exactly one slot changes; 50 slots retained',()=>{assert.equal(r.ids.length,50);assert.equal(r.ids.filter((id,i)=>id!==before.ids[i]).length,1);assert.equal(r.ids[0],next);assert.ok(r.seen.includes(first));});
+ status.items[next]={passed:true,attemptCount:1};
+ check('Passed item never replaced',()=>assert.equal(replacementFor(r,bank,status,next),null));
+ const failed=r.ids[1];status.items[failed]={passed:false,attemptCount:1};
+ const outside=bank.filter(i=>i.kind==='word'&&!r.ids.includes(i.id));
+ const exhausted={...r,seen:bank.map(i=>i.id)};
+ check('After exhaustion recycle eligible outside failed/unpassed item only',()=>{status.items[outside[0].id]={passed:true,attemptCount:1};const id=replacementFor(exhausted,bank,status,failed);assert.ok(id&&!r.ids.includes(id)&&!status.items[id]?.passed);});
+ outside.forEach(i=>status.items[i.id]={passed:true,attemptCount:1});
+ check('No eligible spare returns null',()=>assert.equal(replacementFor(r,bank,status,failed),null));
+ console.log(`${checks} round scenarios passed`);
+}finally{await rm(temp,{recursive:true,force:true});}

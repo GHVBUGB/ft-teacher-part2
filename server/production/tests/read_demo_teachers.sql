@@ -1,0 +1,4 @@
+SELECT t.external_id AS 模拟教师, s.stage AS 关卡,s.status AS 结果,round(s.elapsed_duration_ms/60000.0,2) AS 总分钟,round(s.active_duration_ms/60000.0,2) AS 有效分钟,
+CASE WHEN s.stage='grammar' THEN (SELECT count(*) FROM ft_training.grammar_answers a WHERE a.round_id=s.round_id) ELSE (SELECT count(*) FROM ft_training.speech_assessments a WHERE a.round_id=s.round_id) END AS 提交次数,
+CASE WHEN s.stage='grammar' THEN (SELECT count(*) FROM ft_training.grammar_answers a WHERE a.round_id=s.round_id AND NOT a.correct) ELSE (SELECT count(*) FROM ft_training.speech_assessments a WHERE a.round_id=s.round_id AND a.status='scored' AND a.score<80) END AS 未通过次数
+FROM ft_training.stage_timing_summary s JOIN ft_training.teachers t ON t.id=s.teacher_id WHERE t.email IN('smooth-demo@example.invalid','retry-demo@example.invalid') AND t.is_test_account ORDER BY t.external_id,s.started_at;

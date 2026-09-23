@@ -1,0 +1,55 @@
+{
+  "version": "ft-target-words-v2-round-v1-grammar-20260920",
+  "counts": {
+    "word": 41,
+    "sentence": 58,
+    "grammar": 30
+  },
+  "rules": [
+    [
+      "word",
+      30,
+      80,
+      {
+        "score_formula": "pronunciation",
+        "rounding_decimal_places": 1,
+        "all_items_must_pass": true,
+        "retry_failed_item": true,
+        "prerequisite": null
+      },
+      "第一关：随机抽30个单词；发音分四舍五入到1位小数，每题至少80分，全部通过后解锁第二关。"
+    ],
+    [
+      "sentence",
+      20,
+      80,
+      {
+        "score_formula": "(pronunciation*0.85+fluency*0.10+rhythm*0.05)*integrity/100",
+        "rounding_decimal_places": 1,
+        "all_items_must_pass": true,
+        "retry_failed_item": true,
+        "prerequisite": "word"
+      },
+      "第二关：随机抽20个句子；（发音×85%＋流利度×10%＋韵律×5%）×完整度/100，四舍五入到1位小数，每题至少80分，全部通过后解锁第三关。"
+    ],
+    [
+      "grammar",
+      30,
+      80,
+      {
+        "required_correct": 24,
+        "max_wrong": 6,
+        "fail_on_wrong_number": 7,
+        "attempts_per_question": 1,
+        "sequential": true,
+        "wrong_answer_reveals_solution": false,
+        "wrong_answer_can_continue": true,
+        "shuffle_on_failed_reentry": true,
+        "resume_unfinished": true,
+        "prerequisite": "sentence"
+      },
+      "第三关：30题，每题只提交一次，按顺序作答，答错标记错误且不揭示答案。完成后至少答对24题通过；累计错7题立即结束，重考打乱顺序。未完成时保留进度。"
+    ]
+  ],
+  "source_sha256": "25efd6dcc8f6e19c85e5e2018e3e1046b89fe7a75ec7f5ff94c36d6db1c5e698"
+}

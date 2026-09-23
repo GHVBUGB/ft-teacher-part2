@@ -1,0 +1,11 @@
+.git
+node_modules
+work
+dist
+dist-production
+**/.env*
+**/.venv
+**/__pycache__
+**/tests
+**/*.log
+.openai

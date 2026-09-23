@@ -1,0 +1,4761 @@
+{
+  "sourceFile": "FT Target Words.xlsx",
+  "sourceSha256": "0039151d934f7d2f6b28c04192f0bc9493f992344ec06270834ee7a89f6b2b0a",
+  "sheet": "Sheet1",
+  "contentVersion": "ft-target-words-2026-09-14-v1",
+  "counts": {
+    "materials": 34,
+    "wordRows": 117,
+    "phraseRows": 59,
+    "sentenceRows": 110,
+    "words": 104,
+    "sentences": 129
+  },
+  "policy": "B 列单词与 D 列完整句子；重复合并、明确选项展开；C 列与 B 列多词短语、未完成句型暂缓。原文件不修改。",
+  "items": [
+    {
+      "id": "ft-word-yellow",
+      "text": "yellow",
+      "kind": "word",
+      "sources": [
+        {
+          "cell": "B2",
+          "material": "Colorful Cakes",
+          "raw": "yellow"
+        },
+        {
+          "cell": "B26",
+          "material": "Magic Color Party",
+          "raw": "yellow"
+        },
+        {
+          "cell": "B31",
+          "material": "Colorful Toys",
+          "raw": "yellow"
+        },
+        {
+          "cell": "B145",
+          "material": "Color Fun",
+          "raw": "yellow"
+        }
+      ]
+    },
+    {
+      "id": "ft-word-brown",
+      "text": "brown",
+      "kind": "word",
+      "sources": [
+        {
+          "cell": "B3",
+          "material": "Colorful Cakes",
+          "raw": "brown"
+        },
+        {
+          "cell": "B33",
+          "material": "Colorful Toys",
+          "raw": "brown"
+        }
+      ]
+    },
+    {
+      "id": "ft-word-green",
+      "text": "green",
+      "kind": "word",
+      "sources": [
+        {
+          "cell": "B4",
+          "material": "Colorful Cakes",
+          "raw": "green"
+        },
+        {
+          "cell": "B32",
+          "material": "Colorful Toys",
+          "raw": "green"
+        },
+        {
+          "cell": "B144",
+          "material": "Color Fun",
+          "raw": "green"
+        }
+      ]
+    },
+    {
+      "id": "ft-word-blue",
+      "text": "blue",
+      "kind": "word",
+      "sources": [
+        {
+          "cell": "B5",
+          "material": "Colorful Cakes",
+          "raw": "blue"
+        },
+        {
+          "cell": "B27",
+          "material": "Magic Color Party",
+          "raw": "blue"
+        }
+      ]
+    },
+    {
+      "id": "ft-word-ant",
+      "text": "ant",
+      "kind": "word",
+      "sources": [
+        {
+          "cell": "B6",
+          "material": "Ant's ABC Trip",
+          "raw": "ant"
+        },
+        {
+          "cell": "B46",
+          "material": "ABC Desert Explorers",
+          "raw": "ant"
+        }
+      ]
+    },
+    {
+      "id": "ft-word-apple",
+      "text": "apple",
+      "kind": "word",
+      "sources": [
+        {
+          "cell": "B7",
+          "material": "Ant's ABC Trip",
+          "raw": "apple"
+        }
+      ]
+    },
+    {
+      "id": "ft-word-bird",
+      "text": "bird",
+      "kind": "word",
+      "sources": [
+        {
+          "cell": "B8",
+          "material": "Ant's ABC Trip",
+          "raw": "bird"
+        },
+        {
+          "cell": "B17",
+          "material": "Magic Animal House",
+          "raw": "bird"
+        },
+        {
+          "cell": "B36",
+          "material": "Animals on the Farm",
+          "raw": "bird"
+        },
+        {
+          "cell": "B42",
+          "material": "Amazing Animal Body Parts",
+          "raw": "bird/s"
+        }
+      ]
+    },
+    {
+      "id": "ft-word-box",
+      "text": "box",
+      "kind": "word",
+      "sources": [
+        {
+          "cell": "B9",
+          "material": "Ant's ABC Trip",
+          "raw": "box"
+        }
+      ]
+    },
+    {
+      "id": "ft-word-candy",
+      "text": "candy",
+      "kind": "word",
+      "sources": [
+        {
+          "cell": "B10",
+          "material": "Ant's ABC Trip",
+          "raw": "candy"
+        }
+      ]
+    },
+    {
+      "id": "ft-word-cat",
+      "text": "cat",
+      "kind": "word",
+      "sources": [
+        {
+          "cell": "B11",
+          "material": "Ant's ABC Trip",
+          "raw": "cat"
+        },
+        {
+          "cell": "B15",
+          "material": "Magic Animal House",
+          "raw": "cat"
+        }
+      ]
+    },
+    {
+      "id": "ft-word-dog",
+      "text": "dog",
+      "kind": "word",
+      "sources": [
+        {
+          "cell": "B16",
+          "material": "Magic Animal House",
+          "raw": "dog"
+        }
+      ]
+    },
+    {
+      "id": "ft-word-happy",
+      "text": "happy",
+      "kind": "word",
+      "sources": [
+        {
+          "cell": "B18",
+          "material": "My Feelings",
+          "raw": "happy"
+        }
+      ]
+    },
+    {
+      "id": "ft-word-sad",
+      "text": "sad",
+      "kind": "word",
+      "sources": [
+        {
+          "cell": "B19",
+          "material": "My Feelings",
+          "raw": "sad"
+        }
+      ]
+    },
+    {
+      "id": "ft-word-angry",
+      "text": "angry",
+      "kind": "word",
+      "sources": [
+        {
+          "cell": "B20",
+          "material": "My Feelings",
+          "raw": "angry"
+        }
+      ]
+    },
+    {
+      "id": "ft-word-silly",
+      "text": "silly",
+      "kind": "word",
+      "sources": [
+        {
+          "cell": "B21",
+          "material": "My Feelings",
+          "raw": "silly"
+        }
+      ]
+    },
+    {
+      "id": "ft-word-red",
+      "text": "red",
+      "kind": "word",
+      "sources": [
+        {
+          "cell": "B25",
+          "material": "Magic Color Party",
+          "raw": "red"
+        },
+        {
+          "cell": "B146",
+          "material": "Color Fun",
+          "raw": "red"
+        }
+      ]
+    },
+    {
+      "id": "ft-word-bear",
+      "text": "bear",
+      "kind": "word",
+      "sources": [
+        {
+          "cell": "B28",
+          "material": "Colorful Toys",
+          "raw": "bear"
+        },
+        {
+          "cell": "B137",
+          "material": "Magic Animal Photo Tour",
+          "raw": "bear/s"
+        }
+      ]
+    },
+    {
+      "id": "ft-word-car",
+      "text": "car",
+      "kind": "word",
+      "sources": [
+        {
+          "cell": "B29",
+          "material": "Colorful Toys",
+          "raw": "car"
+        },
+        {
+          "cell": "B52",
+          "material": "ABC Desert Explorers",
+          "raw": "car"
+        }
+      ]
+    },
+    {
+      "id": "ft-word-monster",
+      "text": "monster",
+      "kind": "word",
+      "sources": [
+        {
+          "cell": "B30",
+          "material": "Colorful Toys",
+          "raw": "monster"
+        }
+      ]
+    },
+    {
+      "id": "ft-word-horse",
+      "text": "horse",
+      "kind": "word",
+      "sources": [
+        {
+          "cell": "B34",
+          "material": "Animals on the Farm",
+          "raw": "horse"
+        }
+      ]
+    },
+    {
+      "id": "ft-word-run",
+      "text": "run",
+      "kind": "word",
+      "sources": [
+        {
+          "cell": "B35",
+          "material": "Animals on the Farm",
+          "raw": "run"
+        }
+      ]
+    },
+    {
+      "id": "ft-word-fly",
+      "text": "fly",
+      "kind": "word",
+      "sources": [
+        {
+          "cell": "B37",
+          "material": "Animals on the Farm",
+          "raw": "fly"
+        }
+      ]
+    },
+    {
+      "id": "ft-word-duck",
+      "text": "duck",
+      "kind": "word",
+      "sources": [
+        {
+          "cell": "B38",
+          "material": "Animals on the Farm",
+          "raw": "duck"
+        }
+      ]
+    },
+    {
+      "id": "ft-word-swim",
+      "text": "swim",
+      "kind": "word",
+      "sources": [
+        {
+          "cell": "B39",
+          "material": "Animals on the Farm",
+          "raw": "swim"
+        }
+      ]
+    },
+    {
+      "id": "ft-word-monkey",
+      "text": "monkey",
+      "kind": "word",
+      "sources": [
+        {
+          "cell": "B40",
+          "material": "Amazing Animal Body Parts",
+          "raw": "monkey/s"
+        }
+      ]
+    },
+    {
+      "id": "ft-word-monkeys",
+      "text": "monkeys",
+      "kind": "word",
+      "sources": [
+        {
+          "cell": "B40",
+          "material": "Amazing Animal Body Parts",
+          "raw": "monkey/s"
+        }
+      ]
+    },
+    {
+      "id": "ft-word-tail",
+      "text": "tail",
+      "kind": "word",
+      "sources": [
+        {
+          "cell": "B41",
+          "material": "Amazing Animal Body Parts",
+          "raw": "tail/s"
+        }
+      ]
+    },
+    {
+      "id": "ft-word-tails",
+      "text": "tails",
+      "kind": "word",
+      "sources": [
+        {
+          "cell": "B41",
+          "material": "Amazing Animal Body Parts",
+          "raw": "tail/s"
+        }
+      ]
+    },
+    {
+      "id": "ft-word-birds",
+      "text": "birds",
+      "kind": "word",
+      "sources": [
+        {
+          "cell": "B42",
+          "material": "Amazing Animal Body Parts",
+          "raw": "bird/s"
+        }
+      ]
+    },
+    {
+      "id": "ft-word-wings",
+      "text": "wings",
+      "kind": "word",
+      "sources": [
+        {
+          "cell": "B43",
+          "material": "Amazing Animal Body Parts",
+          "raw": "wings"
+        }
+      ]
+    },
+    {
+      "id": "ft-word-goats",
+      "text": "goats",
+      "kind": "word",
+      "sources": [
+        {
+          "cell": "B44",
+          "material": "Amazing Animal Body Parts",
+          "raw": "goats"
+        }
+      ]
+    },
+    {
+      "id": "ft-word-horns",
+      "text": "horns",
+      "kind": "word",
+      "sources": [
+        {
+          "cell": "B45",
+          "material": "Amazing Animal Body Parts",
+          "raw": "horns"
+        }
+      ]
+    },
+    {
+      "id": "ft-word-arrow",
+      "text": "arrow",
+      "kind": "word",
+      "sources": [
+        {
+          "cell": "B47",
+          "material": "ABC Desert Explorers",
+          "raw": "arrow"
+        }
+      ]
+    },
+    {
+      "id": "ft-word-antelope",
+      "text": "antelope",
+      "kind": "word",
+      "sources": [
+        {
+          "cell": "B48",
+          "material": "ABC Desert Explorers",
+          "raw": "antelope"
+        }
+      ]
+    },
+    {
+      "id": "ft-word-bread",
+      "text": "bread",
+      "kind": "word",
+      "sources": [
+        {
+          "cell": "B49",
+          "material": "ABC Desert Explorers",
+          "raw": "bread"
+        }
+      ]
+    },
+    {
+      "id": "ft-word-football",
+      "text": "football",
+      "kind": "word",
+      "sources": [
+        {
+          "cell": "B50",
+          "material": "ABC Desert Explorers",
+          "raw": "football"
+        },
+        {
+          "cell": "B83",
+          "material": "World Cup Kick Off",
+          "raw": "football"
+        }
+      ]
+    },
+    {
+      "id": "ft-word-camel",
+      "text": "camel",
+      "kind": "word",
+      "sources": [
+        {
+          "cell": "B53",
+          "material": "ABC Desert Explorers",
+          "raw": "camel"
+        }
+      ]
+    },
+    {
+      "id": "ft-word-cucumber",
+      "text": "cucumber",
+      "kind": "word",
+      "sources": [
+        {
+          "cell": "B54",
+          "material": "ABC Desert Explorers",
+          "raw": "cucumber"
+        }
+      ]
+    },
+    {
+      "id": "ft-word-dates",
+      "text": "dates",
+      "kind": "word",
+      "sources": [
+        {
+          "cell": "B55",
+          "material": "Ramadan Iftar Meal Box",
+          "raw": "dates"
+        },
+        {
+          "cell": "B68",
+          "material": "Ramadan Is Here",
+          "raw": "dates"
+        }
+      ]
+    },
+    {
+      "id": "ft-word-pies",
+      "text": "pies",
+      "kind": "word",
+      "sources": [
+        {
+          "cell": "B56",
+          "material": "Ramadan Iftar Meal Box",
+          "raw": "pies"
+        }
+      ]
+    },
+    {
+      "id": "ft-word-cookies",
+      "text": "cookies",
+      "kind": "word",
+      "sources": [
+        {
+          "cell": "B57",
+          "material": "Ramadan Iftar Meal Box",
+          "raw": "cookies"
+        }
+      ]
+    },
+    {
+      "id": "ft-word-soup",
+      "text": "soup",
+      "kind": "word",
+      "sources": [
+        {
+          "cell": "B58",
+          "material": "Ramadan Iftar Meal Box",
+          "raw": "soup"
+        }
+      ]
+    },
+    {
+      "id": "ft-word-water",
+      "text": "water",
+      "kind": "word",
+      "sources": [
+        {
+          "cell": "B59",
+          "material": "Ramadan Iftar Meal Box",
+          "raw": "water"
+        },
+        {
+          "cell": "B99",
+          "material": "My Yummy Order",
+          "raw": "water"
+        }
+      ]
+    },
+    {
+      "id": "ft-word-elephants",
+      "text": "elephants",
+      "kind": "word",
+      "sources": [
+        {
+          "cell": "B60",
+          "material": "Animal Wonderland",
+          "raw": "elephants"
+        }
+      ]
+    },
+    {
+      "id": "ft-word-hamsters",
+      "text": "hamsters",
+      "kind": "word",
+      "sources": [
+        {
+          "cell": "B61",
+          "material": "Animal Wonderland",
+          "raw": "hamsters"
+        }
+      ]
+    },
+    {
+      "id": "ft-word-zebras",
+      "text": "zebras",
+      "kind": "word",
+      "sources": [
+        {
+          "cell": "B62",
+          "material": "Animal Wonderland",
+          "raw": "zebras"
+        }
+      ]
+    },
+    {
+      "id": "ft-word-sunset",
+      "text": "sunset",
+      "kind": "word",
+      "sources": [
+        {
+          "cell": "B67",
+          "material": "Ramadan Is Here",
+          "raw": "sunset"
+        }
+      ]
+    },
+    {
+      "id": "ft-word-sunrise",
+      "text": "sunrise",
+      "kind": "word",
+      "sources": [
+        {
+          "cell": "B69",
+          "material": "Ramadan Is Here",
+          "raw": "sunrise"
+        }
+      ]
+    },
+    {
+      "id": "ft-word-shorts",
+      "text": "shorts",
+      "kind": "word",
+      "sources": [
+        {
+          "cell": "B78",
+          "material": "Guess my Clothes",
+          "raw": "shorts"
+        }
+      ]
+    },
+    {
+      "id": "ft-word-sneakers",
+      "text": "sneakers",
+      "kind": "word",
+      "sources": [
+        {
+          "cell": "B79",
+          "material": "Guess my Clothes",
+          "raw": "sneakers"
+        }
+      ]
+    },
+    {
+      "id": "ft-word-pants",
+      "text": "pants",
+      "kind": "word",
+      "sources": [
+        {
+          "cell": "B80",
+          "material": "Guess my Clothes",
+          "raw": "pants"
+        }
+      ]
+    },
+    {
+      "id": "ft-word-boots",
+      "text": "boots",
+      "kind": "word",
+      "sources": [
+        {
+          "cell": "B81",
+          "material": "Guess my Clothes",
+          "raw": "boots"
+        }
+      ]
+    },
+    {
+      "id": "ft-word-coach",
+      "text": "coach",
+      "kind": "word",
+      "sources": [
+        {
+          "cell": "B82",
+          "material": "World Cup Kick Off",
+          "raw": "coach"
+        }
+      ]
+    },
+    {
+      "id": "ft-word-shoot",
+      "text": "shoot",
+      "kind": "word",
+      "sources": [
+        {
+          "cell": "B84",
+          "material": "World Cup Kick Off",
+          "raw": "shoot"
+        }
+      ]
+    },
+    {
+      "id": "ft-word-beach",
+      "text": "beach",
+      "kind": "word",
+      "sources": [
+        {
+          "cell": "B90",
+          "material": "A Trip to Weather Island",
+          "raw": "beach"
+        }
+      ]
+    },
+    {
+      "id": "ft-word-town",
+      "text": "town",
+      "kind": "word",
+      "sources": [
+        {
+          "cell": "B91",
+          "material": "A Trip to Weather Island",
+          "raw": "town"
+        }
+      ]
+    },
+    {
+      "id": "ft-word-hills",
+      "text": "hills",
+      "kind": "word",
+      "sources": [
+        {
+          "cell": "B92",
+          "material": "A Trip to Weather Island",
+          "raw": "hills"
+        }
+      ]
+    },
+    {
+      "id": "ft-word-shawarma",
+      "text": "shawarma",
+      "kind": "word",
+      "sources": [
+        {
+          "cell": "B95",
+          "material": "My Yummy Order",
+          "raw": "shawarma"
+        }
+      ]
+    },
+    {
+      "id": "ft-word-tomatoes",
+      "text": "tomatoes",
+      "kind": "word",
+      "sources": [
+        {
+          "cell": "B96",
+          "material": "My Yummy Order",
+          "raw": "tomatoes"
+        }
+      ]
+    },
+    {
+      "id": "ft-word-beef",
+      "text": "beef",
+      "kind": "word",
+      "sources": [
+        {
+          "cell": "B97",
+          "material": "My Yummy Order",
+          "raw": "beef"
+        }
+      ]
+    },
+    {
+      "id": "ft-word-cheese",
+      "text": "cheese",
+      "kind": "word",
+      "sources": [
+        {
+          "cell": "B98",
+          "material": "My Yummy Order",
+          "raw": "cheese"
+        }
+      ]
+    },
+    {
+      "id": "ft-word-burger",
+      "text": "burger",
+      "kind": "word",
+      "sources": [
+        {
+          "cell": "B100",
+          "material": "My Yummy Order",
+          "raw": "burger"
+        }
+      ]
+    },
+    {
+      "id": "ft-word-chicken",
+      "text": "chicken",
+      "kind": "word",
+      "sources": [
+        {
+          "cell": "B102",
+          "material": "My Yummy Order",
+          "raw": "chicken"
+        }
+      ]
+    },
+    {
+      "id": "ft-word-sauce",
+      "text": "sauce",
+      "kind": "word",
+      "sources": [
+        {
+          "cell": "B103",
+          "material": "My Yummy Order",
+          "raw": "sauce"
+        }
+      ]
+    },
+    {
+      "id": "ft-word-juice",
+      "text": "juice",
+      "kind": "word",
+      "sources": [
+        {
+          "cell": "B104",
+          "material": "My Yummy Order",
+          "raw": "juice"
+        }
+      ]
+    },
+    {
+      "id": "ft-word-tall",
+      "text": "tall",
+      "kind": "word",
+      "sources": [
+        {
+          "cell": "B105",
+          "material": "My Friends",
+          "raw": "tall"
+        }
+      ]
+    },
+    {
+      "id": "ft-word-taller",
+      "text": "taller",
+      "kind": "word",
+      "sources": [
+        {
+          "cell": "B106",
+          "material": "My Friends",
+          "raw": "taller"
+        }
+      ]
+    },
+    {
+      "id": "ft-word-big",
+      "text": "big",
+      "kind": "word",
+      "sources": [
+        {
+          "cell": "B107",
+          "material": "My Friends",
+          "raw": "big"
+        }
+      ]
+    },
+    {
+      "id": "ft-word-bigger",
+      "text": "bigger",
+      "kind": "word",
+      "sources": [
+        {
+          "cell": "B108",
+          "material": "My Friends",
+          "raw": "bigger"
+        }
+      ]
+    },
+    {
+      "id": "ft-word-short",
+      "text": "short",
+      "kind": "word",
+      "sources": [
+        {
+          "cell": "B109",
+          "material": "My Friends",
+          "raw": "short"
+        }
+      ]
+    },
+    {
+      "id": "ft-word-shorter",
+      "text": "shorter",
+      "kind": "word",
+      "sources": [
+        {
+          "cell": "B110",
+          "material": "My Friends",
+          "raw": "shorter"
+        }
+      ]
+    },
+    {
+      "id": "ft-word-small",
+      "text": "small",
+      "kind": "word",
+      "sources": [
+        {
+          "cell": "B111",
+          "material": "My Friends",
+          "raw": "small"
+        }
+      ]
+    },
+    {
+      "id": "ft-word-smaller",
+      "text": "smaller",
+      "kind": "word",
+      "sources": [
+        {
+          "cell": "B112",
+          "material": "My Friends",
+          "raw": "smaller"
+        }
+      ]
+    },
+    {
+      "id": "ft-word-interesting",
+      "text": "interesting",
+      "kind": "word",
+      "sources": [
+        {
+          "cell": "B113",
+          "material": "What's Your Hobby",
+          "raw": "interesting"
+        }
+      ]
+    },
+    {
+      "id": "ft-word-wonderful",
+      "text": "wonderful",
+      "kind": "word",
+      "sources": [
+        {
+          "cell": "B114",
+          "material": "What's Your Hobby",
+          "raw": "wonderful"
+        }
+      ]
+    },
+    {
+      "id": "ft-word-fun",
+      "text": "fun",
+      "kind": "word",
+      "sources": [
+        {
+          "cell": "B115",
+          "material": "What's Your Hobby",
+          "raw": "fun"
+        }
+      ]
+    },
+    {
+      "id": "ft-word-diet",
+      "text": "diet",
+      "kind": "word",
+      "sources": [
+        {
+          "cell": "B119",
+          "material": "How to Stay Healthy",
+          "raw": "diet"
+        }
+      ]
+    },
+    {
+      "id": "ft-word-exercise",
+      "text": "exercise",
+      "kind": "word",
+      "sources": [
+        {
+          "cell": "B120",
+          "material": "How to Stay Healthy",
+          "raw": "exercise"
+        }
+      ]
+    },
+    {
+      "id": "ft-word-mood",
+      "text": "mood",
+      "kind": "word",
+      "sources": [
+        {
+          "cell": "B121",
+          "material": "How to Stay Healthy",
+          "raw": "mood"
+        }
+      ]
+    },
+    {
+      "id": "ft-word-hawaii",
+      "text": "Hawaii",
+      "kind": "word",
+      "sources": [
+        {
+          "cell": "B122",
+          "material": "Aloha from Hawaii",
+          "raw": "Hawaii"
+        }
+      ]
+    },
+    {
+      "id": "ft-word-hawaiian",
+      "text": "Hawaiian",
+      "kind": "word",
+      "sources": [
+        {
+          "cell": "B123",
+          "material": "Aloha from Hawaii",
+          "raw": "Hawaiian"
+        }
+      ]
+    },
+    {
+      "id": "ft-word-archipelago",
+      "text": "archipelago",
+      "kind": "word",
+      "sources": [
+        {
+          "cell": "B124",
+          "material": "Aloha from Hawaii",
+          "raw": "achipelago"
+        }
+      ]
+    },
+    {
+      "id": "ft-word-announce",
+      "text": "announce",
+      "kind": "word",
+      "sources": [
+        {
+          "cell": "B125",
+          "material": "Aloha from Hawaii",
+          "raw": "announce"
+        }
+      ]
+    },
+    {
+      "id": "ft-word-attraction",
+      "text": "attraction",
+      "kind": "word",
+      "sources": [
+        {
+          "cell": "B126",
+          "material": "Aloha from Hawaii",
+          "raw": "attraction"
+        }
+      ]
+    },
+    {
+      "id": "ft-word-endangered",
+      "text": "endangered",
+      "kind": "word",
+      "sources": [
+        {
+          "cell": "B127",
+          "material": "Endangered Species",
+          "raw": "endangered"
+        }
+      ]
+    },
+    {
+      "id": "ft-word-extinct",
+      "text": "extinct",
+      "kind": "word",
+      "sources": [
+        {
+          "cell": "B128",
+          "material": "Endangered Species",
+          "raw": "extinct"
+        }
+      ]
+    },
+    {
+      "id": "ft-word-microbe",
+      "text": "microbe",
+      "kind": "word",
+      "sources": [
+        {
+          "cell": "B129",
+          "material": "Endangered Species",
+          "raw": "microbe"
+        }
+      ]
+    },
+    {
+      "id": "ft-word-habitat",
+      "text": "habitat",
+      "kind": "word",
+      "sources": [
+        {
+          "cell": "B130",
+          "material": "Endangered Species",
+          "raw": "habitat"
+        }
+      ]
+    },
+    {
+      "id": "ft-word-exploitation",
+      "text": "exploitation",
+      "kind": "word",
+      "sources": [
+        {
+          "cell": "B131",
+          "material": "Endangered Species",
+          "raw": "exploitation"
+        }
+      ]
+    },
+    {
+      "id": "ft-word-realize",
+      "text": "realize",
+      "kind": "word",
+      "sources": [
+        {
+          "cell": "B132",
+          "material": "The Donkey in the Well",
+          "raw": "realize"
+        }
+      ]
+    },
+    {
+      "id": "ft-word-astonished",
+      "text": "astonished",
+      "kind": "word",
+      "sources": [
+        {
+          "cell": "B133",
+          "material": "The Donkey in the Well",
+          "raw": "astonished"
+        }
+      ]
+    },
+    {
+      "id": "ft-word-eventually",
+      "text": "eventually",
+      "kind": "word",
+      "sources": [
+        {
+          "cell": "B134",
+          "material": "The Donkey in the Well",
+          "raw": "eventually"
+        }
+      ]
+    },
+    {
+      "id": "ft-word-shovel",
+      "text": "shovel",
+      "kind": "word",
+      "sources": [
+        {
+          "cell": "B135",
+          "material": "The Donkey in the Well",
+          "raw": "shovel"
+        }
+      ]
+    },
+    {
+      "id": "ft-word-retrieve",
+      "text": "retrieve",
+      "kind": "word",
+      "sources": [
+        {
+          "cell": "B136",
+          "material": "The Donkey in the Well",
+          "raw": "retrieve"
+        }
+      ]
+    },
+    {
+      "id": "ft-word-bears",
+      "text": "bears",
+      "kind": "word",
+      "sources": [
+        {
+          "cell": "B137",
+          "material": "Magic Animal Photo Tour",
+          "raw": "bear/s"
+        }
+      ]
+    },
+    {
+      "id": "ft-word-panda",
+      "text": "panda",
+      "kind": "word",
+      "sources": [
+        {
+          "cell": "B138",
+          "material": "Magic Animal Photo Tour",
+          "raw": "panda/s"
+        }
+      ]
+    },
+    {
+      "id": "ft-word-pandas",
+      "text": "pandas",
+      "kind": "word",
+      "sources": [
+        {
+          "cell": "B138",
+          "material": "Magic Animal Photo Tour",
+          "raw": "panda/s"
+        }
+      ]
+    },
+    {
+      "id": "ft-word-cheetah",
+      "text": "cheetah",
+      "kind": "word",
+      "sources": [
+        {
+          "cell": "B139",
+          "material": "Magic Animal Photo Tour",
+          "raw": "cheetah/s"
+        }
+      ]
+    },
+    {
+      "id": "ft-word-cheetahs",
+      "text": "cheetahs",
+      "kind": "word",
+      "sources": [
+        {
+          "cell": "B139",
+          "material": "Magic Animal Photo Tour",
+          "raw": "cheetah/s"
+        }
+      ]
+    },
+    {
+      "id": "ft-word-kangaroo",
+      "text": "kangaroo",
+      "kind": "word",
+      "sources": [
+        {
+          "cell": "B140",
+          "material": "Magic Animal Photo Tour",
+          "raw": "kangaroo/s"
+        }
+      ]
+    },
+    {
+      "id": "ft-word-kangaroos",
+      "text": "kangaroos",
+      "kind": "word",
+      "sources": [
+        {
+          "cell": "B140",
+          "material": "Magic Animal Photo Tour",
+          "raw": "kangaroo/s"
+        }
+      ]
+    },
+    {
+      "id": "ft-word-circle",
+      "text": "circle",
+      "kind": "word",
+      "sources": [
+        {
+          "cell": "B147",
+          "material": "Treasure Hunt",
+          "raw": "circle"
+        }
+      ]
+    },
+    {
+      "id": "ft-word-triangle",
+      "text": "triangle",
+      "kind": "word",
+      "sources": [
+        {
+          "cell": "B148",
+          "material": "Treasure Hunt",
+          "raw": "triangle"
+        }
+      ]
+    },
+    {
+      "id": "ft-word-square",
+      "text": "square",
+      "kind": "word",
+      "sources": [
+        {
+          "cell": "B149",
+          "material": "Treasure Hunt",
+          "raw": "square"
+        }
+      ]
+    },
+    {
+      "id": "ft-sentence-f815800771b8",
+      "text": "It's a yellow cake.",
+      "kind": "sentence",
+      "sources": [
+        {
+          "cell": "D2",
+          "material": "Colorful Cakes",
+          "raw": "It's a yellow cake."
+        }
+      ]
+    },
+    {
+      "id": "ft-sentence-8f3f08bcd30a",
+      "text": "It's a brown cake.",
+      "kind": "sentence",
+      "sources": [
+        {
+          "cell": "D3",
+          "material": "Colorful Cakes",
+          "raw": "It's a brown cake."
+        }
+      ]
+    },
+    {
+      "id": "ft-sentence-32e49860cf71",
+      "text": "It's a green cake.",
+      "kind": "sentence",
+      "sources": [
+        {
+          "cell": "D4",
+          "material": "Colorful Cakes",
+          "raw": "It's a green cake."
+        }
+      ]
+    },
+    {
+      "id": "ft-sentence-17e7799bdc74",
+      "text": "It's a blue cake.",
+      "kind": "sentence",
+      "sources": [
+        {
+          "cell": "D5",
+          "material": "Colorful Cakes",
+          "raw": "It's a blue cake."
+        }
+      ]
+    },
+    {
+      "id": "ft-sentence-69c21a565f79",
+      "text": "I'm baby shark.",
+      "kind": "sentence",
+      "sources": [
+        {
+          "cell": "D12",
+          "material": "Shark Family",
+          "raw": "I'm baby shark."
+        }
+      ]
+    },
+    {
+      "id": "ft-sentence-a7d62839ee5e",
+      "text": "I'm mommy shark.",
+      "kind": "sentence",
+      "sources": [
+        {
+          "cell": "D13",
+          "material": "Shark Family",
+          "raw": "I'm mommy shark."
+        }
+      ]
+    },
+    {
+      "id": "ft-sentence-9ba2b16d2916",
+      "text": "I'm daddy shark.",
+      "kind": "sentence",
+      "sources": [
+        {
+          "cell": "D14",
+          "material": "Shark Family",
+          "raw": "I'm daddy shark."
+        }
+      ]
+    },
+    {
+      "id": "ft-sentence-64814a3cefde",
+      "text": "It's a cat.",
+      "kind": "sentence",
+      "sources": [
+        {
+          "cell": "D15",
+          "material": "Magic Animal House",
+          "raw": "It's a cat."
+        }
+      ]
+    },
+    {
+      "id": "ft-sentence-01c8728f571a",
+      "text": "It's a dog.",
+      "kind": "sentence",
+      "sources": [
+        {
+          "cell": "D16",
+          "material": "Magic Animal House",
+          "raw": "It's a dog."
+        }
+      ]
+    },
+    {
+      "id": "ft-sentence-1b0efc81d385",
+      "text": "It's a bird.",
+      "kind": "sentence",
+      "sources": [
+        {
+          "cell": "D17",
+          "material": "Magic Animal House",
+          "raw": "It's a bird."
+        },
+        {
+          "cell": "D36",
+          "material": "Animals on the Farm",
+          "raw": "It's a bird."
+        }
+      ]
+    },
+    {
+      "id": "ft-sentence-e6a0d0eda900",
+      "text": "I feel happy.",
+      "kind": "sentence",
+      "sources": [
+        {
+          "cell": "D18",
+          "material": "My Feelings",
+          "raw": "I feel happy."
+        }
+      ]
+    },
+    {
+      "id": "ft-sentence-3fc8c65caddf",
+      "text": "I feel sad.",
+      "kind": "sentence",
+      "sources": [
+        {
+          "cell": "D19",
+          "material": "My Feelings",
+          "raw": "I feel sad."
+        }
+      ]
+    },
+    {
+      "id": "ft-sentence-aa45f011598c",
+      "text": "I feel angry.",
+      "kind": "sentence",
+      "sources": [
+        {
+          "cell": "D20",
+          "material": "My Feelings",
+          "raw": "I feel angry."
+        }
+      ]
+    },
+    {
+      "id": "ft-sentence-f71a6440bd61",
+      "text": "I feel silly.",
+      "kind": "sentence",
+      "sources": [
+        {
+          "cell": "D21",
+          "material": "My Feelings",
+          "raw": "I feel silly."
+        }
+      ]
+    },
+    {
+      "id": "ft-sentence-522e4450748f",
+      "text": "I like red cherries.",
+      "kind": "sentence",
+      "sources": [
+        {
+          "cell": "D22",
+          "material": "Where's my Fruit?",
+          "raw": "I like red cherries."
+        }
+      ]
+    },
+    {
+      "id": "ft-sentence-79a5b67e60ad",
+      "text": "I like yellow mangoes.",
+      "kind": "sentence",
+      "sources": [
+        {
+          "cell": "D23",
+          "material": "Where's my Fruit?",
+          "raw": "I like yellow mangoes."
+        }
+      ]
+    },
+    {
+      "id": "ft-sentence-39c51518fb52",
+      "text": "I like green kiwis.",
+      "kind": "sentence",
+      "sources": [
+        {
+          "cell": "D24",
+          "material": "Where's my Fruit?",
+          "raw": "I like green kiwis."
+        }
+      ]
+    },
+    {
+      "id": "ft-sentence-a3d89d78e833",
+      "text": "It's red.",
+      "kind": "sentence",
+      "sources": [
+        {
+          "cell": "D25",
+          "material": "Magic Color Party",
+          "raw": "It's red."
+        },
+        {
+          "cell": "D144",
+          "material": "Color Fun",
+          "raw": "It's red."
+        },
+        {
+          "cell": "D146",
+          "material": "Color Fun",
+          "raw": "It's red."
+        }
+      ]
+    },
+    {
+      "id": "ft-sentence-b10126768ee6",
+      "text": "It's yellow.",
+      "kind": "sentence",
+      "sources": [
+        {
+          "cell": "D26",
+          "material": "Magic Color Party",
+          "raw": "It's yellow."
+        },
+        {
+          "cell": "D145",
+          "material": "Color Fun",
+          "raw": "It's yellow."
+        }
+      ]
+    },
+    {
+      "id": "ft-sentence-1e695bb7dc6a",
+      "text": "It's blue.",
+      "kind": "sentence",
+      "sources": [
+        {
+          "cell": "D27",
+          "material": "Magic Color Party",
+          "raw": "It's blue."
+        }
+      ]
+    },
+    {
+      "id": "ft-sentence-0bc71291eb6f",
+      "text": "It's a brown bear.",
+      "kind": "sentence",
+      "sources": [
+        {
+          "cell": "D28",
+          "material": "Colorful Toys",
+          "raw": "It's a brown bear./It's a brown monster."
+        }
+      ]
+    },
+    {
+      "id": "ft-sentence-bc5ab996cf15",
+      "text": "It's a brown monster.",
+      "kind": "sentence",
+      "sources": [
+        {
+          "cell": "D28",
+          "material": "Colorful Toys",
+          "raw": "It's a brown bear./It's a brown monster."
+        }
+      ]
+    },
+    {
+      "id": "ft-sentence-dc4470728547",
+      "text": "It's a yellow bear.",
+      "kind": "sentence",
+      "sources": [
+        {
+          "cell": "D29",
+          "material": "Colorful Toys",
+          "raw": "It's a yellow bear./It's a yellow car."
+        }
+      ]
+    },
+    {
+      "id": "ft-sentence-ccb9c7be7688",
+      "text": "It's a yellow car.",
+      "kind": "sentence",
+      "sources": [
+        {
+          "cell": "D29",
+          "material": "Colorful Toys",
+          "raw": "It's a yellow bear./It's a yellow car."
+        }
+      ]
+    },
+    {
+      "id": "ft-sentence-fd3bae219e40",
+      "text": "It's a green car.",
+      "kind": "sentence",
+      "sources": [
+        {
+          "cell": "D30",
+          "material": "Colorful Toys",
+          "raw": "It's a  green car."
+        }
+      ]
+    },
+    {
+      "id": "ft-sentence-9a7503dd0aa7",
+      "text": "I like the brown bear.",
+      "kind": "sentence",
+      "sources": [
+        {
+          "cell": "D31",
+          "material": "Colorful Toys",
+          "raw": "I like the brown/yellow bear."
+        }
+      ]
+    },
+    {
+      "id": "ft-sentence-472c1255b1cd",
+      "text": "I like the yellow bear.",
+      "kind": "sentence",
+      "sources": [
+        {
+          "cell": "D31",
+          "material": "Colorful Toys",
+          "raw": "I like the brown/yellow bear."
+        }
+      ]
+    },
+    {
+      "id": "ft-sentence-d3dfeb523221",
+      "text": "I like the yellow car.",
+      "kind": "sentence",
+      "sources": [
+        {
+          "cell": "D32",
+          "material": "Colorful Toys",
+          "raw": "I like the yellow/green car."
+        }
+      ]
+    },
+    {
+      "id": "ft-sentence-a9397a3b5f64",
+      "text": "I like the green car.",
+      "kind": "sentence",
+      "sources": [
+        {
+          "cell": "D32",
+          "material": "Colorful Toys",
+          "raw": "I like the yellow/green car."
+        }
+      ]
+    },
+    {
+      "id": "ft-sentence-5b076c91c986",
+      "text": "I like the green monster.",
+      "kind": "sentence",
+      "sources": [
+        {
+          "cell": "D33",
+          "material": "Colorful Toys",
+          "raw": "I like the green/brown monster."
+        }
+      ]
+    },
+    {
+      "id": "ft-sentence-95510ba6b780",
+      "text": "I like the brown monster.",
+      "kind": "sentence",
+      "sources": [
+        {
+          "cell": "D33",
+          "material": "Colorful Toys",
+          "raw": "I like the green/brown monster."
+        }
+      ]
+    },
+    {
+      "id": "ft-sentence-c62d10a0c60f",
+      "text": "It's a horse.",
+      "kind": "sentence",
+      "sources": [
+        {
+          "cell": "D34",
+          "material": "Animals on the Farm",
+          "raw": "It's a horse."
+        }
+      ]
+    },
+    {
+      "id": "ft-sentence-0a17fd429dbd",
+      "text": "A horse can run.",
+      "kind": "sentence",
+      "sources": [
+        {
+          "cell": "D35",
+          "material": "Animals on the Farm",
+          "raw": "A horse can run."
+        }
+      ]
+    },
+    {
+      "id": "ft-sentence-ec4bb8ae9f97",
+      "text": "A bird can fly.",
+      "kind": "sentence",
+      "sources": [
+        {
+          "cell": "D37",
+          "material": "Animals on the Farm",
+          "raw": "A bird can fly."
+        }
+      ]
+    },
+    {
+      "id": "ft-sentence-dee35e3af225",
+      "text": "It's a duck.",
+      "kind": "sentence",
+      "sources": [
+        {
+          "cell": "D38",
+          "material": "Animals on the Farm",
+          "raw": "It's a duck."
+        }
+      ]
+    },
+    {
+      "id": "ft-sentence-73e60873da3e",
+      "text": "A duck can swim.",
+      "kind": "sentence",
+      "sources": [
+        {
+          "cell": "D39",
+          "material": "Animals on the Farm",
+          "raw": "A duck can swim."
+        }
+      ]
+    },
+    {
+      "id": "ft-sentence-5db78071c0ba",
+      "text": "They are monkeys.",
+      "kind": "sentence",
+      "sources": [
+        {
+          "cell": "D40",
+          "material": "Amazing Animal Body Parts",
+          "raw": "They are monkeys."
+        }
+      ]
+    },
+    {
+      "id": "ft-sentence-e2a6532fa360",
+      "text": "Monkeys have tails.",
+      "kind": "sentence",
+      "sources": [
+        {
+          "cell": "D41",
+          "material": "Amazing Animal Body Parts",
+          "raw": "Monkeys have tails."
+        }
+      ]
+    },
+    {
+      "id": "ft-sentence-c85559941bde",
+      "text": "They are birds.",
+      "kind": "sentence",
+      "sources": [
+        {
+          "cell": "D42",
+          "material": "Amazing Animal Body Parts",
+          "raw": "They are bird."
+        }
+      ]
+    },
+    {
+      "id": "ft-sentence-c741c795a980",
+      "text": "Birds have wings.",
+      "kind": "sentence",
+      "sources": [
+        {
+          "cell": "D43",
+          "material": "Amazing Animal Body Parts",
+          "raw": "Birds have wings."
+        }
+      ]
+    },
+    {
+      "id": "ft-sentence-0e29f7e39764",
+      "text": "They are goats.",
+      "kind": "sentence",
+      "sources": [
+        {
+          "cell": "D44",
+          "material": "Amazing Animal Body Parts",
+          "raw": "They are goats."
+        }
+      ]
+    },
+    {
+      "id": "ft-sentence-31885e2d0db9",
+      "text": "Goats have horns.",
+      "kind": "sentence",
+      "sources": [
+        {
+          "cell": "D45",
+          "material": "Amazing Animal Body Parts",
+          "raw": "Goats have horns."
+        }
+      ]
+    },
+    {
+      "id": "ft-sentence-239eeec46e26",
+      "text": "I eat dates.",
+      "kind": "sentence",
+      "sources": [
+        {
+          "cell": "D55",
+          "material": "Ramadan Iftar Meal Box",
+          "raw": "I eat dates."
+        }
+      ]
+    },
+    {
+      "id": "ft-sentence-b86a310df71b",
+      "text": "I make pies.",
+      "kind": "sentence",
+      "sources": [
+        {
+          "cell": "D56",
+          "material": "Ramadan Iftar Meal Box",
+          "raw": "I make pies."
+        }
+      ]
+    },
+    {
+      "id": "ft-sentence-7368b02e36b2",
+      "text": "I make cookies.",
+      "kind": "sentence",
+      "sources": [
+        {
+          "cell": "D57",
+          "material": "Ramadan Iftar Meal Box",
+          "raw": "I make cookies."
+        }
+      ]
+    },
+    {
+      "id": "ft-sentence-31b9ac2491c4",
+      "text": "I make soup.",
+      "kind": "sentence",
+      "sources": [
+        {
+          "cell": "D58",
+          "material": "Ramadan Iftar Meal Box",
+          "raw": "I make soup."
+        }
+      ]
+    },
+    {
+      "id": "ft-sentence-4e3c12d2882c",
+      "text": "I drink water.",
+      "kind": "sentence",
+      "sources": [
+        {
+          "cell": "D59",
+          "material": "Ramadan Iftar Meal Box",
+          "raw": "I drink water."
+        }
+      ]
+    },
+    {
+      "id": "ft-sentence-f7f1e7495105",
+      "text": "I see elephants. They're big and strong.",
+      "kind": "sentence",
+      "sources": [
+        {
+          "cell": "D60",
+          "material": "Animal Wonderland",
+          "raw": "I see elephants. They're big and strong."
+        }
+      ]
+    },
+    {
+      "id": "ft-sentence-2ed61ab00507",
+      "text": "I see hamsters. They're small and cute.",
+      "kind": "sentence",
+      "sources": [
+        {
+          "cell": "D61",
+          "material": "Animal Wonderland",
+          "raw": "I see hamsters. They're small and cute."
+        }
+      ]
+    },
+    {
+      "id": "ft-sentence-bfb9deea4cd4",
+      "text": "I see zebras. They're black and white.",
+      "kind": "sentence",
+      "sources": [
+        {
+          "cell": "D62",
+          "material": "Animal Wonderland",
+          "raw": "I see zebras. They're black and white."
+        }
+      ]
+    },
+    {
+      "id": "ft-sentence-e101b2bf055d",
+      "text": "Let's go skiing.",
+      "kind": "sentence",
+      "sources": [
+        {
+          "cell": "D63",
+          "material": "Sports World Fun",
+          "raw": "Let's go skiing."
+        }
+      ]
+    },
+    {
+      "id": "ft-sentence-0d0a654d3272",
+      "text": "I can play basketball.",
+      "kind": "sentence",
+      "sources": [
+        {
+          "cell": "D64",
+          "material": "Sports World Fun",
+          "raw": "I can play basketball."
+        }
+      ]
+    },
+    {
+      "id": "ft-sentence-301298370ae0",
+      "text": "I can play football.",
+      "kind": "sentence",
+      "sources": [
+        {
+          "cell": "D65",
+          "material": "Sports World Fun",
+          "raw": "I can play football."
+        }
+      ]
+    },
+    {
+      "id": "ft-sentence-02ac3169dbdc",
+      "text": "Let's ride a horse.",
+      "kind": "sentence",
+      "sources": [
+        {
+          "cell": "D66",
+          "material": "Sports World Fun",
+          "raw": "Let's ride a horse."
+        }
+      ]
+    },
+    {
+      "id": "ft-sentence-19824d98e613",
+      "text": "I will play the guitar.",
+      "kind": "sentence",
+      "sources": [
+        {
+          "cell": "D70",
+          "material": "After School",
+          "raw": "I will play the guitar"
+        }
+      ]
+    },
+    {
+      "id": "ft-sentence-f526d658c219",
+      "text": "I will go swimming.",
+      "kind": "sentence",
+      "sources": [
+        {
+          "cell": "D71",
+          "material": "After School",
+          "raw": "I will go swimming."
+        },
+        {
+          "cell": "D76",
+          "material": "After School ME Version",
+          "raw": "I will go swimming."
+        }
+      ]
+    },
+    {
+      "id": "ft-sentence-d15e60c3590c",
+      "text": "I will play basketball.",
+      "kind": "sentence",
+      "sources": [
+        {
+          "cell": "D72",
+          "material": "After School",
+          "raw": "I will play basketball."
+        },
+        {
+          "cell": "D77",
+          "material": "After School ME Version",
+          "raw": "I will play basketball."
+        }
+      ]
+    },
+    {
+      "id": "ft-sentence-5730fbdef633",
+      "text": "I will go to a dance class.",
+      "kind": "sentence",
+      "sources": [
+        {
+          "cell": "D73",
+          "material": "After School",
+          "raw": "I will go to a dance class."
+        }
+      ]
+    },
+    {
+      "id": "ft-sentence-52a27fdcebaf",
+      "text": "I will read a book.",
+      "kind": "sentence",
+      "sources": [
+        {
+          "cell": "D74",
+          "material": "After School ME Version",
+          "raw": "I will read a book."
+        }
+      ]
+    },
+    {
+      "id": "ft-sentence-df20793d8e3f",
+      "text": "I will go to an art class.",
+      "kind": "sentence",
+      "sources": [
+        {
+          "cell": "D75",
+          "material": "After School ME Version",
+          "raw": "I will go to an art class."
+        }
+      ]
+    },
+    {
+      "id": "ft-sentence-3d3db9cb7e04",
+      "text": "I'm wearing a shirt.",
+      "kind": "sentence",
+      "sources": [
+        {
+          "cell": "D78",
+          "material": "Guess my Clothes",
+          "raw": "I'm wearing a shirt/shorts/sneakers/a coat/pants/boots."
+        }
+      ]
+    },
+    {
+      "id": "ft-sentence-60d3097274ba",
+      "text": "I'm wearing shorts.",
+      "kind": "sentence",
+      "sources": [
+        {
+          "cell": "D78",
+          "material": "Guess my Clothes",
+          "raw": "I'm wearing a shirt/shorts/sneakers/a coat/pants/boots."
+        }
+      ]
+    },
+    {
+      "id": "ft-sentence-e4149cf61ce8",
+      "text": "I'm wearing sneakers.",
+      "kind": "sentence",
+      "sources": [
+        {
+          "cell": "D78",
+          "material": "Guess my Clothes",
+          "raw": "I'm wearing a shirt/shorts/sneakers/a coat/pants/boots."
+        }
+      ]
+    },
+    {
+      "id": "ft-sentence-05504fe3a402",
+      "text": "I'm wearing a coat.",
+      "kind": "sentence",
+      "sources": [
+        {
+          "cell": "D78",
+          "material": "Guess my Clothes",
+          "raw": "I'm wearing a shirt/shorts/sneakers/a coat/pants/boots."
+        }
+      ]
+    },
+    {
+      "id": "ft-sentence-ec57f5509ce6",
+      "text": "I'm wearing pants.",
+      "kind": "sentence",
+      "sources": [
+        {
+          "cell": "D78",
+          "material": "Guess my Clothes",
+          "raw": "I'm wearing a shirt/shorts/sneakers/a coat/pants/boots."
+        }
+      ]
+    },
+    {
+      "id": "ft-sentence-6439421a46b4",
+      "text": "I'm wearing boots.",
+      "kind": "sentence",
+      "sources": [
+        {
+          "cell": "D78",
+          "material": "Guess my Clothes",
+          "raw": "I'm wearing a shirt/shorts/sneakers/a coat/pants/boots."
+        }
+      ]
+    },
+    {
+      "id": "ft-sentence-bd7225d54955",
+      "text": "He is wearing a shirt, shorts and sneakers.",
+      "kind": "sentence",
+      "sources": [
+        {
+          "cell": "D79",
+          "material": "Guess my Clothes",
+          "raw": "He is wearing a shirt, shorts and sneakers."
+        }
+      ]
+    },
+    {
+      "id": "ft-sentence-019295640adc",
+      "text": "You are good at running with the ball.",
+      "kind": "sentence",
+      "sources": [
+        {
+          "cell": "D82",
+          "material": "World Cup Kick Off",
+          "raw": "You are good at running with the ball/shooting."
+        }
+      ]
+    },
+    {
+      "id": "ft-sentence-59c73d62f866",
+      "text": "You are good at shooting.",
+      "kind": "sentence",
+      "sources": [
+        {
+          "cell": "D82",
+          "material": "World Cup Kick Off",
+          "raw": "You are good at running with the ball/shooting."
+        }
+      ]
+    },
+    {
+      "id": "ft-sentence-4cdcaba2de5e",
+      "text": "You are good at passing the ball.",
+      "kind": "sentence",
+      "sources": [
+        {
+          "cell": "D83",
+          "material": "World Cup Kick Off",
+          "raw": "You are good at passing the ball/taking away the ball."
+        }
+      ]
+    },
+    {
+      "id": "ft-sentence-2a7e1418a695",
+      "text": "You are good at taking away the ball.",
+      "kind": "sentence",
+      "sources": [
+        {
+          "cell": "D83",
+          "material": "World Cup Kick Off",
+          "raw": "You are good at passing the ball/taking away the ball."
+        }
+      ]
+    },
+    {
+      "id": "ft-sentence-17f7cedc2b82",
+      "text": "I will choose football socks for my football player.",
+      "kind": "sentence",
+      "sources": [
+        {
+          "cell": "D84",
+          "material": "World Cup Kick Off",
+          "raw": "I will choose football socks/a football shirt/football boots/football shorts for my football player."
+        }
+      ]
+    },
+    {
+      "id": "ft-sentence-74bdc69a8b34",
+      "text": "I will choose a football shirt for my football player.",
+      "kind": "sentence",
+      "sources": [
+        {
+          "cell": "D84",
+          "material": "World Cup Kick Off",
+          "raw": "I will choose football socks/a football shirt/football boots/football shorts for my football player."
+        }
+      ]
+    },
+    {
+      "id": "ft-sentence-a0109f44e593",
+      "text": "I will choose football boots for my football player.",
+      "kind": "sentence",
+      "sources": [
+        {
+          "cell": "D84",
+          "material": "World Cup Kick Off",
+          "raw": "I will choose football socks/a football shirt/football boots/football shorts for my football player."
+        }
+      ]
+    },
+    {
+      "id": "ft-sentence-cdff895f9833",
+      "text": "I will choose football shorts for my football player.",
+      "kind": "sentence",
+      "sources": [
+        {
+          "cell": "D84",
+          "material": "World Cup Kick Off",
+          "raw": "I will choose football socks/a football shirt/football boots/football shorts for my football player."
+        }
+      ]
+    },
+    {
+      "id": "ft-sentence-1a81f075270b",
+      "text": "It's sunny and hot.",
+      "kind": "sentence",
+      "sources": [
+        {
+          "cell": "D90",
+          "material": "A Trip to Weather Island",
+          "raw": "It's sunny and hot/rainy and cool/snowy and cold."
+        }
+      ]
+    },
+    {
+      "id": "ft-sentence-d9b295acf8ff",
+      "text": "It's rainy and cool.",
+      "kind": "sentence",
+      "sources": [
+        {
+          "cell": "D90",
+          "material": "A Trip to Weather Island",
+          "raw": "It's sunny and hot/rainy and cool/snowy and cold."
+        }
+      ]
+    },
+    {
+      "id": "ft-sentence-ba6cc91986fd",
+      "text": "It's snowy and cold.",
+      "kind": "sentence",
+      "sources": [
+        {
+          "cell": "D90",
+          "material": "A Trip to Weather Island",
+          "raw": "It's sunny and hot/rainy and cool/snowy and cold."
+        }
+      ]
+    },
+    {
+      "id": "ft-sentence-dfb1d433b6d4",
+      "text": "Let's go to the beach.",
+      "kind": "sentence",
+      "sources": [
+        {
+          "cell": "D91",
+          "material": "A Trip to Weather Island",
+          "raw": "Let's go to the beach/town/hills."
+        }
+      ]
+    },
+    {
+      "id": "ft-sentence-f021a0db35c3",
+      "text": "Let's go to the town.",
+      "kind": "sentence",
+      "sources": [
+        {
+          "cell": "D91",
+          "material": "A Trip to Weather Island",
+          "raw": "Let's go to the beach/town/hills."
+        }
+      ]
+    },
+    {
+      "id": "ft-sentence-b7c49f806942",
+      "text": "Let's go to the hills.",
+      "kind": "sentence",
+      "sources": [
+        {
+          "cell": "D91",
+          "material": "A Trip to Weather Island",
+          "raw": "Let's go to the beach/town/hills."
+        }
+      ]
+    },
+    {
+      "id": "ft-sentence-8259e3d6fa7c",
+      "text": "We can go swimming.",
+      "kind": "sentence",
+      "sources": [
+        {
+          "cell": "D92",
+          "material": "A Trip to Weather Island",
+          "raw": "We can go swimming/go surfing."
+        }
+      ]
+    },
+    {
+      "id": "ft-sentence-d24023f5c973",
+      "text": "We can go surfing.",
+      "kind": "sentence",
+      "sources": [
+        {
+          "cell": "D92",
+          "material": "A Trip to Weather Island",
+          "raw": "We can go swimming/go surfing."
+        }
+      ]
+    },
+    {
+      "id": "ft-sentence-ef5e5c5e9dcc",
+      "text": "We can go shopping.",
+      "kind": "sentence",
+      "sources": [
+        {
+          "cell": "D93",
+          "material": "A Trip to Weather Island",
+          "raw": "We can go shopping/ride a bike."
+        }
+      ]
+    },
+    {
+      "id": "ft-sentence-dda99f2f7d83",
+      "text": "We can ride a bike.",
+      "kind": "sentence",
+      "sources": [
+        {
+          "cell": "D93",
+          "material": "A Trip to Weather Island",
+          "raw": "We can go shopping/ride a bike."
+        }
+      ]
+    },
+    {
+      "id": "ft-sentence-1f31c4d47be8",
+      "text": "We can make a snowman.",
+      "kind": "sentence",
+      "sources": [
+        {
+          "cell": "D94",
+          "material": "A Trip to Weather Island",
+          "raw": "We can make a snowman/go skiing."
+        }
+      ]
+    },
+    {
+      "id": "ft-sentence-a1c5c9c0c709",
+      "text": "We can go skiing.",
+      "kind": "sentence",
+      "sources": [
+        {
+          "cell": "D94",
+          "material": "A Trip to Weather Island",
+          "raw": "We can make a snowman/go skiing."
+        }
+      ]
+    },
+    {
+      "id": "ft-sentence-05e2fab67284",
+      "text": "I'd like a shawarma.",
+      "kind": "sentence",
+      "sources": [
+        {
+          "cell": "D95",
+          "material": "My Yummy Order",
+          "raw": "I'd like a shawarma/burger."
+        }
+      ]
+    },
+    {
+      "id": "ft-sentence-b0913115cabb",
+      "text": "I'd like a burger.",
+      "kind": "sentence",
+      "sources": [
+        {
+          "cell": "D95",
+          "material": "My Yummy Order",
+          "raw": "I'd like a shawarma/burger."
+        }
+      ]
+    },
+    {
+      "id": "ft-sentence-a215e04b02eb",
+      "text": "I'd like some tomatoes.",
+      "kind": "sentence",
+      "sources": [
+        {
+          "cell": "D96",
+          "material": "My Yummy Order",
+          "raw": "I'd like some/I prefer some tomatoes. "
+        }
+      ]
+    },
+    {
+      "id": "ft-sentence-6db51e65409d",
+      "text": "I prefer some tomatoes.",
+      "kind": "sentence",
+      "sources": [
+        {
+          "cell": "D96",
+          "material": "My Yummy Order",
+          "raw": "I'd like some/I prefer some tomatoes. "
+        }
+      ]
+    },
+    {
+      "id": "ft-sentence-efde9428aa5b",
+      "text": "I'd like some beef.",
+      "kind": "sentence",
+      "sources": [
+        {
+          "cell": "D97",
+          "material": "My Yummy Order",
+          "raw": "I'd like some/I prefer some beef."
+        }
+      ]
+    },
+    {
+      "id": "ft-sentence-9bff7db155b0",
+      "text": "I prefer some beef.",
+      "kind": "sentence",
+      "sources": [
+        {
+          "cell": "D97",
+          "material": "My Yummy Order",
+          "raw": "I'd like some/I prefer some beef."
+        }
+      ]
+    },
+    {
+      "id": "ft-sentence-b9eb6df54775",
+      "text": "I'd like some cheese.",
+      "kind": "sentence",
+      "sources": [
+        {
+          "cell": "D98",
+          "material": "My Yummy Order",
+          "raw": "I'd like some/I prefer some cheese."
+        }
+      ]
+    },
+    {
+      "id": "ft-sentence-9308bae27155",
+      "text": "I prefer some cheese.",
+      "kind": "sentence",
+      "sources": [
+        {
+          "cell": "D98",
+          "material": "My Yummy Order",
+          "raw": "I'd like some/I prefer some cheese."
+        }
+      ]
+    },
+    {
+      "id": "ft-sentence-5c1ceea5e737",
+      "text": "I'd like some water.",
+      "kind": "sentence",
+      "sources": [
+        {
+          "cell": "D99",
+          "material": "My Yummy Order",
+          "raw": "I'd like some/I prefer some water."
+        }
+      ]
+    },
+    {
+      "id": "ft-sentence-606118c9d787",
+      "text": "I prefer some water.",
+      "kind": "sentence",
+      "sources": [
+        {
+          "cell": "D99",
+          "material": "My Yummy Order",
+          "raw": "I'd like some/I prefer some water."
+        }
+      ]
+    },
+    {
+      "id": "ft-sentence-8203b357223a",
+      "text": "I'd like some bell peppers.",
+      "kind": "sentence",
+      "sources": [
+        {
+          "cell": "D101",
+          "material": "My Yummy Order",
+          "raw": "I'd like some/I prefer some bell peppers."
+        }
+      ]
+    },
+    {
+      "id": "ft-sentence-162e6c675957",
+      "text": "I prefer some bell peppers.",
+      "kind": "sentence",
+      "sources": [
+        {
+          "cell": "D101",
+          "material": "My Yummy Order",
+          "raw": "I'd like some/I prefer some bell peppers."
+        }
+      ]
+    },
+    {
+      "id": "ft-sentence-8facd7860ff5",
+      "text": "I'd like some chicken.",
+      "kind": "sentence",
+      "sources": [
+        {
+          "cell": "D102",
+          "material": "My Yummy Order",
+          "raw": "I'd like some/I prefer some chicken."
+        }
+      ]
+    },
+    {
+      "id": "ft-sentence-ae56425dd25c",
+      "text": "I prefer some chicken.",
+      "kind": "sentence",
+      "sources": [
+        {
+          "cell": "D102",
+          "material": "My Yummy Order",
+          "raw": "I'd like some/I prefer some chicken."
+        }
+      ]
+    },
+    {
+      "id": "ft-sentence-8d8af5653b0a",
+      "text": "I'd like some sauce.",
+      "kind": "sentence",
+      "sources": [
+        {
+          "cell": "D103",
+          "material": "My Yummy Order",
+          "raw": "I'd like some/I prefer some sauce."
+        }
+      ]
+    },
+    {
+      "id": "ft-sentence-202d8293bdcd",
+      "text": "I prefer some sauce.",
+      "kind": "sentence",
+      "sources": [
+        {
+          "cell": "D103",
+          "material": "My Yummy Order",
+          "raw": "I'd like some/I prefer some sauce."
+        }
+      ]
+    },
+    {
+      "id": "ft-sentence-1445828a1842",
+      "text": "I'd like some juice.",
+      "kind": "sentence",
+      "sources": [
+        {
+          "cell": "D104",
+          "material": "My Yummy Order",
+          "raw": "I'd like some/I prefer some juice."
+        }
+      ]
+    },
+    {
+      "id": "ft-sentence-8c970f2def86",
+      "text": "I prefer some juice.",
+      "kind": "sentence",
+      "sources": [
+        {
+          "cell": "D104",
+          "material": "My Yummy Order",
+          "raw": "I'd like some/I prefer some juice."
+        }
+      ]
+    },
+    {
+      "id": "ft-sentence-6c50df479e57",
+      "text": "He is taller than me.",
+      "kind": "sentence",
+      "sources": [
+        {
+          "cell": "D105",
+          "material": "My Friends",
+          "raw": "He is taller than me."
+        }
+      ]
+    },
+    {
+      "id": "ft-sentence-0e7bd7666363",
+      "text": "She is shorter than me.",
+      "kind": "sentence",
+      "sources": [
+        {
+          "cell": "D106",
+          "material": "My Friends",
+          "raw": "She is shorter than me."
+        }
+      ]
+    },
+    {
+      "id": "ft-sentence-5fbee6201ccd",
+      "text": "He is bigger than me.",
+      "kind": "sentence",
+      "sources": [
+        {
+          "cell": "D107",
+          "material": "My Friends",
+          "raw": "He is bigger than me."
+        }
+      ]
+    },
+    {
+      "id": "ft-sentence-4ffc815b0285",
+      "text": "She is smaller than me.",
+      "kind": "sentence",
+      "sources": [
+        {
+          "cell": "D108",
+          "material": "My Friends",
+          "raw": "She is smaller than me."
+        }
+      ]
+    },
+    {
+      "id": "ft-sentence-ac2d3071c25c",
+      "text": "I want to play on the slide.",
+      "kind": "sentence",
+      "sources": [
+        {
+          "cell": "D116",
+          "material": "Fun in the Park",
+          "raw": "I want to play on the slide."
+        }
+      ]
+    },
+    {
+      "id": "ft-sentence-0a7e8af74449",
+      "text": "I want to ride the roller coaster.",
+      "kind": "sentence",
+      "sources": [
+        {
+          "cell": "D117",
+          "material": "Fun in the Park",
+          "raw": "I want to ride the roller coaster."
+        }
+      ]
+    },
+    {
+      "id": "ft-sentence-fe173bb9a002",
+      "text": "I want to go karting.",
+      "kind": "sentence",
+      "sources": [
+        {
+          "cell": "D118",
+          "material": "Fun in the Park",
+          "raw": "I want to go karting."
+        }
+      ]
+    },
+    {
+      "id": "ft-sentence-38ee96db45fb",
+      "text": "I like bears.",
+      "kind": "sentence",
+      "sources": [
+        {
+          "cell": "D137",
+          "material": "Magic Animal Photo Tour",
+          "raw": "I like bears."
+        }
+      ]
+    },
+    {
+      "id": "ft-sentence-9843d164f918",
+      "text": "I like pandas.",
+      "kind": "sentence",
+      "sources": [
+        {
+          "cell": "D138",
+          "material": "Magic Animal Photo Tour",
+          "raw": "I like pandas."
+        }
+      ]
+    },
+    {
+      "id": "ft-sentence-4a36d61944a9",
+      "text": "I like cheetahs.",
+      "kind": "sentence",
+      "sources": [
+        {
+          "cell": "D139",
+          "material": "Magic Animal Photo Tour",
+          "raw": "I like cheetahs."
+        }
+      ]
+    },
+    {
+      "id": "ft-sentence-a225f4964be1",
+      "text": "I like kangaroos.",
+      "kind": "sentence",
+      "sources": [
+        {
+          "cell": "D140",
+          "material": "Magic Animal Photo Tour",
+          "raw": "I like kangaroos."
+        }
+      ]
+    },
+    {
+      "id": "ft-sentence-a23544c9c28c",
+      "text": "Let's try bumper cars.",
+      "kind": "sentence",
+      "sources": [
+        {
+          "cell": "D141",
+          "material": "Fun at the Play Zone",
+          "raw": "Let's try bumber cars."
+        }
+      ]
+    },
+    {
+      "id": "ft-sentence-21dd9d0b218b",
+      "text": "Let's try rock climbing.",
+      "kind": "sentence",
+      "sources": [
+        {
+          "cell": "D142",
+          "material": "Fun at the Play Zone",
+          "raw": "Let's try rock climbing."
+        }
+      ]
+    },
+    {
+      "id": "ft-sentence-3a2fda94b064",
+      "text": "Let's try the trampoline.",
+      "kind": "sentence",
+      "sources": [
+        {
+          "cell": "D143",
+          "material": "Fun at the Play Zone",
+          "raw": "Let's try the trampoline."
+        }
+      ]
+    },
+    {
+      "id": "ft-sentence-504400974f6f",
+      "text": "I see a circle.",
+      "kind": "sentence",
+      "sources": [
+        {
+          "cell": "D147",
+          "material": "Treasure Hunt",
+          "raw": "I see a circle."
+        }
+      ]
+    },
+    {
+      "id": "ft-sentence-dc08560837b9",
+      "text": "I see a triangle.",
+      "kind": "sentence",
+      "sources": [
+        {
+          "cell": "D148",
+          "material": "Treasure Hunt",
+          "raw": "I see a triangle."
+        }
+      ]
+    },
+    {
+      "id": "ft-sentence-d2c78cb03a2f",
+      "text": "I see a square.",
+      "kind": "sentence",
+      "sources": [
+        {
+          "cell": "D149",
+          "material": "Treasure Hunt",
+          "raw": "I see a square."
+        }
+      ]
+    },
+    {
+      "id": "ft-sentence-cabd62dc81c5",
+      "text": "I want to go skiing.",
+      "kind": "sentence",
+      "sources": [
+        {
+          "cell": "D150",
+          "material": "Happy Vacation Plan",
+          "raw": "I want to go skiing."
+        }
+      ]
+    },
+    {
+      "id": "ft-sentence-c2fcc9169f72",
+      "text": "I want to go cycling.",
+      "kind": "sentence",
+      "sources": [
+        {
+          "cell": "D151",
+          "material": "Happy Vacation Plan",
+          "raw": "I want to go cycling."
+        }
+      ]
+    },
+    {
+      "id": "ft-sentence-39f76d675d16",
+      "text": "I want to go swimming.",
+      "kind": "sentence",
+      "sources": [
+        {
+          "cell": "D152",
+          "material": "Happy Vacation Plan",
+          "raw": "I want to go swimming."
+        }
+      ]
+    },
+    {
+      "id": "ft-sentence-91c7d3be27f9",
+      "text": "I want to go camping.",
+      "kind": "sentence",
+      "sources": [
+        {
+          "cell": "D153",
+          "material": "Happy Vacation Plan",
+          "raw": "I want to go camping."
+        }
+      ]
+    },
+    {
+      "id": "ft-sentence-7f66eeaf86b6",
+      "text": "I'm making coffee.",
+      "kind": "sentence",
+      "sources": [
+        {
+          "cell": "D154",
+          "material": "A Weekend at the Chalet",
+          "raw": "I'm making coffee."
+        }
+      ]
+    },
+    {
+      "id": "ft-sentence-b6d8c5c92b17",
+      "text": "I'm having a barbeque.",
+      "kind": "sentence",
+      "sources": [
+        {
+          "cell": "D155",
+          "material": "A Weekend at the Chalet",
+          "raw": "I'm having a barbeque."
+        }
+      ]
+    },
+    {
+      "id": "ft-sentence-ce901d25619f",
+      "text": "I'm playing soccer.",
+      "kind": "sentence",
+      "sources": [
+        {
+          "cell": "D156",
+          "material": "A Weekend at the Chalet",
+          "raw": "I'm playing soccer."
+        }
+      ]
+    }
+  ],
+  "deferred": [
+    {
+      "cell": "C2",
+      "material": "Colorful Cakes",
+      "raw": "a yellow cake",
+      "reason": "短语暂不接入；包括单词列中的多词表达"
+    },
+    {
+      "cell": "C3",
+      "material": "Colorful Cakes",
+      "raw": "a brown cake",
+      "reason": "短语暂不接入；包括单词列中的多词表达"
+    },
+    {
+      "cell": "C4",
+      "material": "Colorful Cakes",
+      "raw": "a green cake",
+      "reason": "短语暂不接入；包括单词列中的多词表达"
+    },
+    {
+      "cell": "C5",
+      "material": "Colorful Cakes",
+      "raw": "a blue cake",
+      "reason": "短语暂不接入；包括单词列中的多词表达"
+    },
+    {
+      "cell": "C12",
+      "material": "Shark Family",
+      "raw": "baby shark",
+      "reason": "短语暂不接入；包括单词列中的多词表达"
+    },
+    {
+      "cell": "C13",
+      "material": "Shark Family",
+      "raw": "mommy shark",
+      "reason": "短语暂不接入；包括单词列中的多词表达"
+    },
+    {
+      "cell": "C14",
+      "material": "Shark Family",
+      "raw": "daddy shark",
+      "reason": "短语暂不接入；包括单词列中的多词表达"
+    },
+    {
+      "cell": "C22",
+      "material": "Where's my Fruit?",
+      "raw": "red cherries",
+      "reason": "短语暂不接入；包括单词列中的多词表达"
+    },
+    {
+      "cell": "C23",
+      "material": "Where's my Fruit?",
+      "raw": "yellow mangoes",
+      "reason": "短语暂不接入；包括单词列中的多词表达"
+    },
+    {
+      "cell": "C24",
+      "material": "Where's my Fruit?",
+      "raw": "green kiwis",
+      "reason": "短语暂不接入；包括单词列中的多词表达"
+    },
+    {
+      "cell": "B51",
+      "material": "ABC Desert Explorers",
+      "raw": "board game",
+      "reason": "短语暂不接入；包括单词列中的多词表达"
+    },
+    {
+      "cell": "C60",
+      "material": "Animal Wonderland",
+      "raw": "big and strong",
+      "reason": "短语暂不接入；包括单词列中的多词表达"
+    },
+    {
+      "cell": "C61",
+      "material": "Animal Wonderland",
+      "raw": "small and cute",
+      "reason": "短语暂不接入；包括单词列中的多词表达"
+    },
+    {
+      "cell": "C62",
+      "material": "Animal Wonderland",
+      "raw": "black and white",
+      "reason": "短语暂不接入；包括单词列中的多词表达"
+    },
+    {
+      "cell": "C63",
+      "material": "Sports World Fun",
+      "raw": "go skiing",
+      "reason": "短语暂不接入；包括单词列中的多词表达"
+    },
+    {
+      "cell": "C64",
+      "material": "Sports World Fun",
+      "raw": "play basketball",
+      "reason": "短语暂不接入；包括单词列中的多词表达"
+    },
+    {
+      "cell": "C65",
+      "material": "Sports World Fun",
+      "raw": "play football",
+      "reason": "短语暂不接入；包括单词列中的多词表达"
+    },
+    {
+      "cell": "C66",
+      "material": "Sports World Fun",
+      "raw": "ride a horse",
+      "reason": "短语暂不接入；包括单词列中的多词表达"
+    },
+    {
+      "cell": "C67",
+      "material": "Ramadan Is Here",
+      "raw": "share a meal",
+      "reason": "短语暂不接入；包括单词列中的多词表达"
+    },
+    {
+      "cell": "C68",
+      "material": "Ramadan Is Here",
+      "raw": "give to others",
+      "reason": "短语暂不接入；包括单词列中的多词表达"
+    },
+    {
+      "cell": "C69",
+      "material": "Ramadan Is Here",
+      "raw": "invite friends",
+      "reason": "短语暂不接入；包括单词列中的多词表达"
+    },
+    {
+      "cell": "C70",
+      "material": "After School",
+      "raw": "play the guitar",
+      "reason": "短语暂不接入；包括单词列中的多词表达"
+    },
+    {
+      "cell": "C71",
+      "material": "After School",
+      "raw": "go swimming",
+      "reason": "短语暂不接入；包括单词列中的多词表达"
+    },
+    {
+      "cell": "C72",
+      "material": "After School",
+      "raw": "play basketball",
+      "reason": "短语暂不接入；包括单词列中的多词表达"
+    },
+    {
+      "cell": "C73",
+      "material": "After School",
+      "raw": "go to a dance class",
+      "reason": "短语暂不接入；包括单词列中的多词表达"
+    },
+    {
+      "cell": "C74",
+      "material": "After School ME Version",
+      "raw": "read a book",
+      "reason": "短语暂不接入；包括单词列中的多词表达"
+    },
+    {
+      "cell": "C75",
+      "material": "After School ME Version",
+      "raw": "go to an art class",
+      "reason": "短语暂不接入；包括单词列中的多词表达"
+    },
+    {
+      "cell": "C76",
+      "material": "After School ME Version",
+      "raw": "go swimming",
+      "reason": "短语暂不接入；包括单词列中的多词表达"
+    },
+    {
+      "cell": "C77",
+      "material": "After School ME Version",
+      "raw": "play basketball",
+      "reason": "短语暂不接入；包括单词列中的多词表达"
+    },
+    {
+      "cell": "C78",
+      "material": "Guess my Clothes",
+      "raw": "a shirt",
+      "reason": "短语暂不接入；包括单词列中的多词表达"
+    },
+    {
+      "cell": "C79",
+      "material": "Guess my Clothes",
+      "raw": "a coat",
+      "reason": "短语暂不接入；包括单词列中的多词表达"
+    },
+    {
+      "cell": "D80",
+      "material": "Guess my Clothes",
+      "raw": "She's wearing a coat/pants and boots.",
+      "reason": "需确认斜杠范围或 burger 的单复数表达，暂不猜测标准朗读文本"
+    },
+    {
+      "cell": "C82",
+      "material": "World Cup Kick Off",
+      "raw": "take away the ball",
+      "reason": "短语暂不接入；包括单词列中的多词表达"
+    },
+    {
+      "cell": "C83",
+      "material": "World Cup Kick Off",
+      "raw": "football player",
+      "reason": "短语暂不接入；包括单词列中的多词表达"
+    },
+    {
+      "cell": "C84",
+      "material": "World Cup Kick Off",
+      "raw": "run with the ball",
+      "reason": "短语暂不接入；包括单词列中的多词表达"
+    },
+    {
+      "cell": "C85",
+      "material": "World Cup Kick Off",
+      "raw": "pass the ball",
+      "reason": "短语暂不接入；包括单词列中的多词表达"
+    },
+    {
+      "cell": "C86",
+      "material": "World Cup Kick Off",
+      "raw": "football socks",
+      "reason": "短语暂不接入；包括单词列中的多词表达"
+    },
+    {
+      "cell": "C87",
+      "material": "World Cup Kick Off",
+      "raw": "a football shirt",
+      "reason": "短语暂不接入；包括单词列中的多词表达"
+    },
+    {
+      "cell": "C88",
+      "material": "World Cup Kick Off",
+      "raw": "football boots",
+      "reason": "短语暂不接入；包括单词列中的多词表达"
+    },
+    {
+      "cell": "C89",
+      "material": "World Cup Kick Off",
+      "raw": "football shorts",
+      "reason": "短语暂不接入；包括单词列中的多词表达"
+    },
+    {
+      "cell": "C90",
+      "material": "A Trip to Weather Island",
+      "raw": "sunny and hot",
+      "reason": "短语暂不接入；包括单词列中的多词表达"
+    },
+    {
+      "cell": "C91",
+      "material": "A Trip to Weather Island",
+      "raw": "rainy and cool",
+      "reason": "短语暂不接入；包括单词列中的多词表达"
+    },
+    {
+      "cell": "C92",
+      "material": "A Trip to Weather Island",
+      "raw": "snowy and cold",
+      "reason": "短语暂不接入；包括单词列中的多词表达"
+    },
+    {
+      "cell": "D100",
+      "material": "My Yummy Order",
+      "raw": "I'd like some/I prefer some burger.",
+      "reason": "需确认斜杠范围或 burger 的单复数表达，暂不猜测标准朗读文本"
+    },
+    {
+      "cell": "B101",
+      "material": "My Yummy Order",
+      "raw": "bell peppers",
+      "reason": "短语暂不接入；包括单词列中的多词表达"
+    },
+    {
+      "cell": "D113",
+      "material": "What's Your Hobby",
+      "raw": "My/His/Her hobby is ………..",
+      "reason": "未完成句型，需要业务补齐朗读文本"
+    },
+    {
+      "cell": "D114",
+      "material": "What's Your Hobby",
+      "raw": "I/He/She think(s) it's ……..",
+      "reason": "未完成句型，需要业务补齐朗读文本"
+    },
+    {
+      "cell": "D115",
+      "material": "What's Your Hobby",
+      "raw": "It can make/help …….",
+      "reason": "未完成句型，需要业务补齐朗读文本"
+    },
+    {
+      "cell": "C116",
+      "material": "Fun in the Park",
+      "raw": "play on the slide",
+      "reason": "短语暂不接入；包括单词列中的多词表达"
+    },
+    {
+      "cell": "C117",
+      "material": "Fun in the Park",
+      "raw": "ride the roller coaster",
+      "reason": "短语暂不接入；包括单词列中的多词表达"
+    },
+    {
+      "cell": "C118",
+      "material": "Fun in the Park",
+      "raw": "go karting",
+      "reason": "短语暂不接入；包括单词列中的多词表达"
+    },
+    {
+      "cell": "C119",
+      "material": "How to Stay Healthy",
+      "raw": "junk food",
+      "reason": "短语暂不接入；包括单词列中的多词表达"
+    },
+    {
+      "cell": "D119",
+      "material": "How to Stay Healthy",
+      "raw": "We should/shouldn't…….",
+      "reason": "未完成句型，需要业务补齐朗读文本"
+    },
+    {
+      "cell": "C120",
+      "material": "How to Stay Healthy",
+      "raw": "stay up",
+      "reason": "短语暂不接入；包括单词列中的多词表达"
+    },
+    {
+      "cell": "C121",
+      "material": "How to Stay Healthy",
+      "raw": "stay indoors",
+      "reason": "短语暂不接入；包括单词列中的多词表达"
+    },
+    {
+      "cell": "C122",
+      "material": "Aloha from Hawaii",
+      "raw": "hula dance",
+      "reason": "短语暂不接入；包括单词列中的多词表达"
+    },
+    {
+      "cell": "C127",
+      "material": "Endangered Species",
+      "raw": "tropical forest",
+      "reason": "短语暂不接入；包括单词列中的多词表达"
+    },
+    {
+      "cell": "C141",
+      "material": "Fun at the Play Zone",
+      "raw": "bumber cars",
+      "reason": "短语暂不接入；包括单词列中的多词表达"
+    },
+    {
+      "cell": "C142",
+      "material": "Fun at the Play Zone",
+      "raw": "rock climbing",
+      "reason": "短语暂不接入；包括单词列中的多词表达"
+    },
+    {
+      "cell": "C143",
+      "material": "Fun at the Play Zone",
+      "raw": "trampoline",
+      "reason": "短语暂不接入；包括单词列中的多词表达"
+    },
+    {
+      "cell": "C150",
+      "material": "Happy Vacation Plan",
+      "raw": "go skiing",
+      "reason": "短语暂不接入；包括单词列中的多词表达"
+    },
+    {
+      "cell": "C151",
+      "material": "Happy Vacation Plan",
+      "raw": "go cycling",
+      "reason": "短语暂不接入；包括单词列中的多词表达"
+    },
+    {
+      "cell": "C152",
+      "material": "Happy Vacation Plan",
+      "raw": "go swimming",
+      "reason": "短语暂不接入；包括单词列中的多词表达"
+    },
+    {
+      "cell": "C153",
+      "material": "Happy Vacation Plan",
+      "raw": "go camping",
+      "reason": "短语暂不接入；包括单词列中的多词表达"
+    },
+    {
+      "cell": "C154",
+      "material": "A Weekend at the Chalet",
+      "raw": "making coffee",
+      "reason": "短语暂不接入；包括单词列中的多词表达"
+    },
+    {
+      "cell": "C155",
+      "material": "A Weekend at the Chalet",
+      "raw": "having a barbeque",
+      "reason": "短语暂不接入；包括单词列中的多词表达"
+    },
+    {
+      "cell": "C156",
+      "material": "A Weekend at the Chalet",
+      "raw": "playing soccer",
+      "reason": "短语暂不接入；包括单词列中的多词表达"
+    }
+  ],
+  "normalizations": [
+    {
+      "cell": "D28",
+      "material": "Colorful Toys",
+      "raw": "It's a brown bear./It's a brown monster.",
+      "targets": [
+        "It's a brown bear.",
+        "It's a brown monster."
+      ],
+      "reason": "展开原表中明确的单复数或斜杠选项"
+    },
+    {
+      "cell": "D29",
+      "material": "Colorful Toys",
+      "raw": "It's a yellow bear./It's a yellow car.",
+      "targets": [
+        "It's a yellow bear.",
+        "It's a yellow car."
+      ],
+      "reason": "展开原表中明确的单复数或斜杠选项"
+    },
+    {
+      "cell": "D31",
+      "material": "Colorful Toys",
+      "raw": "I like the brown/yellow bear.",
+      "targets": [
+        "I like the brown bear.",
+        "I like the yellow bear."
+      ],
+      "reason": "展开原表中明确的单复数或斜杠选项"
+    },
+    {
+      "cell": "D32",
+      "material": "Colorful Toys",
+      "raw": "I like the yellow/green car.",
+      "targets": [
+        "I like the yellow car.",
+        "I like the green car."
+      ],
+      "reason": "展开原表中明确的单复数或斜杠选项"
+    },
+    {
+      "cell": "D33",
+      "material": "Colorful Toys",
+      "raw": "I like the green/brown monster.",
+      "targets": [
+        "I like the green monster.",
+        "I like the brown monster."
+      ],
+      "reason": "展开原表中明确的单复数或斜杠选项"
+    },
+    {
+      "cell": "B40",
+      "material": "Amazing Animal Body Parts",
+      "raw": "monkey/s",
+      "targets": [
+        "monkey",
+        "monkeys"
+      ],
+      "reason": "展开原表中明确的单复数或斜杠选项"
+    },
+    {
+      "cell": "B41",
+      "material": "Amazing Animal Body Parts",
+      "raw": "tail/s",
+      "targets": [
+        "tail",
+        "tails"
+      ],
+      "reason": "展开原表中明确的单复数或斜杠选项"
+    },
+    {
+      "cell": "B42",
+      "material": "Amazing Animal Body Parts",
+      "raw": "bird/s",
+      "targets": [
+        "bird",
+        "birds"
+      ],
+      "reason": "展开原表中明确的单复数或斜杠选项"
+    },
+    {
+      "cell": "D42",
+      "material": "Amazing Animal Body Parts",
+      "raw": "They are bird.",
+      "targets": [
+        "They are birds."
+      ],
+      "reason": "修正 are 后复数名词"
+    },
+    {
+      "cell": "D78",
+      "material": "Guess my Clothes",
+      "raw": "I'm wearing a shirt/shorts/sneakers/a coat/pants/boots.",
+      "targets": [
+        "I'm wearing a shirt.",
+        "I'm wearing shorts.",
+        "I'm wearing sneakers.",
+        "I'm wearing a coat.",
+        "I'm wearing pants.",
+        "I'm wearing boots."
+      ],
+      "reason": "展开原表中明确的单复数或斜杠选项"
+    },
+    {
+      "cell": "D82",
+      "material": "World Cup Kick Off",
+      "raw": "You are good at running with the ball/shooting.",
+      "targets": [
+        "You are good at running with the ball.",
+        "You are good at shooting."
+      ],
+      "reason": "展开原表中明确的单复数或斜杠选项"
+    },
+    {
+      "cell": "D83",
+      "material": "World Cup Kick Off",
+      "raw": "You are good at passing the ball/taking away the ball.",
+      "targets": [
+        "You are good at passing the ball.",
+        "You are good at taking away the ball."
+      ],
+      "reason": "展开原表中明确的单复数或斜杠选项"
+    },
+    {
+      "cell": "D84",
+      "material": "World Cup Kick Off",
+      "raw": "I will choose football socks/a football shirt/football boots/football shorts for my football player.",
+      "targets": [
+        "I will choose football socks for my football player.",
+        "I will choose a football shirt for my football player.",
+        "I will choose football boots for my football player.",
+        "I will choose football shorts for my football player."
+      ],
+      "reason": "展开原表中明确的单复数或斜杠选项"
+    },
+    {
+      "cell": "D90",
+      "material": "A Trip to Weather Island",
+      "raw": "It's sunny and hot/rainy and cool/snowy and cold.",
+      "targets": [
+        "It's sunny and hot.",
+        "It's rainy and cool.",
+        "It's snowy and cold."
+      ],
+      "reason": "展开原表中明确的单复数或斜杠选项"
+    },
+    {
+      "cell": "D91",
+      "material": "A Trip to Weather Island",
+      "raw": "Let's go to the beach/town/hills.",
+      "targets": [
+        "Let's go to the beach.",
+        "Let's go to the town.",
+        "Let's go to the hills."
+      ],
+      "reason": "展开原表中明确的单复数或斜杠选项"
+    },
+    {
+      "cell": "D92",
+      "material": "A Trip to Weather Island",
+      "raw": "We can go swimming/go surfing.",
+      "targets": [
+        "We can go swimming.",
+        "We can go surfing."
+      ],
+      "reason": "展开原表中明确的单复数或斜杠选项"
+    },
+    {
+      "cell": "D93",
+      "material": "A Trip to Weather Island",
+      "raw": "We can go shopping/ride a bike.",
+      "targets": [
+        "We can go shopping.",
+        "We can ride a bike."
+      ],
+      "reason": "展开原表中明确的单复数或斜杠选项"
+    },
+    {
+      "cell": "D94",
+      "material": "A Trip to Weather Island",
+      "raw": "We can make a snowman/go skiing.",
+      "targets": [
+        "We can make a snowman.",
+        "We can go skiing."
+      ],
+      "reason": "展开原表中明确的单复数或斜杠选项"
+    },
+    {
+      "cell": "D95",
+      "material": "My Yummy Order",
+      "raw": "I'd like a shawarma/burger.",
+      "targets": [
+        "I'd like a shawarma.",
+        "I'd like a burger."
+      ],
+      "reason": "展开原表中明确的单复数或斜杠选项"
+    },
+    {
+      "cell": "D96",
+      "material": "My Yummy Order",
+      "raw": "I'd like some/I prefer some tomatoes. ",
+      "targets": [
+        "I'd like some tomatoes.",
+        "I prefer some tomatoes."
+      ],
+      "reason": "展开原表中明确的单复数或斜杠选项"
+    },
+    {
+      "cell": "D97",
+      "material": "My Yummy Order",
+      "raw": "I'd like some/I prefer some beef.",
+      "targets": [
+        "I'd like some beef.",
+        "I prefer some beef."
+      ],
+      "reason": "展开原表中明确的单复数或斜杠选项"
+    },
+    {
+      "cell": "D98",
+      "material": "My Yummy Order",
+      "raw": "I'd like some/I prefer some cheese.",
+      "targets": [
+        "I'd like some cheese.",
+        "I prefer some cheese."
+      ],
+      "reason": "展开原表中明确的单复数或斜杠选项"
+    },
+    {
+      "cell": "D99",
+      "material": "My Yummy Order",
+      "raw": "I'd like some/I prefer some water.",
+      "targets": [
+        "I'd like some water.",
+        "I prefer some water."
+      ],
+      "reason": "展开原表中明确的单复数或斜杠选项"
+    },
+    {
+      "cell": "D101",
+      "material": "My Yummy Order",
+      "raw": "I'd like some/I prefer some bell peppers.",
+      "targets": [
+        "I'd like some bell peppers.",
+        "I prefer some bell peppers."
+      ],
+      "reason": "展开原表中明确的单复数或斜杠选项"
+    },
+    {
+      "cell": "D102",
+      "material": "My Yummy Order",
+      "raw": "I'd like some/I prefer some chicken.",
+      "targets": [
+        "I'd like some chicken.",
+        "I prefer some chicken."
+      ],
+      "reason": "展开原表中明确的单复数或斜杠选项"
+    },
+    {
+      "cell": "D103",
+      "material": "My Yummy Order",
+      "raw": "I'd like some/I prefer some sauce.",
+      "targets": [
+        "I'd like some sauce.",
+        "I prefer some sauce."
+      ],
+      "reason": "展开原表中明确的单复数或斜杠选项"
+    },
+    {
+      "cell": "D104",
+      "material": "My Yummy Order",
+      "raw": "I'd like some/I prefer some juice.",
+      "targets": [
+        "I'd like some juice.",
+        "I prefer some juice."
+      ],
+      "reason": "展开原表中明确的单复数或斜杠选项"
+    },
+    {
+      "cell": "B124",
+      "material": "Aloha from Hawaii",
+      "raw": "achipelago",
+      "targets": [
+        "archipelago"
+      ],
+      "reason": "修正明显拼写错误"
+    },
+    {
+      "cell": "B137",
+      "material": "Magic Animal Photo Tour",
+      "raw": "bear/s",
+      "targets": [
+        "bear",
+        "bears"
+      ],
+      "reason": "展开原表中明确的单复数或斜杠选项"
+    },
+    {
+      "cell": "B138",
+      "material": "Magic Animal Photo Tour",
+      "raw": "panda/s",
+      "targets": [
+        "panda",
+        "pandas"
+      ],
+      "reason": "展开原表中明确的单复数或斜杠选项"
+    },
+    {
+      "cell": "B139",
+      "material": "Magic Animal Photo Tour",
+      "raw": "cheetah/s",
+      "targets": [
+        "cheetah",
+        "cheetahs"
+      ],
+      "reason": "展开原表中明确的单复数或斜杠选项"
+    },
+    {
+      "cell": "B140",
+      "material": "Magic Animal Photo Tour",
+      "raw": "kangaroo/s",
+      "targets": [
+        "kangaroo",
+        "kangaroos"
+      ],
+      "reason": "展开原表中明确的单复数或斜杠选项"
+    },
+    {
+      "cell": "D141",
+      "material": "Fun at the Play Zone",
+      "raw": "Let's try bumber cars.",
+      "targets": [
+        "Let's try bumper cars."
+      ],
+      "reason": "修正明显拼写错误"
+    }
+  ],
+  "sourceRows": [
+    {
+      "row": 2,
+      "material": "Colorful Cakes",
+      "word": "yellow",
+      "phrase": "a yellow cake",
+      "sentence": "It's a yellow cake."
+    },
+    {
+      "row": 3,
+      "material": "Colorful Cakes",
+      "word": "brown",
+      "phrase": "a brown cake",
+      "sentence": "It's a brown cake."
+    },
+    {
+      "row": 4,
+      "material": "Colorful Cakes",
+      "word": "green",
+      "phrase": "a green cake",
+      "sentence": "It's a green cake."
+    },
+    {
+      "row": 5,
+      "material": "Colorful Cakes",
+      "word": "blue",
+      "phrase": "a blue cake",
+      "sentence": "It's a blue cake."
+    },
+    {
+      "row": 6,
+      "material": "Ant's ABC Trip",
+      "word": "ant",
+      "phrase": null,
+      "sentence": null
+    },
+    {
+      "row": 7,
+      "material": "Ant's ABC Trip",
+      "word": "apple",
+      "phrase": null,
+      "sentence": null
+    },
+    {
+      "row": 8,
+      "material": "Ant's ABC Trip",
+      "word": "bird",
+      "phrase": null,
+      "sentence": null
+    },
+    {
+      "row": 9,
+      "material": "Ant's ABC Trip",
+      "word": "box",
+      "phrase": null,
+      "sentence": null
+    },
+    {
+      "row": 10,
+      "material": "Ant's ABC Trip",
+      "word": "candy",
+      "phrase": null,
+      "sentence": null
+    },
+    {
+      "row": 11,
+      "material": "Ant's ABC Trip",
+      "word": "cat",
+      "phrase": null,
+      "sentence": null
+    },
+    {
+      "row": 12,
+      "material": "Shark Family",
+      "word": null,
+      "phrase": "baby shark",
+      "sentence": "I'm baby shark."
+    },
+    {
+      "row": 13,
+      "material": "Shark Family",
+      "word": null,
+      "phrase": "mommy shark",
+      "sentence": "I'm mommy shark."
+    },
+    {
+      "row": 14,
+      "material": "Shark Family",
+      "word": null,
+      "phrase": "daddy shark",
+      "sentence": "I'm daddy shark."
+    },
+    {
+      "row": 15,
+      "material": "Magic Animal House",
+      "word": "cat",
+      "phrase": null,
+      "sentence": "It's a cat."
+    },
+    {
+      "row": 16,
+      "material": "Magic Animal House",
+      "word": "dog",
+      "phrase": null,
+      "sentence": "It's a dog."
+    },
+    {
+      "row": 17,
+      "material": "Magic Animal House",
+      "word": "bird",
+      "phrase": null,
+      "sentence": "It's a bird."
+    },
+    {
+      "row": 18,
+      "material": "My Feelings",
+      "word": "happy",
+      "phrase": null,
+      "sentence": "I feel happy."
+    },
+    {
+      "row": 19,
+      "material": "My Feelings",
+      "word": "sad",
+      "phrase": null,
+      "sentence": "I feel sad."
+    },
+    {
+      "row": 20,
+      "material": "My Feelings",
+      "word": "angry",
+      "phrase": null,
+      "sentence": "I feel angry."
+    },
+    {
+      "row": 21,
+      "material": "My Feelings",
+      "word": "silly",
+      "phrase": null,
+      "sentence": "I feel silly."
+    },
+    {
+      "row": 22,
+      "material": "Where's my Fruit?",
+      "word": null,
+      "phrase": "red cherries",
+      "sentence": "I like red cherries."
+    },
+    {
+      "row": 23,
+      "material": "Where's my Fruit?",
+      "word": null,
+      "phrase": "yellow mangoes",
+      "sentence": "I like yellow mangoes."
+    },
+    {
+      "row": 24,
+      "material": "Where's my Fruit?",
+      "word": null,
+      "phrase": "green kiwis",
+      "sentence": "I like green kiwis."
+    },
+    {
+      "row": 25,
+      "material": "Magic Color Party",
+      "word": "red",
+      "phrase": null,
+      "sentence": "It's red."
+    },
+    {
+      "row": 26,
+      "material": "Magic Color Party",
+      "word": "yellow",
+      "phrase": null,
+      "sentence": "It's yellow."
+    },
+    {
+      "row": 27,
+      "material": "Magic Color Party",
+      "word": "blue",
+      "phrase": null,
+      "sentence": "It's blue."
+    },
+    {
+      "row": 28,
+      "material": "Colorful Toys",
+      "word": "bear",
+      "phrase": null,
+      "sentence": "It's a brown bear./It's a brown monster."
+    },
+    {
+      "row": 29,
+      "material": "Colorful Toys",
+      "word": "car",
+      "phrase": null,
+      "sentence": "It's a yellow bear./It's a yellow car."
+    },
+    {
+      "row": 30,
+      "material": "Colorful Toys",
+      "word": "monster",
+      "phrase": null,
+      "sentence": "It's a  green car."
+    },
+    {
+      "row": 31,
+      "material": "Colorful Toys",
+      "word": "yellow",
+      "phrase": null,
+      "sentence": "I like the brown/yellow bear."
+    },
+    {
+      "row": 32,
+      "material": "Colorful Toys",
+      "word": "green",
+      "phrase": null,
+      "sentence": "I like the yellow/green car."
+    },
+    {
+      "row": 33,
+      "material": "Colorful Toys",
+      "word": "brown",
+      "phrase": null,
+      "sentence": "I like the green/brown monster."
+    },
+    {
+      "row": 34,
+      "material": "Animals on the Farm",
+      "word": "horse",
+      "phrase": null,
+      "sentence": "It's a horse."
+    },
+    {
+      "row": 35,
+      "material": "Animals on the Farm",
+      "word": "run",
+      "phrase": null,
+      "sentence": "A horse can run."
+    },
+    {
+      "row": 36,
+      "material": "Animals on the Farm",
+      "word": "bird",
+      "phrase": null,
+      "sentence": "It's a bird."
+    },
+    {
+      "row": 37,
+      "material": "Animals on the Farm",
+      "word": "fly",
+      "phrase": null,
+      "sentence": "A bird can fly."
+    },
+    {
+      "row": 38,
+      "material": "Animals on the Farm",
+      "word": "duck",
+      "phrase": null,
+      "sentence": "It's a duck."
+    },
+    {
+      "row": 39,
+      "material": "Animals on the Farm",
+      "word": "swim",
+      "phrase": null,
+      "sentence": "A duck can swim."
+    },
+    {
+      "row": 40,
+      "material": "Amazing Animal Body Parts",
+      "word": "monkey/s",
+      "phrase": null,
+      "sentence": "They are monkeys."
+    },
+    {
+      "row": 41,
+      "material": "Amazing Animal Body Parts",
+      "word": "tail/s",
+      "phrase": null,
+      "sentence": "Monkeys have tails."
+    },
+    {
+      "row": 42,
+      "material": "Amazing Animal Body Parts",
+      "word": "bird/s",
+      "phrase": null,
+      "sentence": "They are bird."
+    },
+    {
+      "row": 43,
+      "material": "Amazing Animal Body Parts",
+      "word": "wings",
+      "phrase": null,
+      "sentence": "Birds have wings."
+    },
+    {
+      "row": 44,
+      "material": "Amazing Animal Body Parts",
+      "word": "goats",
+      "phrase": null,
+      "sentence": "They are goats."
+    },
+    {
+      "row": 45,
+      "material": "Amazing Animal Body Parts",
+      "word": "horns",
+      "phrase": null,
+      "sentence": "Goats have horns."
+    },
+    {
+      "row": 46,
+      "material": "ABC Desert Explorers",
+      "word": "ant",
+      "phrase": null,
+      "sentence": null
+    },
+    {
+      "row": 47,
+      "material": "ABC Desert Explorers",
+      "word": "arrow",
+      "phrase": null,
+      "sentence": null
+    },
+    {
+      "row": 48,
+      "material": "ABC Desert Explorers",
+      "word": "antelope",
+      "phrase": null,
+      "sentence": null
+    },
+    {
+      "row": 49,
+      "material": "ABC Desert Explorers",
+      "word": "bread",
+      "phrase": null,
+      "sentence": null
+    },
+    {
+      "row": 50,
+      "material": "ABC Desert Explorers",
+      "word": "football",
+      "phrase": null,
+      "sentence": null
+    },
+    {
+      "row": 51,
+      "material": "ABC Desert Explorers",
+      "word": "board game",
+      "phrase": null,
+      "sentence": null
+    },
+    {
+      "row": 52,
+      "material": "ABC Desert Explorers",
+      "word": "car",
+      "phrase": null,
+      "sentence": null
+    },
+    {
+      "row": 53,
+      "material": "ABC Desert Explorers",
+      "word": "camel",
+      "phrase": null,
+      "sentence": null
+    },
+    {
+      "row": 54,
+      "material": "ABC Desert Explorers",
+      "word": "cucumber",
+      "phrase": null,
+      "sentence": null
+    },
+    {
+      "row": 55,
+      "material": "Ramadan Iftar Meal Box",
+      "word": "dates",
+      "phrase": null,
+      "sentence": "I eat dates."
+    },
+    {
+      "row": 56,
+      "material": "Ramadan Iftar Meal Box",
+      "word": "pies",
+      "phrase": null,
+      "sentence": "I make pies."
+    },
+    {
+      "row": 57,
+      "material": "Ramadan Iftar Meal Box",
+      "word": "cookies",
+      "phrase": null,
+      "sentence": "I make cookies."
+    },
+    {
+      "row": 58,
+      "material": "Ramadan Iftar Meal Box",
+      "word": "soup",
+      "phrase": null,
+      "sentence": "I make soup."
+    },
+    {
+      "row": 59,
+      "material": "Ramadan Iftar Meal Box",
+      "word": "water",
+      "phrase": null,
+      "sentence": "I drink water."
+    },
+    {
+      "row": 60,
+      "material": "Animal Wonderland",
+      "word": "elephants",
+      "phrase": "big and strong",
+      "sentence": "I see elephants. They're big and strong."
+    },
+    {
+      "row": 61,
+      "material": "Animal Wonderland",
+      "word": "hamsters",
+      "phrase": "small and cute",
+      "sentence": "I see hamsters. They're small and cute."
+    },
+    {
+      "row": 62,
+      "material": "Animal Wonderland",
+      "word": "zebras",
+      "phrase": "black and white",
+      "sentence": "I see zebras. They're black and white."
+    },
+    {
+      "row": 63,
+      "material": "Sports World Fun",
+      "word": null,
+      "phrase": "go skiing",
+      "sentence": "Let's go skiing."
+    },
+    {
+      "row": 64,
+      "material": "Sports World Fun",
+      "word": null,
+      "phrase": "play basketball",
+      "sentence": "I can play basketball."
+    },
+    {
+      "row": 65,
+      "material": "Sports World Fun",
+      "word": null,
+      "phrase": "play football",
+      "sentence": "I can play football."
+    },
+    {
+      "row": 66,
+      "material": "Sports World Fun",
+      "word": null,
+      "phrase": "ride a horse",
+      "sentence": "Let's ride a horse."
+    },
+    {
+      "row": 67,
+      "material": "Ramadan Is Here",
+      "word": "sunset",
+      "phrase": "share a meal",
+      "sentence": null
+    },
+    {
+      "row": 68,
+      "material": "Ramadan Is Here",
+      "word": "dates",
+      "phrase": "give to others",
+      "sentence": null
+    },
+    {
+      "row": 69,
+      "material": "Ramadan Is Here",
+      "word": "sunrise",
+      "phrase": "invite friends",
+      "sentence": null
+    },
+    {
+      "row": 70,
+      "material": "After School",
+      "word": null,
+      "phrase": "play the guitar",
+      "sentence": "I will play the guitar"
+    },
+    {
+      "row": 71,
+      "material": "After School",
+      "word": null,
+      "phrase": "go swimming",
+      "sentence": "I will go swimming."
+    },
+    {
+      "row": 72,
+      "material": "After School",
+      "word": null,
+      "phrase": "play basketball",
+      "sentence": "I will play basketball."
+    },
+    {
+      "row": 73,
+      "material": "After School",
+      "word": null,
+      "phrase": "go to a dance class",
+      "sentence": "I will go to a dance class."
+    },
+    {
+      "row": 74,
+      "material": "After School ME Version",
+      "word": null,
+      "phrase": "read a book",
+      "sentence": "I will read a book."
+    },
+    {
+      "row": 75,
+      "material": "After School ME Version",
+      "word": null,
+      "phrase": "go to an art class",
+      "sentence": "I will go to an art class."
+    },
+    {
+      "row": 76,
+      "material": "After School ME Version",
+      "word": null,
+      "phrase": "go swimming",
+      "sentence": "I will go swimming."
+    },
+    {
+      "row": 77,
+      "material": "After School ME Version",
+      "word": null,
+      "phrase": "play basketball",
+      "sentence": "I will play basketball."
+    },
+    {
+      "row": 78,
+      "material": "Guess my Clothes",
+      "word": "shorts",
+      "phrase": "a shirt",
+      "sentence": "I'm wearing a shirt/shorts/sneakers/a coat/pants/boots."
+    },
+    {
+      "row": 79,
+      "material": "Guess my Clothes",
+      "word": "sneakers",
+      "phrase": "a coat",
+      "sentence": "He is wearing a shirt, shorts and sneakers."
+    },
+    {
+      "row": 80,
+      "material": "Guess my Clothes",
+      "word": "pants",
+      "phrase": null,
+      "sentence": "She's wearing a coat/pants and boots."
+    },
+    {
+      "row": 81,
+      "material": "Guess my Clothes",
+      "word": "boots",
+      "phrase": null,
+      "sentence": null
+    },
+    {
+      "row": 82,
+      "material": "World Cup Kick Off",
+      "word": "coach",
+      "phrase": "take away the ball",
+      "sentence": "You are good at running with the ball/shooting."
+    },
+    {
+      "row": 83,
+      "material": "World Cup Kick Off",
+      "word": "football",
+      "phrase": "football player",
+      "sentence": "You are good at passing the ball/taking away the ball."
+    },
+    {
+      "row": 84,
+      "material": "World Cup Kick Off",
+      "word": "shoot",
+      "phrase": "run with the ball",
+      "sentence": "I will choose football socks/a football shirt/football boots/football shorts for my football player."
+    },
+    {
+      "row": 85,
+      "material": "World Cup Kick Off",
+      "word": null,
+      "phrase": "pass the ball",
+      "sentence": null
+    },
+    {
+      "row": 86,
+      "material": "World Cup Kick Off",
+      "word": null,
+      "phrase": "football socks",
+      "sentence": null
+    },
+    {
+      "row": 87,
+      "material": "World Cup Kick Off",
+      "word": null,
+      "phrase": "a football shirt",
+      "sentence": null
+    },
+    {
+      "row": 88,
+      "material": "World Cup Kick Off",
+      "word": null,
+      "phrase": "football boots",
+      "sentence": null
+    },
+    {
+      "row": 89,
+      "material": "World Cup Kick Off",
+      "word": null,
+      "phrase": "football shorts",
+      "sentence": null
+    },
+    {
+      "row": 90,
+      "material": "A Trip to Weather Island",
+      "word": "beach",
+      "phrase": "sunny and hot",
+      "sentence": "It's sunny and hot/rainy and cool/snowy and cold."
+    },
+    {
+      "row": 91,
+      "material": "A Trip to Weather Island",
+      "word": "town",
+      "phrase": "rainy and cool",
+      "sentence": "Let's go to the beach/town/hills."
+    },
+    {
+      "row": 92,
+      "material": "A Trip to Weather Island",
+      "word": "hills",
+      "phrase": "snowy and cold",
+      "sentence": "We can go swimming/go surfing."
+    },
+    {
+      "row": 93,
+      "material": "A Trip to Weather Island",
+      "word": null,
+      "phrase": null,
+      "sentence": "We can go shopping/ride a bike."
+    },
+    {
+      "row": 94,
+      "material": "A Trip to Weather Island",
+      "word": null,
+      "phrase": null,
+      "sentence": "We can make a snowman/go skiing."
+    },
+    {
+      "row": 95,
+      "material": "My Yummy Order",
+      "word": "shawarma",
+      "phrase": null,
+      "sentence": "I'd like a shawarma/burger."
+    },
+    {
+      "row": 96,
+      "material": "My Yummy Order",
+      "word": "tomatoes",
+      "phrase": null,
+      "sentence": "I'd like some/I prefer some tomatoes. "
+    },
+    {
+      "row": 97,
+      "material": "My Yummy Order",
+      "word": "beef",
+      "phrase": null,
+      "sentence": "I'd like some/I prefer some beef."
+    },
+    {
+      "row": 98,
+      "material": "My Yummy Order",
+      "word": "cheese",
+      "phrase": null,
+      "sentence": "I'd like some/I prefer some cheese."
+    },
+    {
+      "row": 99,
+      "material": "My Yummy Order",
+      "word": "water",
+      "phrase": null,
+      "sentence": "I'd like some/I prefer some water."
+    },
+    {
+      "row": 100,
+      "material": "My Yummy Order",
+      "word": "burger",
+      "phrase": null,
+      "sentence": "I'd like some/I prefer some burger."
+    },
+    {
+      "row": 101,
+      "material": "My Yummy Order",
+      "word": "bell peppers",
+      "phrase": null,
+      "sentence": "I'd like some/I prefer some bell peppers."
+    },
+    {
+      "row": 102,
+      "material": "My Yummy Order",
+      "word": "chicken",
+      "phrase": null,
+      "sentence": "I'd like some/I prefer some chicken."
+    },
+    {
+      "row": 103,
+      "material": "My Yummy Order",
+      "word": "sauce",
+      "phrase": null,
+      "sentence": "I'd like some/I prefer some sauce."
+    },
+    {
+      "row": 104,
+      "material": "My Yummy Order",
+      "word": "juice",
+      "phrase": null,
+      "sentence": "I'd like some/I prefer some juice."
+    },
+    {
+      "row": 105,
+      "material": "My Friends",
+      "word": "tall",
+      "phrase": null,
+      "sentence": "He is taller than me."
+    },
+    {
+      "row": 106,
+      "material": "My Friends",
+      "word": "taller",
+      "phrase": null,
+      "sentence": "She is shorter than me."
+    },
+    {
+      "row": 107,
+      "material": "My Friends",
+      "word": "big",
+      "phrase": null,
+      "sentence": "He is bigger than me."
+    },
+    {
+      "row": 108,
+      "material": "My Friends",
+      "word": "bigger",
+      "phrase": null,
+      "sentence": "She is smaller than me."
+    },
+    {
+      "row": 109,
+      "material": "My Friends",
+      "word": "short",
+      "phrase": null,
+      "sentence": null
+    },
+    {
+      "row": 110,
+      "material": "My Friends",
+      "word": "shorter",
+      "phrase": null,
+      "sentence": null
+    },
+    {
+      "row": 111,
+      "material": "My Friends",
+      "word": "small",
+      "phrase": null,
+      "sentence": null
+    },
+    {
+      "row": 112,
+      "material": "My Friends",
+      "word": "smaller",
+      "phrase": null,
+      "sentence": null
+    },
+    {
+      "row": 113,
+      "material": "What's Your Hobby",
+      "word": "interesting",
+      "phrase": null,
+      "sentence": "My/His/Her hobby is ……….."
+    },
+    {
+      "row": 114,
+      "material": "What's Your Hobby",
+      "word": "wonderful",
+      "phrase": null,
+      "sentence": "I/He/She think(s) it's …….."
+    },
+    {
+      "row": 115,
+      "material": "What's Your Hobby",
+      "word": "fun",
+      "phrase": null,
+      "sentence": "It can make/help ……."
+    },
+    {
+      "row": 116,
+      "material": "Fun in the Park",
+      "word": null,
+      "phrase": "play on the slide",
+      "sentence": "I want to play on the slide."
+    },
+    {
+      "row": 117,
+      "material": "Fun in the Park",
+      "word": null,
+      "phrase": "ride the roller coaster",
+      "sentence": "I want to ride the roller coaster."
+    },
+    {
+      "row": 118,
+      "material": "Fun in the Park",
+      "word": null,
+      "phrase": "go karting",
+      "sentence": "I want to go karting."
+    },
+    {
+      "row": 119,
+      "material": "How to Stay Healthy",
+      "word": "diet",
+      "phrase": "junk food",
+      "sentence": "We should/shouldn't……."
+    },
+    {
+      "row": 120,
+      "material": "How to Stay Healthy",
+      "word": "exercise",
+      "phrase": "stay up",
+      "sentence": null
+    },
+    {
+      "row": 121,
+      "material": "How to Stay Healthy",
+      "word": "mood",
+      "phrase": "stay indoors",
+      "sentence": null
+    },
+    {
+      "row": 122,
+      "material": "Aloha from Hawaii",
+      "word": "Hawaii",
+      "phrase": "hula dance",
+      "sentence": null
+    },
+    {
+      "row": 123,
+      "material": "Aloha from Hawaii",
+      "word": "Hawaiian",
+      "phrase": null,
+      "sentence": null
+    },
+    {
+      "row": 124,
+      "material": "Aloha from Hawaii",
+      "word": "achipelago",
+      "phrase": null,
+      "sentence": null
+    },
+    {
+      "row": 125,
+      "material": "Aloha from Hawaii",
+      "word": "announce",
+      "phrase": null,
+      "sentence": null
+    },
+    {
+      "row": 126,
+      "material": "Aloha from Hawaii",
+      "word": "attraction",
+      "phrase": null,
+      "sentence": null
+    },
+    {
+      "row": 127,
+      "material": "Endangered Species",
+      "word": "endangered",
+      "phrase": "tropical forest",
+      "sentence": null
+    },
+    {
+      "row": 128,
+      "material": "Endangered Species",
+      "word": "extinct",
+      "phrase": null,
+      "sentence": null
+    },
+    {
+      "row": 129,
+      "material": "Endangered Species",
+      "word": "microbe",
+      "phrase": null,
+      "sentence": null
+    },
+    {
+      "row": 130,
+      "material": "Endangered Species",
+      "word": "habitat",
+      "phrase": null,
+      "sentence": null
+    },
+    {
+      "row": 131,
+      "material": "Endangered Species",
+      "word": "exploitation",
+      "phrase": null,
+      "sentence": null
+    },
+    {
+      "row": 132,
+      "material": "The Donkey in the Well",
+      "word": "realize",
+      "phrase": null,
+      "sentence": null
+    },
+    {
+      "row": 133,
+      "material": "The Donkey in the Well",
+      "word": "astonished",
+      "phrase": null,
+      "sentence": null
+    },
+    {
+      "row": 134,
+      "material": "The Donkey in the Well",
+      "word": "eventually",
+      "phrase": null,
+      "sentence": null
+    },
+    {
+      "row": 135,
+      "material": "The Donkey in the Well",
+      "word": "shovel",
+      "phrase": null,
+      "sentence": null
+    },
+    {
+      "row": 136,
+      "material": "The Donkey in the Well",
+      "word": "retrieve",
+      "phrase": null,
+      "sentence": null
+    },
+    {
+      "row": 137,
+      "material": "Magic Animal Photo Tour",
+      "word": "bear/s",
+      "phrase": null,
+      "sentence": "I like bears."
+    },
+    {
+      "row": 138,
+      "material": "Magic Animal Photo Tour",
+      "word": "panda/s",
+      "phrase": null,
+      "sentence": "I like pandas."
+    },
+    {
+      "row": 139,
+      "material": "Magic Animal Photo Tour",
+      "word": "cheetah/s",
+      "phrase": null,
+      "sentence": "I like cheetahs."
+    },
+    {
+      "row": 140,
+      "material": "Magic Animal Photo Tour",
+      "word": "kangaroo/s",
+      "phrase": null,
+      "sentence": "I like kangaroos."
+    },
+    {
+      "row": 141,
+      "material": "Fun at the Play Zone",
+      "word": null,
+      "phrase": "bumber cars",
+      "sentence": "Let's try bumber cars."
+    },
+    {
+      "row": 142,
+      "material": "Fun at the Play Zone",
+      "word": null,
+      "phrase": "rock climbing",
+      "sentence": "Let's try rock climbing."
+    },
+    {
+      "row": 143,
+      "material": "Fun at the Play Zone",
+      "word": null,
+      "phrase": "trampoline",
+      "sentence": "Let's try the trampoline."
+    },
+    {
+      "row": 144,
+      "material": "Color Fun",
+      "word": "green",
+      "phrase": null,
+      "sentence": "It's red."
+    },
+    {
+      "row": 145,
+      "material": "Color Fun",
+      "word": "yellow",
+      "phrase": null,
+      "sentence": "It's yellow."
+    },
+    {
+      "row": 146,
+      "material": "Color Fun",
+      "word": "red",
+      "phrase": null,
+      "sentence": "It's red."
+    },
+    {
+      "row": 147,
+      "material": "Treasure Hunt",
+      "word": "circle",
+      "phrase": null,
+      "sentence": "I see a circle."
+    },
+    {
+      "row": 148,
+      "material": "Treasure Hunt",
+      "word": "triangle",
+      "phrase": null,
+      "sentence": "I see a triangle."
+    },
+    {
+      "row": 149,
+      "material": "Treasure Hunt",
+      "word": "square",
+      "phrase": null,
+      "sentence": "I see a square."
+    },
+    {
+      "row": 150,
+      "material": "Happy Vacation Plan",
+      "word": null,
+      "phrase": "go skiing",
+      "sentence": "I want to go skiing."
+    },
+    {
+      "row": 151,
+      "material": "Happy Vacation Plan",
+      "word": null,
+      "phrase": "go cycling",
+      "sentence": "I want to go cycling."
+    },
+    {
+      "row": 152,
+      "material": "Happy Vacation Plan",
+      "word": null,
+      "phrase": "go swimming",
+      "sentence": "I want to go swimming."
+    },
+    {
+      "row": 153,
+      "material": "Happy Vacation Plan",
+      "word": null,
+      "phrase": "go camping",
+      "sentence": "I want to go camping."
+    },
+    {
+      "row": 154,
+      "material": "A Weekend at the Chalet",
+      "word": null,
+      "phrase": "making coffee",
+      "sentence": "I'm making coffee."
+    },
+    {
+      "row": 155,
+      "material": "A Weekend at the Chalet",
+      "word": null,
+      "phrase": "having a barbeque",
+      "sentence": "I'm having a barbeque."
+    },
+    {
+      "row": 156,
+      "material": "A Weekend at the Chalet",
+      "word": null,
+      "phrase": "playing soccer",
+      "sentence": "I'm playing soccer."
+    }
+  ]
+}

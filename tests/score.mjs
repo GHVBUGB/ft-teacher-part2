@@ -1,0 +1,13 @@
+import assert from 'node:assert/strict';
+import { calculateScore } from '../src/features/practice/lib/score.ts';
+assert.equal(calculateScore('word',{overall:10,pronunciation:99,intelligibility:3,stress:0}).value,99);
+const sample={overall:70,pronunciation:76,fluency:34,rhythm:70,integrity:100};
+assert.equal(calculateScore('sentence',sample).value,71.5);
+assert.equal(calculateScore('sentence',{...sample,overall:0}).value,71.5);
+assert.equal(calculateScore('sentence',{...sample,integrity:50}).value,35.8);
+assert.equal(calculateScore('sentence',{...sample,integrity:0}).value,0);
+assert.equal(calculateScore('sentence',{...sample,rhythm:undefined}).value,null);
+for(const bad of [NaN,Infinity,-1,101,'76',null]) assert.equal(calculateScore('sentence',{...sample,pronunciation:bad}).value,null);
+assert.equal(calculateScore('word',{overall:99}).value,null);
+assert.equal(calculateScore('speech',sample).value,null);
+console.log('PASS 14 assertions: dimensions, overall ignored, completeness, rounding, missing/invalid fields, unsupported kind');

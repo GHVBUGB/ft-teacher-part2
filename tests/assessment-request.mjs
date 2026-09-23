@@ -1,0 +1,17 @@
+import assert from 'node:assert/strict';
+import {abortable} from '../src/features/practice/lib/assessmentRequest.ts';
+const c=new AbortController();
+let late;
+const pending=abortable(()=>new Promise(resolve=>{late=resolve;}),c.signal);
+await Promise.resolve();
+c.abort(new Error('cancelled'));
+await assert.rejects(pending,/cancelled/);
+late(90);
+assert.equal(await abortable(async()=>80,new AbortController().signal),80);
+let called=false;
+await assert.rejects(abortable(async()=>{called=true;},c.signal),/cancelled/);
+assert.equal(called,false);
+await assert.rejects(abortable(()=>{throw Error('sync failure');},new AbortController().signal),/sync failure/);
+const timeout=new AbortController();setTimeout(()=>timeout.abort(new Error('timeout')),10);
+await assert.rejects(abortable(()=>new Promise(()=>{}),timeout.signal),/timeout/);
+console.log('PASS: cancel, late response, retry, pre-abort, synchronous failure, deadline');

@@ -1,0 +1,827 @@
+{
+  "source": "/Users/guhongji/Desktop/FT Target Words V2.xlsx",
+  "sha256": "a501a51920dc16cfbc0d41614b806f6568ba9abf90d4559718e166ef5ca9fc69",
+  "items": [
+    {
+      "id": "ft-word-yellow",
+      "text": "yellow",
+      "kind": "word",
+      "sources": [
+        "B2",
+        "B20",
+        "B25",
+        "B60"
+      ]
+    },
+    {
+      "id": "ft-word-brown",
+      "text": "brown",
+      "kind": "word",
+      "sources": [
+        "B3",
+        "B27"
+      ]
+    },
+    {
+      "id": "ft-word-green",
+      "text": "green",
+      "kind": "word",
+      "sources": [
+        "B4",
+        "B26",
+        "B59"
+      ]
+    },
+    {
+      "id": "ft-word-blue",
+      "text": "blue",
+      "kind": "word",
+      "sources": [
+        "B5",
+        "B21"
+      ]
+    },
+    {
+      "id": "ft-word-ant",
+      "text": "ant",
+      "kind": "word",
+      "sources": [
+        "B6",
+        "B28"
+      ]
+    },
+    {
+      "id": "ft-word-apple",
+      "text": "apple",
+      "kind": "word",
+      "sources": [
+        "B7"
+      ]
+    },
+    {
+      "id": "ft-word-bird",
+      "text": "bird",
+      "kind": "word",
+      "sources": [
+        "B8"
+      ]
+    },
+    {
+      "id": "ft-word-box",
+      "text": "box",
+      "kind": "word",
+      "sources": [
+        "B9"
+      ]
+    },
+    {
+      "id": "ft-word-candy",
+      "text": "candy",
+      "kind": "word",
+      "sources": [
+        "B10"
+      ]
+    },
+    {
+      "id": "ft-word-cat",
+      "text": "cat",
+      "kind": "word",
+      "sources": [
+        "B11"
+      ]
+    },
+    {
+      "id": "ft-word-happy",
+      "text": "happy",
+      "kind": "word",
+      "sources": [
+        "B12"
+      ]
+    },
+    {
+      "id": "ft-word-sad",
+      "text": "sad",
+      "kind": "word",
+      "sources": [
+        "B13"
+      ]
+    },
+    {
+      "id": "ft-word-angry",
+      "text": "angry",
+      "kind": "word",
+      "sources": [
+        "B14"
+      ]
+    },
+    {
+      "id": "ft-word-silly",
+      "text": "silly",
+      "kind": "word",
+      "sources": [
+        "B15"
+      ]
+    },
+    {
+      "id": "ft-word-red",
+      "text": "red",
+      "kind": "word",
+      "sources": [
+        "B19",
+        "B61"
+      ]
+    },
+    {
+      "id": "ft-word-bear",
+      "text": "bear",
+      "kind": "word",
+      "sources": [
+        "B22",
+        "B52"
+      ]
+    },
+    {
+      "id": "ft-word-car",
+      "text": "car",
+      "kind": "word",
+      "sources": [
+        "B23",
+        "B34"
+      ]
+    },
+    {
+      "id": "ft-word-monster",
+      "text": "monster",
+      "kind": "word",
+      "sources": [
+        "B24"
+      ]
+    },
+    {
+      "id": "ft-word-arrow",
+      "text": "arrow",
+      "kind": "word",
+      "sources": [
+        "B29"
+      ]
+    },
+    {
+      "id": "ft-word-antelope",
+      "text": "antelope",
+      "kind": "word",
+      "sources": [
+        "B30"
+      ]
+    },
+    {
+      "id": "ft-word-bread",
+      "text": "bread",
+      "kind": "word",
+      "sources": [
+        "B31"
+      ]
+    },
+    {
+      "id": "ft-word-football",
+      "text": "football",
+      "kind": "word",
+      "sources": [
+        "B32"
+      ]
+    },
+    {
+      "id": "ft-word-camel",
+      "text": "camel",
+      "kind": "word",
+      "sources": [
+        "B35"
+      ]
+    },
+    {
+      "id": "ft-word-cucumber",
+      "text": "cucumber",
+      "kind": "word",
+      "sources": [
+        "B36"
+      ]
+    },
+    {
+      "id": "ft-word-elephants",
+      "text": "elephants",
+      "kind": "word",
+      "sources": [
+        "B37"
+      ]
+    },
+    {
+      "id": "ft-word-hamsters",
+      "text": "hamsters",
+      "kind": "word",
+      "sources": [
+        "B38"
+      ]
+    },
+    {
+      "id": "ft-word-zebras",
+      "text": "zebras",
+      "kind": "word",
+      "sources": [
+        "B39"
+      ]
+    },
+    {
+      "id": "ft-word-shorts",
+      "text": "shorts",
+      "kind": "word",
+      "sources": [
+        "B48"
+      ]
+    },
+    {
+      "id": "ft-word-sneakers",
+      "text": "sneakers",
+      "kind": "word",
+      "sources": [
+        "B49"
+      ]
+    },
+    {
+      "id": "ft-word-pants",
+      "text": "pants",
+      "kind": "word",
+      "sources": [
+        "B50"
+      ]
+    },
+    {
+      "id": "ft-word-boots",
+      "text": "boots",
+      "kind": "word",
+      "sources": [
+        "B51"
+      ]
+    },
+    {
+      "id": "ft-word-bears",
+      "text": "bears",
+      "kind": "word",
+      "sources": [
+        "B52"
+      ]
+    },
+    {
+      "id": "ft-word-panda",
+      "text": "panda",
+      "kind": "word",
+      "sources": [
+        "B53"
+      ]
+    },
+    {
+      "id": "ft-word-pandas",
+      "text": "pandas",
+      "kind": "word",
+      "sources": [
+        "B53"
+      ]
+    },
+    {
+      "id": "ft-word-cheetah",
+      "text": "cheetah",
+      "kind": "word",
+      "sources": [
+        "B54"
+      ]
+    },
+    {
+      "id": "ft-word-cheetahs",
+      "text": "cheetahs",
+      "kind": "word",
+      "sources": [
+        "B54"
+      ]
+    },
+    {
+      "id": "ft-word-kangaroo",
+      "text": "kangaroo",
+      "kind": "word",
+      "sources": [
+        "B55"
+      ]
+    },
+    {
+      "id": "ft-word-kangaroos",
+      "text": "kangaroos",
+      "kind": "word",
+      "sources": [
+        "B55"
+      ]
+    },
+    {
+      "id": "ft-word-circle",
+      "text": "circle",
+      "kind": "word",
+      "sources": [
+        "B62"
+      ]
+    },
+    {
+      "id": "ft-word-triangle",
+      "text": "triangle",
+      "kind": "word",
+      "sources": [
+        "B63"
+      ]
+    },
+    {
+      "id": "ft-word-square",
+      "text": "square",
+      "kind": "word",
+      "sources": [
+        "B64"
+      ]
+    },
+    {
+      "id": "ft-sentence-f815800771b8",
+      "text": "It's a yellow cake.",
+      "kind": "sentence",
+      "sources": [
+        "D2"
+      ]
+    },
+    {
+      "id": "ft-sentence-8f3f08bcd30a",
+      "text": "It's a brown cake.",
+      "kind": "sentence",
+      "sources": [
+        "D3"
+      ]
+    },
+    {
+      "id": "ft-sentence-32e49860cf71",
+      "text": "It's a green cake.",
+      "kind": "sentence",
+      "sources": [
+        "D4"
+      ]
+    },
+    {
+      "id": "ft-sentence-17e7799bdc74",
+      "text": "It's a blue cake.",
+      "kind": "sentence",
+      "sources": [
+        "D5"
+      ]
+    },
+    {
+      "id": "ft-sentence-e6a0d0eda900",
+      "text": "I feel happy.",
+      "kind": "sentence",
+      "sources": [
+        "D12"
+      ]
+    },
+    {
+      "id": "ft-sentence-3fc8c65caddf",
+      "text": "I feel sad.",
+      "kind": "sentence",
+      "sources": [
+        "D13"
+      ]
+    },
+    {
+      "id": "ft-sentence-aa45f011598c",
+      "text": "I feel angry.",
+      "kind": "sentence",
+      "sources": [
+        "D14"
+      ]
+    },
+    {
+      "id": "ft-sentence-f71a6440bd61",
+      "text": "I feel silly.",
+      "kind": "sentence",
+      "sources": [
+        "D15"
+      ]
+    },
+    {
+      "id": "ft-sentence-522e4450748f",
+      "text": "I like red cherries.",
+      "kind": "sentence",
+      "sources": [
+        "D16"
+      ]
+    },
+    {
+      "id": "ft-sentence-79a5b67e60ad",
+      "text": "I like yellow mangoes.",
+      "kind": "sentence",
+      "sources": [
+        "D17"
+      ]
+    },
+    {
+      "id": "ft-sentence-39c51518fb52",
+      "text": "I like green kiwis.",
+      "kind": "sentence",
+      "sources": [
+        "D18"
+      ]
+    },
+    {
+      "id": "ft-sentence-a3d89d78e833",
+      "text": "It's red.",
+      "kind": "sentence",
+      "sources": [
+        "D19",
+        "D59",
+        "D61"
+      ]
+    },
+    {
+      "id": "ft-sentence-b10126768ee6",
+      "text": "It's yellow.",
+      "kind": "sentence",
+      "sources": [
+        "D20",
+        "D60"
+      ]
+    },
+    {
+      "id": "ft-sentence-1e695bb7dc6a",
+      "text": "It's blue.",
+      "kind": "sentence",
+      "sources": [
+        "D21"
+      ]
+    },
+    {
+      "id": "ft-sentence-0bc71291eb6f",
+      "text": "It's a brown bear.",
+      "kind": "sentence",
+      "sources": [
+        "D22"
+      ]
+    },
+    {
+      "id": "ft-sentence-bc5ab996cf15",
+      "text": "It's a brown monster.",
+      "kind": "sentence",
+      "sources": [
+        "D22"
+      ]
+    },
+    {
+      "id": "ft-sentence-dc4470728547",
+      "text": "It's a yellow bear.",
+      "kind": "sentence",
+      "sources": [
+        "D23"
+      ]
+    },
+    {
+      "id": "ft-sentence-ccb9c7be7688",
+      "text": "It's a yellow car.",
+      "kind": "sentence",
+      "sources": [
+        "D23"
+      ]
+    },
+    {
+      "id": "ft-sentence-fd3bae219e40",
+      "text": "It's a green car.",
+      "kind": "sentence",
+      "sources": [
+        "D24"
+      ]
+    },
+    {
+      "id": "ft-sentence-9a7503dd0aa7",
+      "text": "I like the brown bear.",
+      "kind": "sentence",
+      "sources": [
+        "D25"
+      ]
+    },
+    {
+      "id": "ft-sentence-472c1255b1cd",
+      "text": "I like the yellow bear.",
+      "kind": "sentence",
+      "sources": [
+        "D25"
+      ]
+    },
+    {
+      "id": "ft-sentence-d3dfeb523221",
+      "text": "I like the yellow car.",
+      "kind": "sentence",
+      "sources": [
+        "D26"
+      ]
+    },
+    {
+      "id": "ft-sentence-a9397a3b5f64",
+      "text": "I like the green car.",
+      "kind": "sentence",
+      "sources": [
+        "D26"
+      ]
+    },
+    {
+      "id": "ft-sentence-5b076c91c986",
+      "text": "I like the green monster.",
+      "kind": "sentence",
+      "sources": [
+        "D27"
+      ]
+    },
+    {
+      "id": "ft-sentence-95510ba6b780",
+      "text": "I like the brown monster.",
+      "kind": "sentence",
+      "sources": [
+        "D27"
+      ]
+    },
+    {
+      "id": "ft-sentence-f7f1e7495105",
+      "text": "I see elephants. They're big and strong.",
+      "kind": "sentence",
+      "sources": [
+        "D37"
+      ]
+    },
+    {
+      "id": "ft-sentence-2ed61ab00507",
+      "text": "I see hamsters. They're small and cute.",
+      "kind": "sentence",
+      "sources": [
+        "D38"
+      ]
+    },
+    {
+      "id": "ft-sentence-bfb9deea4cd4",
+      "text": "I see zebras. They're black and white.",
+      "kind": "sentence",
+      "sources": [
+        "D39"
+      ]
+    },
+    {
+      "id": "ft-sentence-19824d98e613",
+      "text": "I will play the guitar.",
+      "kind": "sentence",
+      "sources": [
+        "D40"
+      ]
+    },
+    {
+      "id": "ft-sentence-f526d658c219",
+      "text": "I will go swimming.",
+      "kind": "sentence",
+      "sources": [
+        "D41",
+        "D46"
+      ]
+    },
+    {
+      "id": "ft-sentence-d15e60c3590c",
+      "text": "I will play basketball.",
+      "kind": "sentence",
+      "sources": [
+        "D42",
+        "D47"
+      ]
+    },
+    {
+      "id": "ft-sentence-5730fbdef633",
+      "text": "I will go to a dance class.",
+      "kind": "sentence",
+      "sources": [
+        "D43"
+      ]
+    },
+    {
+      "id": "ft-sentence-52a27fdcebaf",
+      "text": "I will read a book.",
+      "kind": "sentence",
+      "sources": [
+        "D44"
+      ]
+    },
+    {
+      "id": "ft-sentence-df20793d8e3f",
+      "text": "I will go to an art class.",
+      "kind": "sentence",
+      "sources": [
+        "D45"
+      ]
+    },
+    {
+      "id": "ft-sentence-3d3db9cb7e04",
+      "text": "I'm wearing a shirt.",
+      "kind": "sentence",
+      "sources": [
+        "D48"
+      ]
+    },
+    {
+      "id": "ft-sentence-60d3097274ba",
+      "text": "I'm wearing shorts.",
+      "kind": "sentence",
+      "sources": [
+        "D48"
+      ]
+    },
+    {
+      "id": "ft-sentence-e4149cf61ce8",
+      "text": "I'm wearing sneakers.",
+      "kind": "sentence",
+      "sources": [
+        "D48"
+      ]
+    },
+    {
+      "id": "ft-sentence-05504fe3a402",
+      "text": "I'm wearing a coat.",
+      "kind": "sentence",
+      "sources": [
+        "D48"
+      ]
+    },
+    {
+      "id": "ft-sentence-ec57f5509ce6",
+      "text": "I'm wearing pants.",
+      "kind": "sentence",
+      "sources": [
+        "D48"
+      ]
+    },
+    {
+      "id": "ft-sentence-6439421a46b4",
+      "text": "I'm wearing boots.",
+      "kind": "sentence",
+      "sources": [
+        "D48"
+      ]
+    },
+    {
+      "id": "ft-sentence-bd7225d54955",
+      "text": "He is wearing a shirt, shorts and sneakers.",
+      "kind": "sentence",
+      "sources": [
+        "D49"
+      ]
+    },
+    {
+      "id": "ft-sentence-38ee96db45fb",
+      "text": "I like bears.",
+      "kind": "sentence",
+      "sources": [
+        "D52"
+      ]
+    },
+    {
+      "id": "ft-sentence-9843d164f918",
+      "text": "I like pandas.",
+      "kind": "sentence",
+      "sources": [
+        "D53"
+      ]
+    },
+    {
+      "id": "ft-sentence-4a36d61944a9",
+      "text": "I like cheetahs.",
+      "kind": "sentence",
+      "sources": [
+        "D54"
+      ]
+    },
+    {
+      "id": "ft-sentence-a225f4964be1",
+      "text": "I like kangaroos.",
+      "kind": "sentence",
+      "sources": [
+        "D55"
+      ]
+    },
+    {
+      "id": "ft-sentence-a23544c9c28c",
+      "text": "Let's try bumper cars.",
+      "kind": "sentence",
+      "sources": [
+        "D56"
+      ]
+    },
+    {
+      "id": "ft-sentence-21dd9d0b218b",
+      "text": "Let's try rock climbing.",
+      "kind": "sentence",
+      "sources": [
+        "D57"
+      ]
+    },
+    {
+      "id": "ft-sentence-3a2fda94b064",
+      "text": "Let's try the trampoline.",
+      "kind": "sentence",
+      "sources": [
+        "D58"
+      ]
+    },
+    {
+      "id": "ft-sentence-504400974f6f",
+      "text": "I see a circle.",
+      "kind": "sentence",
+      "sources": [
+        "D62"
+      ]
+    },
+    {
+      "id": "ft-sentence-dc08560837b9",
+      "text": "I see a triangle.",
+      "kind": "sentence",
+      "sources": [
+        "D63"
+      ]
+    },
+    {
+      "id": "ft-sentence-d2c78cb03a2f",
+      "text": "I see a square.",
+      "kind": "sentence",
+      "sources": [
+        "D64"
+      ]
+    },
+    {
+      "id": "ft-sentence-cabd62dc81c5",
+      "text": "I want to go skiing.",
+      "kind": "sentence",
+      "sources": [
+        "D65"
+      ]
+    },
+    {
+      "id": "ft-sentence-c2fcc9169f72",
+      "text": "I want to go cycling.",
+      "kind": "sentence",
+      "sources": [
+        "D66"
+      ]
+    },
+    {
+      "id": "ft-sentence-39f76d675d16",
+      "text": "I want to go swimming.",
+      "kind": "sentence",
+      "sources": [
+        "D67"
+      ]
+    },
+    {
+      "id": "ft-sentence-91c7d3be27f9",
+      "text": "I want to go camping.",
+      "kind": "sentence",
+      "sources": [
+        "D68"
+      ]
+    },
+    {
+      "id": "ft-sentence-7f66eeaf86b6",
+      "text": "I'm making coffee.",
+      "kind": "sentence",
+      "sources": [
+        "D69"
+      ]
+    },
+    {
+      "id": "ft-sentence-b6d8c5c92b17",
+      "text": "I'm having a barbeque.",
+      "kind": "sentence",
+      "sources": [
+        "D70"
+      ]
+    },
+    {
+      "id": "ft-sentence-ce901d25619f",
+      "text": "I'm playing soccer.",
+      "kind": "sentence",
+      "sources": [
+        "D71"
+      ]
+    }
+  ],
+  "deferred": [
+    {
+      "cell": "B33",
+      "text": "board game",
+      "reason": "multiword phrase"
+    },
+    {
+      "cell": "D50",
+      "text": "She's wearing a coat/pants and boots.",
+      "reason": "ambiguous slash scope"
+    }
+  ],
+  "policy": "Deduplicate; expand explicit slash alternatives; exclude phrases and ambiguous D50. Preserve source cells."
+}
