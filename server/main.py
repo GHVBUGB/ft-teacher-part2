@@ -35,3 +35,6 @@ app.include_router(speechsuper_router)
 
 from practice.speechace import router as speechace_router
 app.include_router(speechace_router)
+
+from practice.tencent import router as tencent_router
+app.include_router(tencent_router)

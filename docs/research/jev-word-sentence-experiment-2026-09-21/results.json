@@ -1,0 +1,382 @@
+{
+  "summary": {
+    "status": "resolved",
+    "provider": "jev",
+    "model": "jev-1.13.0",
+    "latencyMs": 614,
+    "usage": {
+      "input_tokens": 6453,
+      "output_tokens": 925
+    },
+    "sampleCount": 20,
+    "wordCount": 10,
+    "sentenceCount": 10,
+    "baselineCorrect": 15,
+    "jevCorrect": 20,
+    "baselineAccuracy": 0.75,
+    "jevAccuracy": 1,
+    "interpretation": "文本重放实验，不等于发音评分准确率，不改变 FT 业务评分或生产验收结论。"
+  },
+  "rows": [
+    {
+      "case": "case_01",
+      "id": "ft-word-yellow",
+      "target": "yellow",
+      "observed": "yellow",
+      "gold": "exact",
+      "baseline": "exact",
+      "jev": "exact",
+      "baselineCorrect": true,
+      "jevCorrect": true,
+      "jevConfidence": 1,
+      "jevProbabilities": {
+        "exact": 1,
+        "near": 0,
+        "unclear": 0,
+        "wrong": 0
+      }
+    },
+    {
+      "case": "case_02",
+      "id": "ft-word-brown",
+      "target": "brown",
+      "observed": "brow",
+      "gold": "near",
+      "baseline": "near",
+      "jev": "near",
+      "baselineCorrect": true,
+      "jevCorrect": true,
+      "jevConfidence": 0.97,
+      "jevProbabilities": {
+        "exact": 0,
+        "near": 0.98,
+        "unclear": 0,
+        "wrong": 0.02
+      }
+    },
+    {
+      "case": "case_03",
+      "id": "ft-word-green",
+      "target": "green",
+      "observed": "blue",
+      "gold": "wrong",
+      "baseline": "near",
+      "jev": "wrong",
+      "baselineCorrect": false,
+      "jevCorrect": true,
+      "jevConfidence": 1,
+      "jevProbabilities": {
+        "exact": 0,
+        "near": 0,
+        "unclear": 0,
+        "wrong": 1
+      }
+    },
+    {
+      "case": "case_04",
+      "id": "ft-word-ant",
+      "target": "ant",
+      "observed": "[无识别文本]",
+      "gold": "unclear",
+      "baseline": "unclear",
+      "jev": "unclear",
+      "baselineCorrect": true,
+      "jevCorrect": true,
+      "jevConfidence": 1,
+      "jevProbabilities": {
+        "exact": 0,
+        "near": 0,
+        "unclear": 1,
+        "wrong": 0
+      }
+    },
+    {
+      "case": "case_05",
+      "id": "ft-word-candy",
+      "target": "candy",
+      "observed": "candy",
+      "gold": "exact",
+      "baseline": "exact",
+      "jev": "exact",
+      "baselineCorrect": true,
+      "jevCorrect": true,
+      "jevConfidence": 1,
+      "jevProbabilities": {
+        "exact": 1,
+        "near": 0,
+        "unclear": 0,
+        "wrong": 0
+      }
+    },
+    {
+      "case": "case_06",
+      "id": "ft-word-happy",
+      "target": "happy",
+      "observed": "hapy",
+      "gold": "near",
+      "baseline": "near",
+      "jev": "near",
+      "baselineCorrect": true,
+      "jevCorrect": true,
+      "jevConfidence": 1,
+      "jevProbabilities": {
+        "exact": 0,
+        "near": 1,
+        "unclear": 0,
+        "wrong": 0
+      }
+    },
+    {
+      "case": "case_07",
+      "id": "ft-word-angry",
+      "target": "angry",
+      "observed": "apple",
+      "gold": "wrong",
+      "baseline": "near",
+      "jev": "wrong",
+      "baselineCorrect": false,
+      "jevCorrect": true,
+      "jevConfidence": 1,
+      "jevProbabilities": {
+        "wrong": 1,
+        "near": 0,
+        "unclear": 0,
+        "exact": 0
+      }
+    },
+    {
+      "case": "case_08",
+      "id": "ft-word-bear",
+      "target": "bear",
+      "observed": "bear",
+      "gold": "exact",
+      "baseline": "exact",
+      "jev": "exact",
+      "baselineCorrect": true,
+      "jevCorrect": true,
+      "jevConfidence": 1,
+      "jevProbabilities": {
+        "exact": 1,
+        "near": 0,
+        "unclear": 0,
+        "wrong": 0
+      }
+    },
+    {
+      "case": "case_09",
+      "id": "ft-word-camel",
+      "target": "camel",
+      "observed": "camal",
+      "gold": "near",
+      "baseline": "near",
+      "jev": "near",
+      "baselineCorrect": true,
+      "jevCorrect": true,
+      "jevConfidence": 1,
+      "jevProbabilities": {
+        "exact": 0,
+        "near": 1,
+        "unclear": 0,
+        "wrong": 0
+      }
+    },
+    {
+      "case": "case_10",
+      "id": "ft-word-boots",
+      "target": "boots",
+      "observed": "boots",
+      "gold": "exact",
+      "baseline": "exact",
+      "jev": "exact",
+      "baselineCorrect": true,
+      "jevCorrect": true,
+      "jevConfidence": 1,
+      "jevProbabilities": {
+        "wrong": 0,
+        "near": 0,
+        "unclear": 0,
+        "exact": 1
+      }
+    },
+    {
+      "case": "case_11",
+      "id": "ft-sentence-f815800771b8",
+      "target": "It's a yellow cake.",
+      "observed": "It's a yellow cake.",
+      "gold": "exact",
+      "baseline": "exact",
+      "jev": "exact",
+      "baselineCorrect": true,
+      "jevCorrect": true,
+      "jevConfidence": 1,
+      "jevProbabilities": {
+        "exact": 1,
+        "near": 0,
+        "unclear": 0,
+        "wrong": 0
+      }
+    },
+    {
+      "case": "case_12",
+      "id": "ft-sentence-8f3f08bcd30a",
+      "target": "It's a brown cake.",
+      "observed": "It's a brown cake",
+      "gold": "exact",
+      "baseline": "exact",
+      "jev": "exact",
+      "baselineCorrect": true,
+      "jevCorrect": true,
+      "jevConfidence": 0.87,
+      "jevProbabilities": {
+        "exact": 0.9,
+        "near": 0.1,
+        "unclear": 0,
+        "wrong": 0
+      }
+    },
+    {
+      "case": "case_13",
+      "id": "ft-sentence-e6a0d0eda900",
+      "target": "I feel happy.",
+      "observed": "I feel sad.",
+      "gold": "wrong",
+      "baseline": "wrong",
+      "jev": "wrong",
+      "baselineCorrect": true,
+      "jevCorrect": true,
+      "jevConfidence": 0.96,
+      "jevProbabilities": {
+        "wrong": 0.97,
+        "near": 0.03,
+        "unclear": 0,
+        "exact": 0
+      }
+    },
+    {
+      "case": "case_14",
+      "id": "ft-sentence-3fc8c65caddf",
+      "target": "I feel sad.",
+      "observed": "[无识别文本]",
+      "gold": "unclear",
+      "baseline": "unclear",
+      "jev": "unclear",
+      "baselineCorrect": true,
+      "jevCorrect": true,
+      "jevConfidence": 1,
+      "jevProbabilities": {
+        "exact": 0,
+        "near": 0,
+        "unclear": 1,
+        "wrong": 0
+      }
+    },
+    {
+      "case": "case_15",
+      "id": "ft-sentence-1e695bb7dc6a",
+      "target": "It's blue.",
+      "observed": "Its blue.",
+      "gold": "near",
+      "baseline": "exact",
+      "jev": "near",
+      "baselineCorrect": false,
+      "jevCorrect": true,
+      "jevConfidence": 0.9,
+      "jevProbabilities": {
+        "wrong": 0,
+        "near": 0.92,
+        "unclear": 0,
+        "exact": 0.08
+      }
+    },
+    {
+      "case": "case_16",
+      "id": "ft-sentence-d15e60c3590c",
+      "target": "I will play basketball.",
+      "observed": "I will play basketbal.",
+      "gold": "near",
+      "baseline": "near",
+      "jev": "near",
+      "baselineCorrect": true,
+      "jevCorrect": true,
+      "jevConfidence": 1,
+      "jevProbabilities": {
+        "exact": 0,
+        "near": 1,
+        "unclear": 0,
+        "wrong": 0
+      }
+    },
+    {
+      "case": "case_17",
+      "id": "ft-sentence-e4149cf61ce8",
+      "target": "I'm wearing sneakers.",
+      "observed": "I'm wearing a shirt.",
+      "gold": "wrong",
+      "baseline": "near",
+      "jev": "wrong",
+      "baselineCorrect": false,
+      "jevCorrect": true,
+      "jevConfidence": 0.99,
+      "jevProbabilities": {
+        "exact": 0,
+        "near": 0.01,
+        "unclear": 0,
+        "wrong": 0.99
+      }
+    },
+    {
+      "case": "case_18",
+      "id": "ft-sentence-9843d164f918",
+      "target": "I like pandas.",
+      "observed": "I like pandas.",
+      "gold": "exact",
+      "baseline": "exact",
+      "jev": "exact",
+      "baselineCorrect": true,
+      "jevCorrect": true,
+      "jevConfidence": 1,
+      "jevProbabilities": {
+        "exact": 1,
+        "near": 0,
+        "unclear": 0,
+        "wrong": 0
+      }
+    },
+    {
+      "case": "case_19",
+      "id": "ft-sentence-21dd9d0b218b",
+      "target": "Let's try rock climbing.",
+      "observed": "Let's try climbing.",
+      "gold": "near",
+      "baseline": "near",
+      "jev": "near",
+      "baselineCorrect": true,
+      "jevCorrect": true,
+      "jevConfidence": 0.95,
+      "jevProbabilities": {
+        "exact": 0,
+        "near": 0.96,
+        "unclear": 0,
+        "wrong": 0.04
+      }
+    },
+    {
+      "case": "case_20",
+      "id": "ft-sentence-504400974f6f",
+      "target": "I see a circle.",
+      "observed": "I see a square.",
+      "gold": "wrong",
+      "baseline": "near",
+      "jev": "wrong",
+      "baselineCorrect": false,
+      "jevCorrect": true,
+      "jevConfidence": 0.89,
+      "jevProbabilities": {
+        "exact": 0,
+        "near": 0.08,
+        "unclear": 0,
+        "wrong": 0.92
+      }
+    }
+  ]
+}

@@ -1,0 +1,317 @@
+{
+  "state": {
+    "project": "ft-teacher-part2",
+    "experiment": "word_sentence_text_judgment",
+    "warning": "这是脱敏、合成的文本重放样本；不读取教师身份、录音内容或业务账号，也不修改 FT 评分链路。",
+    "cases": [
+      {
+        "id": "ft-word-yellow",
+        "target": "yellow",
+        "observed": "yellow"
+      },
+      {
+        "id": "ft-word-brown",
+        "target": "brown",
+        "observed": "brow"
+      },
+      {
+        "id": "ft-word-green",
+        "target": "green",
+        "observed": "blue"
+      },
+      {
+        "id": "ft-word-ant",
+        "target": "ant",
+        "observed": "[无识别文本]"
+      },
+      {
+        "id": "ft-word-candy",
+        "target": "candy",
+        "observed": "candy"
+      },
+      {
+        "id": "ft-word-happy",
+        "target": "happy",
+        "observed": "hapy"
+      },
+      {
+        "id": "ft-word-angry",
+        "target": "angry",
+        "observed": "apple"
+      },
+      {
+        "id": "ft-word-bear",
+        "target": "bear",
+        "observed": "bear"
+      },
+      {
+        "id": "ft-word-camel",
+        "target": "camel",
+        "observed": "camal"
+      },
+      {
+        "id": "ft-word-boots",
+        "target": "boots",
+        "observed": "boots"
+      },
+      {
+        "id": "ft-sentence-f815800771b8",
+        "target": "It's a yellow cake.",
+        "observed": "It's a yellow cake."
+      },
+      {
+        "id": "ft-sentence-8f3f08bcd30a",
+        "target": "It's a brown cake.",
+        "observed": "It's a brown cake"
+      },
+      {
+        "id": "ft-sentence-e6a0d0eda900",
+        "target": "I feel happy.",
+        "observed": "I feel sad."
+      },
+      {
+        "id": "ft-sentence-3fc8c65caddf",
+        "target": "I feel sad.",
+        "observed": "[无识别文本]"
+      },
+      {
+        "id": "ft-sentence-1e695bb7dc6a",
+        "target": "It's blue.",
+        "observed": "Its blue."
+      },
+      {
+        "id": "ft-sentence-d15e60c3590c",
+        "target": "I will play basketball.",
+        "observed": "I will play basketbal."
+      },
+      {
+        "id": "ft-sentence-e4149cf61ce8",
+        "target": "I'm wearing sneakers.",
+        "observed": "I'm wearing a shirt."
+      },
+      {
+        "id": "ft-sentence-9843d164f918",
+        "target": "I like pandas.",
+        "observed": "I like pandas."
+      },
+      {
+        "id": "ft-sentence-21dd9d0b218b",
+        "target": "Let's try rock climbing.",
+        "observed": "Let's try climbing."
+      },
+      {
+        "id": "ft-sentence-504400974f6f",
+        "target": "I see a circle.",
+        "observed": "I see a square."
+      }
+    ]
+  },
+  "questions": {
+    "case_01": {
+      "type": "choice",
+      "instructions": "这是 FT 英语单词文本判断。目标文本是“yellow”，语音识别结果是“yellow”。 只按这四个标签判断，不评估发音音质，不猜测没有提供的声音：exact=文本一致，near=轻微识别误差但核心仍对应，wrong=不对应，unclear=没有可用识别文本。 请给出最符合的标签，并保持概率分布和置信度诚实。",
+      "criteria": {
+        "exact": "与目标文本一致（忽略大小写和末尾标点）",
+        "near": "轻微识别误差，但核心词或句意仍基本对应",
+        "wrong": "与目标不对应，不能判为通过",
+        "unclear": "没有可用识别文本，应该交给复核或重试"
+      }
+    },
+    "case_02": {
+      "type": "choice",
+      "instructions": "这是 FT 英语单词文本判断。目标文本是“brown”，语音识别结果是“brow”。 只按这四个标签判断，不评估发音音质，不猜测没有提供的声音：exact=文本一致，near=轻微识别误差但核心仍对应，wrong=不对应，unclear=没有可用识别文本。 请给出最符合的标签，并保持概率分布和置信度诚实。",
+      "criteria": {
+        "exact": "与目标文本一致（忽略大小写和末尾标点）",
+        "near": "轻微识别误差，但核心词或句意仍基本对应",
+        "wrong": "与目标不对应，不能判为通过",
+        "unclear": "没有可用识别文本，应该交给复核或重试"
+      }
+    },
+    "case_03": {
+      "type": "choice",
+      "instructions": "这是 FT 英语单词文本判断。目标文本是“green”，语音识别结果是“blue”。 只按这四个标签判断，不评估发音音质，不猜测没有提供的声音：exact=文本一致，near=轻微识别误差但核心仍对应，wrong=不对应，unclear=没有可用识别文本。 请给出最符合的标签，并保持概率分布和置信度诚实。",
+      "criteria": {
+        "exact": "与目标文本一致（忽略大小写和末尾标点）",
+        "near": "轻微识别误差，但核心词或句意仍基本对应",
+        "wrong": "与目标不对应，不能判为通过",
+        "unclear": "没有可用识别文本，应该交给复核或重试"
+      }
+    },
+    "case_04": {
+      "type": "choice",
+      "instructions": "这是 FT 英语单词文本判断。目标文本是“ant”，语音识别结果是“[无识别文本]”。 只按这四个标签判断，不评估发音音质，不猜测没有提供的声音：exact=文本一致，near=轻微识别误差但核心仍对应，wrong=不对应，unclear=没有可用识别文本。 请给出最符合的标签，并保持概率分布和置信度诚实。",
+      "criteria": {
+        "exact": "与目标文本一致（忽略大小写和末尾标点）",
+        "near": "轻微识别误差，但核心词或句意仍基本对应",
+        "wrong": "与目标不对应，不能判为通过",
+        "unclear": "没有可用识别文本，应该交给复核或重试"
+      }
+    },
+    "case_05": {
+      "type": "choice",
+      "instructions": "这是 FT 英语单词文本判断。目标文本是“candy”，语音识别结果是“candy”。 只按这四个标签判断，不评估发音音质，不猜测没有提供的声音：exact=文本一致，near=轻微识别误差但核心仍对应，wrong=不对应，unclear=没有可用识别文本。 请给出最符合的标签，并保持概率分布和置信度诚实。",
+      "criteria": {
+        "exact": "与目标文本一致（忽略大小写和末尾标点）",
+        "near": "轻微识别误差，但核心词或句意仍基本对应",
+        "wrong": "与目标不对应，不能判为通过",
+        "unclear": "没有可用识别文本，应该交给复核或重试"
+      }
+    },
+    "case_06": {
+      "type": "choice",
+      "instructions": "这是 FT 英语单词文本判断。目标文本是“happy”，语音识别结果是“hapy”。 只按这四个标签判断，不评估发音音质，不猜测没有提供的声音：exact=文本一致，near=轻微识别误差但核心仍对应，wrong=不对应，unclear=没有可用识别文本。 请给出最符合的标签，并保持概率分布和置信度诚实。",
+      "criteria": {
+        "exact": "与目标文本一致（忽略大小写和末尾标点）",
+        "near": "轻微识别误差，但核心词或句意仍基本对应",
+        "wrong": "与目标不对应，不能判为通过",
+        "unclear": "没有可用识别文本，应该交给复核或重试"
+      }
+    },
+    "case_07": {
+      "type": "choice",
+      "instructions": "这是 FT 英语单词文本判断。目标文本是“angry”，语音识别结果是“apple”。 只按这四个标签判断，不评估发音音质，不猜测没有提供的声音：exact=文本一致，near=轻微识别误差但核心仍对应，wrong=不对应，unclear=没有可用识别文本。 请给出最符合的标签，并保持概率分布和置信度诚实。",
+      "criteria": {
+        "exact": "与目标文本一致（忽略大小写和末尾标点）",
+        "near": "轻微识别误差，但核心词或句意仍基本对应",
+        "wrong": "与目标不对应，不能判为通过",
+        "unclear": "没有可用识别文本，应该交给复核或重试"
+      }
+    },
+    "case_08": {
+      "type": "choice",
+      "instructions": "这是 FT 英语单词文本判断。目标文本是“bear”，语音识别结果是“bear”。 只按这四个标签判断，不评估发音音质，不猜测没有提供的声音：exact=文本一致，near=轻微识别误差但核心仍对应，wrong=不对应，unclear=没有可用识别文本。 请给出最符合的标签，并保持概率分布和置信度诚实。",
+      "criteria": {
+        "exact": "与目标文本一致（忽略大小写和末尾标点）",
+        "near": "轻微识别误差，但核心词或句意仍基本对应",
+        "wrong": "与目标不对应，不能判为通过",
+        "unclear": "没有可用识别文本，应该交给复核或重试"
+      }
+    },
+    "case_09": {
+      "type": "choice",
+      "instructions": "这是 FT 英语单词文本判断。目标文本是“camel”，语音识别结果是“camal”。 只按这四个标签判断，不评估发音音质，不猜测没有提供的声音：exact=文本一致，near=轻微识别误差但核心仍对应，wrong=不对应，unclear=没有可用识别文本。 请给出最符合的标签，并保持概率分布和置信度诚实。",
+      "criteria": {
+        "exact": "与目标文本一致（忽略大小写和末尾标点）",
+        "near": "轻微识别误差，但核心词或句意仍基本对应",
+        "wrong": "与目标不对应，不能判为通过",
+        "unclear": "没有可用识别文本，应该交给复核或重试"
+      }
+    },
+    "case_10": {
+      "type": "choice",
+      "instructions": "这是 FT 英语单词文本判断。目标文本是“boots”，语音识别结果是“boots”。 只按这四个标签判断，不评估发音音质，不猜测没有提供的声音：exact=文本一致，near=轻微识别误差但核心仍对应，wrong=不对应，unclear=没有可用识别文本。 请给出最符合的标签，并保持概率分布和置信度诚实。",
+      "criteria": {
+        "exact": "与目标文本一致（忽略大小写和末尾标点）",
+        "near": "轻微识别误差，但核心词或句意仍基本对应",
+        "wrong": "与目标不对应，不能判为通过",
+        "unclear": "没有可用识别文本，应该交给复核或重试"
+      }
+    },
+    "case_11": {
+      "type": "choice",
+      "instructions": "这是 FT 英语句子文本判断。目标文本是“It's a yellow cake.”，语音识别结果是“It's a yellow cake.”。 只按这四个标签判断，不评估发音音质，不猜测没有提供的声音：exact=文本一致，near=轻微识别误差但核心仍对应，wrong=不对应，unclear=没有可用识别文本。 请给出最符合的标签，并保持概率分布和置信度诚实。",
+      "criteria": {
+        "exact": "与目标文本一致（忽略大小写和末尾标点）",
+        "near": "轻微识别误差，但核心词或句意仍基本对应",
+        "wrong": "与目标不对应，不能判为通过",
+        "unclear": "没有可用识别文本，应该交给复核或重试"
+      }
+    },
+    "case_12": {
+      "type": "choice",
+      "instructions": "这是 FT 英语句子文本判断。目标文本是“It's a brown cake.”，语音识别结果是“It's a brown cake”。 只按这四个标签判断，不评估发音音质，不猜测没有提供的声音：exact=文本一致，near=轻微识别误差但核心仍对应，wrong=不对应，unclear=没有可用识别文本。 请给出最符合的标签，并保持概率分布和置信度诚实。",
+      "criteria": {
+        "exact": "与目标文本一致（忽略大小写和末尾标点）",
+        "near": "轻微识别误差，但核心词或句意仍基本对应",
+        "wrong": "与目标不对应，不能判为通过",
+        "unclear": "没有可用识别文本，应该交给复核或重试"
+      }
+    },
+    "case_13": {
+      "type": "choice",
+      "instructions": "这是 FT 英语句子文本判断。目标文本是“I feel happy.”，语音识别结果是“I feel sad.”。 只按这四个标签判断，不评估发音音质，不猜测没有提供的声音：exact=文本一致，near=轻微识别误差但核心仍对应，wrong=不对应，unclear=没有可用识别文本。 请给出最符合的标签，并保持概率分布和置信度诚实。",
+      "criteria": {
+        "exact": "与目标文本一致（忽略大小写和末尾标点）",
+        "near": "轻微识别误差，但核心词或句意仍基本对应",
+        "wrong": "与目标不对应，不能判为通过",
+        "unclear": "没有可用识别文本，应该交给复核或重试"
+      }
+    },
+    "case_14": {
+      "type": "choice",
+      "instructions": "这是 FT 英语句子文本判断。目标文本是“I feel sad.”，语音识别结果是“[无识别文本]”。 只按这四个标签判断，不评估发音音质，不猜测没有提供的声音：exact=文本一致，near=轻微识别误差但核心仍对应，wrong=不对应，unclear=没有可用识别文本。 请给出最符合的标签，并保持概率分布和置信度诚实。",
+      "criteria": {
+        "exact": "与目标文本一致（忽略大小写和末尾标点）",
+        "near": "轻微识别误差，但核心词或句意仍基本对应",
+        "wrong": "与目标不对应，不能判为通过",
+        "unclear": "没有可用识别文本，应该交给复核或重试"
+      }
+    },
+    "case_15": {
+      "type": "choice",
+      "instructions": "这是 FT 英语句子文本判断。目标文本是“It's blue.”，语音识别结果是“Its blue.”。 只按这四个标签判断，不评估发音音质，不猜测没有提供的声音：exact=文本一致，near=轻微识别误差但核心仍对应，wrong=不对应，unclear=没有可用识别文本。 请给出最符合的标签，并保持概率分布和置信度诚实。",
+      "criteria": {
+        "exact": "与目标文本一致（忽略大小写和末尾标点）",
+        "near": "轻微识别误差，但核心词或句意仍基本对应",
+        "wrong": "与目标不对应，不能判为通过",
+        "unclear": "没有可用识别文本，应该交给复核或重试"
+      }
+    },
+    "case_16": {
+      "type": "choice",
+      "instructions": "这是 FT 英语句子文本判断。目标文本是“I will play basketball.”，语音识别结果是“I will play basketbal.”。 只按这四个标签判断，不评估发音音质，不猜测没有提供的声音：exact=文本一致，near=轻微识别误差但核心仍对应，wrong=不对应，unclear=没有可用识别文本。 请给出最符合的标签，并保持概率分布和置信度诚实。",
+      "criteria": {
+        "exact": "与目标文本一致（忽略大小写和末尾标点）",
+        "near": "轻微识别误差，但核心词或句意仍基本对应",
+        "wrong": "与目标不对应，不能判为通过",
+        "unclear": "没有可用识别文本，应该交给复核或重试"
+      }
+    },
+    "case_17": {
+      "type": "choice",
+      "instructions": "这是 FT 英语句子文本判断。目标文本是“I'm wearing sneakers.”，语音识别结果是“I'm wearing a shirt.”。 只按这四个标签判断，不评估发音音质，不猜测没有提供的声音：exact=文本一致，near=轻微识别误差但核心仍对应，wrong=不对应，unclear=没有可用识别文本。 请给出最符合的标签，并保持概率分布和置信度诚实。",
+      "criteria": {
+        "exact": "与目标文本一致（忽略大小写和末尾标点）",
+        "near": "轻微识别误差，但核心词或句意仍基本对应",
+        "wrong": "与目标不对应，不能判为通过",
+        "unclear": "没有可用识别文本，应该交给复核或重试"
+      }
+    },
+    "case_18": {
+      "type": "choice",
+      "instructions": "这是 FT 英语句子文本判断。目标文本是“I like pandas.”，语音识别结果是“I like pandas.”。 只按这四个标签判断，不评估发音音质，不猜测没有提供的声音：exact=文本一致，near=轻微识别误差但核心仍对应，wrong=不对应，unclear=没有可用识别文本。 请给出最符合的标签，并保持概率分布和置信度诚实。",
+      "criteria": {
+        "exact": "与目标文本一致（忽略大小写和末尾标点）",
+        "near": "轻微识别误差，但核心词或句意仍基本对应",
+        "wrong": "与目标不对应，不能判为通过",
+        "unclear": "没有可用识别文本，应该交给复核或重试"
+      }
+    },
+    "case_19": {
+      "type": "choice",
+      "instructions": "这是 FT 英语句子文本判断。目标文本是“Let's try rock climbing.”，语音识别结果是“Let's try climbing.”。 只按这四个标签判断，不评估发音音质，不猜测没有提供的声音：exact=文本一致，near=轻微识别误差但核心仍对应，wrong=不对应，unclear=没有可用识别文本。 请给出最符合的标签，并保持概率分布和置信度诚实。",
+      "criteria": {
+        "exact": "与目标文本一致（忽略大小写和末尾标点）",
+        "near": "轻微识别误差，但核心词或句意仍基本对应",
+        "wrong": "与目标不对应，不能判为通过",
+        "unclear": "没有可用识别文本，应该交给复核或重试"
+      }
+    },
+    "case_20": {
+      "type": "choice",
+      "instructions": "这是 FT 英语句子文本判断。目标文本是“I see a circle.”，语音识别结果是“I see a square.”。 只按这四个标签判断，不评估发音音质，不猜测没有提供的声音：exact=文本一致，near=轻微识别误差但核心仍对应，wrong=不对应，unclear=没有可用识别文本。 请给出最符合的标签，并保持概率分布和置信度诚实。",
+      "criteria": {
+        "exact": "与目标文本一致（忽略大小写和末尾标点）",
+        "near": "轻微识别误差，但核心词或句意仍基本对应",
+        "wrong": "与目标不对应，不能判为通过",
+        "unclear": "没有可用识别文本，应该交给复核或重试"
+      }
+    }
+  },
+  "labels": {
+    "exact": "与目标文本一致（忽略大小写和末尾标点）",
+    "near": "轻微识别误差，但核心词或句意仍基本对应",
+    "wrong": "与目标不对应，不能判为通过",
+    "unclear": "没有可用识别文本，应该交给复核或重试"
+  }
+}

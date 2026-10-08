@@ -69,7 +69,7 @@ export default function WordAtlas({ stage, onSelect, onSwitchStage }: {
                 }}
                 aria-label={`${t('区域')} ${number(index + 1)} · ${number(index * 8 + 1)}–${number(index * 8 + group.length)} · ${completed}/${group.length} ${t('已通过')}`}
                 aria-pressed={activeGroup === index} data-progress={progressGroup === index || undefined} data-complete={completed === group.length || undefined}
-                title={`${number(index * 8 + 1)}–${number(index * 8 + group.length)}`} 
+                title={`${number(index * 8 + 1)}–${number(index * 8 + group.length)}`}
                 onClick={() => setPreviewGroup(index)}>
                 {progressGroup === index ? <span className="atlas-avatar-marker">
                   <span className="atlas-portrait"><img src="/images/zhang-linghe.png" alt={t('张凌赫头像')} draggable={false} /></span>

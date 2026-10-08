@@ -7,7 +7,7 @@ import {
   useState,
   useSyncExternalStore,
 } from 'react';
-import { assessSpeech, type SpeechResult } from './lib/speechsuper';
+import { assessSpeech, type SpeechProvider, type SpeechResult } from './lib/speechsuper';
 import { abortable, ASSESSMENT_TIMEOUT_MS } from './lib/assessmentRequest';
 import { calculateScore } from './lib/score';
 import type { StageTraining } from './useStageTraining';
@@ -39,7 +39,7 @@ export default function SpeechSuperPanel({
   checkStatus = true,
   onBusyChange,
 }: {
-  provider?: 'speechace' | 'speechsuper';
+  provider?: SpeechProvider;
   stage?: StageTraining;
   assess?: typeof assessSpeech;
   checkStatus?: boolean;
@@ -53,7 +53,7 @@ export default function SpeechSuperPanel({
     navigationSnapshot,
     () => '',
   );
-  const vendor = provider === 'speechace' ? 'Speechace' : 'SpeechSuper';
+  const vendor = provider === 'speechace' ? 'Speechace' : provider === 'tencent' ? '腾讯云口语评测' : 'SpeechSuper';
   const [freeKind, setFreeKind] = useState<'word' | 'sentence'>('word');
   const [freeText, setFreeText] = useState(defaults.word);
   const selectedId = navigation.startsWith('#read/') ? navigation.slice(6) : '';

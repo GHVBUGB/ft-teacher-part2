@@ -2,6 +2,15 @@
 name = "ft-training-common-api"
 version = "0.1.0"
 requires-python = ">=3.12"
-dependencies = ["fastapi", "pydantic>=2", "sqlalchemy>=2", "alembic", "psycopg[binary]>=3", "uvicorn", "httpx"]
+dependencies = [
+    "fastapi",
+    "pydantic>=2",
+    "sqlalchemy>=2",
+    "alembic",
+    "psycopg[binary]>=3",
+    "uvicorn",
+    "httpx",
+    "websockets>=15,<16",
+]
 [dependency-groups]
 dev = ["httpx", "pytest"]

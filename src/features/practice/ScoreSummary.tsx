@@ -154,6 +154,7 @@ export default function ScoreSummary({
                 <tr>
                   <th scope="col">单词</th>
                   <th scope="col">质量评分</th>
+                  <th scope="col">MatchTag</th>
                   <th scope="col">音素级分析</th>
                 </tr>
               </thead>
@@ -165,6 +166,7 @@ export default function ScoreSummary({
                         {w.word}
                       </th>
                       <td>{w.score ?? '未返回'}</td>
+                      <td>{w.matchTag ?? '未返回'}</td>
                       <td>
                         <button
                           type="button"
@@ -191,7 +193,7 @@ export default function ScoreSummary({
                       className="assessment-detail-row"
                       hidden={!open.has(index)}
                     >
-                      <td colSpan={3} id={`${id}-word-${index}`}>
+                      <td colSpan={4} id={`${id}-word-${index}`}>
                         {w.feedback.length > 0 && (
                           <ul className="assessment-word-feedback">
                             {w.feedback.map((f, i) => (

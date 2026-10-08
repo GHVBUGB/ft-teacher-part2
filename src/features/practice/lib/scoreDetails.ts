@@ -9,12 +9,14 @@ export type ScoreDimension = {
 export type PhonemeDetail = {
   symbol: string;
   score: number | null;
+  matchTag?: number | string | null;
   recognized: string | null;
   feedback: string[];
 };
 export type WordDetail = {
   word: string;
   score: number | null;
+  matchTag?: number | string | null;
   phonemes: PhonemeDetail[];
   feedback: string[];
 };
@@ -57,6 +59,15 @@ function firstScore(...values: unknown[]): number | null {
   }
   return null;
 }
+function matchTag(value: unknown): number | string | null {
+  if (
+    typeof value === 'number' &&
+    Number.isFinite(value) &&
+    Number.isInteger(value)
+  )
+    return value;
+  return typeof value === 'string' && value.trim() ? value.trim() : null;
+}
 function symbols(value: unknown): string | null {
   if (Array.isArray(value))
     return (
@@ -75,6 +86,13 @@ const issueLabels: Record<string, string> = {
   mispronunciation: '发音需要调整',
   substitution: '替换发音',
   repetition: '重复朗读',
+};
+const matchTagLabels: Record<string, string> = {
+  '0': '匹配',
+  '1': '新增单词',
+  '2': '漏读',
+  '3': '错读',
+  '4': '未录入单词',
 };
 function returnedFeedback(value: Data): string[] {
   const result: string[] = [];
@@ -99,6 +117,11 @@ function returnedFeedback(value: Data): string[] {
       );
     }
   }
+  const tag = matchTag(value.MatchTag ?? value.matchTag);
+  if (tag !== null) {
+    const label = matchTagLabels[String(tag)] ?? '接口原值';
+    result.push(`匹配情况：${label}（MatchTag ${tag}）`);
+  }
   const readType = value.readType;
   if (
     (typeof readType === 'number' &&
@@ -122,6 +145,7 @@ function phoneme(value: Data): PhonemeDetail | null {
   const symbol =
     symbols(value.phoneme) ?? text(value.phone) ?? text(value.sound);
   if (!symbol) return null;
+  const tag = matchTag(value.MatchTag ?? value.matchTag);
   return {
     symbol,
     score: firstScore(
@@ -131,6 +155,7 @@ function phoneme(value: Data): PhonemeDetail | null {
       value.overall,
       value.score,
     ),
+    ...(tag !== null ? { matchTag: tag } : {}),
     recognized:
       text(value.sound_like) ??
       text(value.sound_most_like) ??
@@ -161,6 +186,7 @@ function word(value: Data): WordDetail | null {
       feedback.push(`${label} 重音：参考 ${expected}，识别 ${actual}`);
     }
   }
+  const tag = matchTag(value.MatchTag ?? value.matchTag);
   return {
     word: label,
     score: firstScore(
@@ -170,6 +196,7 @@ function word(value: Data): WordDetail | null {
       value.score,
       wordScores.overall,
     ),
+    ...(tag !== null ? { matchTag: tag } : {}),
     phonemes: phones.map(phoneme).filter((p): p is PhonemeDetail => p !== null),
     feedback,
   };
@@ -185,18 +212,31 @@ export function getScoreDetails(
     metrics[key] === undefined ? source[key] : metrics[key];
   const dimensionKeys =
     kind === 'word'
-      ? [
-          ['pronunciation', '发音'],
-          ['stress', '重音'],
-          ['intelligibility', '可理解性'],
-        ]
-      : [
-          ['pronunciation', '发音'],
-          ['fluency', '流利度'],
-          ['integrity', '完整度'],
-          ['rhythm', '韵律'],
-          ['speed', '速度'],
-        ];
+      ? source.provider === 'tencent'
+        ? [
+            ['pronunciation', '发音'],
+            ['suggestedScore', '腾讯建议分'],
+          ]
+        : [
+            ['pronunciation', '发音'],
+            ['stress', '重音'],
+            ['intelligibility', '可理解性'],
+          ]
+      : source.provider === 'tencent'
+        ? [
+            ['pronunciation', '发音'],
+            ['fluency', '流利度'],
+            ['completion', '完整度'],
+            ['rhythm', '韵律'],
+            ['suggestedScore', '腾讯建议分'],
+          ]
+        : [
+            ['pronunciation', '发音'],
+            ['fluency', '流利度'],
+            ['integrity', '完整度'],
+            ['rhythm', '韵律'],
+            ['speed', '速度'],
+          ];
   const dimensions: ScoreDimension[] = dimensionKeys.map(([key, label]) => ({
     key,
     label,

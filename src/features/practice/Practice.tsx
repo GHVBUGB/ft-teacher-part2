@@ -90,7 +90,7 @@ export default function Practice() {
   const [ready, setReady] = useState(false);
   const debugTools = new URLSearchParams(location.search).get('debug') === '1';
   const openPreview = isOpenPreview();
-  const [tab, setTab] = useState('speechsuper');
+  const [tab, setTab] = useState('tencent');
   const [allCompleteView, setAllCompleteView] = useState(location.hash === '#complete/all');
   useEffect(() => { stage.start(); }, [stage.start]);
   const [clip, setClip] = useState<Clip | null>(null);
@@ -190,7 +190,7 @@ export default function Practice() {
     const sync = () => {
       const all = location.hash === '#complete/all';
       setAllCompleteView(all);
-      setTab((location.hash === '#grammar' || all) && (openPreview || debugTools || stage.status.pronunciationComplete) ? 'grammar' : 'speechsuper');
+      setTab((location.hash === '#grammar' || all) && (openPreview || debugTools || stage.status.pronunciationComplete) ? 'grammar' : 'tencent');
     };
     sync();
     window.addEventListener('hashchange', sync);
@@ -469,7 +469,7 @@ export default function Practice() {
           <div>
             <p className={css('eyebrow')}>{t('练习 / 改进 / 教学')}</p>
             <h1>
-              {t(['speechace', 'speechsuper'].includes(tab) ? '词句发音练习' : tab === 'grammar' ? '语法测验' : sentenceMode ? '关键句朗读' : '单词发音')}
+              {t(['speechace', 'tencent'].includes(tab) ? '词句发音练习' : tab === 'grammar' ? '语法测验' : sentenceMode ? '关键句朗读' : '单词发音')}
               <span className={css('title-dot')}>.</span>
             </h1>
             <p className={css('subtitle')}>
@@ -484,7 +484,7 @@ export default function Practice() {
         {!readingFlow && <div className={css('demo-banner')}>
           <FlaskConical size={19} />
           <span>
-            <strong>{['speechace', 'speechsuper'].includes(tab) ? '接入试点' : t('演示环境')}</strong>
+            <strong>{['speechace', 'tencent'].includes(tab) ? '接入试点' : t('演示环境')}</strong>
             {debugTools ? t('词句来自业务 FT 清单；本页演示评分为模拟，语法暂为示例题。') : t('词句来自业务 FT 清单。发音逐题至少 80 分，本关全部通过后解锁下一关；语法暂为示例题。')}
           </span>
           {debugTools && <a
@@ -519,7 +519,7 @@ export default function Practice() {
               aria-label={t('练习模块')}
             >
               {debugTools && <TabsTrigger value="speechace" disabled={locked}>Speechace 对照测试</TabsTrigger>}
-              <TabsTrigger value="speechsuper" disabled={locked}>{t('第一、二关 · 发音')}</TabsTrigger>
+              <TabsTrigger value="tencent" disabled={locked}>腾讯云口语评测 · 第一、二关</TabsTrigger>
               {debugTools && <TabsTrigger value="pronunciation" disabled={locked}>
                 <Headphones />
                 {t('单词发音')}
@@ -547,7 +547,7 @@ export default function Practice() {
             </span>
           </div>}
           <TabsContent value="speechace"><SpeechSuperPanel key="speechace" provider="speechace" onBusyChange={setSpeechBusy} /></TabsContent>
-          <TabsContent value="speechsuper"><SpeechSuperPanel key={`speechsuper:${training.teacher.id}:${training.enrollment_id}`} provider="speechsuper" stage={stage} onBusyChange={setSpeechBusy} />
+          <TabsContent value="tencent"><SpeechSuperPanel key={`tencent:${training.teacher.id}:${training.enrollment_id}`} provider="tencent" stage={stage} onBusyChange={setSpeechBusy} />
           </TabsContent>
           <TabsContent
             value={tab === 'sentences' ? 'sentences' : 'pronunciation'}
@@ -1144,7 +1144,7 @@ export default function Practice() {
               className={css('primary-btn')}
               onClick={() => {
                 setBooking(false);
-                if(debugTools) continuePending(); else switchModule(stage.status.pronunciationComplete ? 'grammar' : 'speechsuper');
+                if(debugTools) continuePending(); else switchModule(stage.status.pronunciationComplete ? 'grammar' : 'tencent');
                 history.replaceState(
                   null,
                   '',

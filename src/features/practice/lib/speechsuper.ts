@@ -1,6 +1,7 @@
 import type { CalculatedScore } from './score';
 import { abortable, ASSESSMENT_TIMEOUT_MS } from './assessmentRequest';
 export type SpeechKind = 'word' | 'sentence' | 'speech';
+export type SpeechProvider = 'speechace' | 'speechsuper' | 'tencent';
 export type SpeechResult = { id: string; provider: string; kind: SpeechKind; text: string; duration: number; result: Record<string, unknown>; scale: string; qualification: string; calculatedScore?: CalculatedScore; metrics?: Record<string, unknown> };
 export async function toWav(blob: Blob, signal = AbortSignal.timeout(15_000)): Promise<Blob> {
   if (blob.size > 20_000_000) throw new Error('音频文件超过 20MB，请缩短录音。');
@@ -22,7 +23,7 @@ export async function toWav(blob: Blob, signal = AbortSignal.timeout(15_000)): P
     return new Blob([bytes], { type: 'audio/wav' });
   } finally { void ctx.close().catch(() => {}); }
 }
-export async function assessSpeech(kind: SpeechKind, text: string, blob: Blob, provider: 'speechace' | 'speechsuper' = 'speechsuper', options?: { signal?: AbortSignal; onPhase?: (phase: string) => void }): Promise<SpeechResult> {
+export async function assessSpeech(kind: SpeechKind, text: string, blob: Blob, provider: SpeechProvider = 'speechsuper', options?: { signal?: AbortSignal; onPhase?: (phase: string) => void }): Promise<SpeechResult> {
   const signal = options?.signal ?? AbortSignal.timeout(ASSESSMENT_TIMEOUT_MS);
   options?.onPhase?.('正在处理录音…');
   let wav: Blob;
