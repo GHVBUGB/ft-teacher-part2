@@ -31,7 +31,7 @@ export async function assessSpeech(kind: SpeechKind, text: string, blob: Blob, p
   catch (error) {
     signal.throwIfAborted();
     if (error instanceof DOMException && error.name === 'TimeoutError') throw new Error('录音处理超时，录音已保留，请重试或重新录音。');
-    if (error instanceof DOMException) throw new Error('无法读取这段录音，请重新录音或换一个音频文件。');
+    if (error instanceof DOMException) throw new Error('无法读取这段录音，请重新录音。');
     throw error;
   }
   const bytes = new Uint8Array(await abortable(() => wav.arrayBuffer(), signal)); let binary = '';

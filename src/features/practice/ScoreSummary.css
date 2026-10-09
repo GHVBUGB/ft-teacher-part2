@@ -233,6 +233,15 @@
   font-weight: 600;
   color: #1477e8;
 }
+.assessment-phoneme-table--tencent {
+  min-width: 0;
+  table-layout: fixed;
+}
+.assessment-phoneme-table--tencent th,
+.assessment-phoneme-table--tencent td {
+  width: 50%;
+  text-align: center;
+}
 .assessment-phoneme-table ul,
 .assessment-feedback ul,
 .assessment-word-feedback {

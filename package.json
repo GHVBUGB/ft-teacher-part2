@@ -10,7 +10,7 @@
     "build": "vite build",
     "start": "vite preview --host localhost --port 3000",
     "lint": "oxlint",
-    "test": "node tests/rules.mjs",
+    "test": "node tests/run.mjs",
     "typecheck": "tsc --noEmit",
     "format": "oxfmt",
     "api:types": "openapi-typescript contracts/openapi.json -o src/shared/api/generated.ts"

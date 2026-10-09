@@ -1,0 +1,115 @@
+{
+  "overall": 96,
+  "stress": 100,
+  "words": [
+    {
+      "pause": {
+        "duration": 0,
+        "type": 0
+      },
+      "phonics": [
+        {
+          "overall": 100,
+          "phoneme": [
+            "æ"
+          ],
+          "spell": "a"
+        },
+        {
+          "overall": 100,
+          "phoneme": [
+            "p"
+          ],
+          "spell": "pp"
+        },
+        {
+          "overall": 85,
+          "phoneme": [
+            "l"
+          ],
+          "spell": "le"
+        }
+      ],
+      "readType": 0,
+      "phonemes": [
+        {
+          "stress_mark": 1,
+          "pronunciation": 100,
+          "span": {
+            "end": 15,
+            "start": 0
+          },
+          "readType": 0,
+          "phoneme": "æ",
+          "inserted_before": [],
+          "sound_like": "æ",
+          "inserted_after": []
+        },
+        {
+          "stress_mark": 0,
+          "pronunciation": 100,
+          "span": {
+            "end": 26,
+            "start": 15
+          },
+          "readType": 0,
+          "phoneme": "p",
+          "inserted_before": [],
+          "sound_like": "p",
+          "inserted_after": []
+        },
+        {
+          "stress_mark": 0,
+          "pronunciation": 85,
+          "span": {
+            "end": 44,
+            "start": 26
+          },
+          "readType": 0,
+          "phoneme": "l",
+          "inserted_before": [],
+          "sound_like": "l",
+          "inserted_after": []
+        }
+      ],
+      "span": {
+        "end": 44,
+        "start": 0
+      },
+      "scores": {
+        "overall": 96,
+        "pronunciation": 96,
+        "stress": [
+          {
+            "phonetic": "æ",
+            "ref_stress": 1,
+            "phoneme_offset": 0,
+            "overall": 100,
+            "spell": "a",
+            "stress": 1
+          },
+          {
+            "phonetic": "pl",
+            "ref_stress": 0,
+            "phoneme_offset": 1,
+            "overall": 93,
+            "spell": "pple",
+            "stress": 0
+          }
+        ]
+      },
+      "word_parts": [
+        {
+          "beginIndex": 0,
+          "charType": 0,
+          "endIndex": 4,
+          "part": "apple"
+        }
+      ],
+      "word": "apple",
+      "charType": 0
+    }
+  ],
+  "intelligibility": 98,
+  "pronunciation": 96
+}

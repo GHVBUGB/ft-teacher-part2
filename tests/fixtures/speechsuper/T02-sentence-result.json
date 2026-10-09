@@ -1,0 +1,418 @@
+{
+  "words": [
+    {
+      "linked": 1,
+      "phonemes": [
+        {
+          "stress_mark": 0,
+          "pronunciation": 100,
+          "readType": 0,
+          "span": {
+            "start": 0,
+            "end": 5
+          },
+          "sound_like": "ð",
+          "inserted_after": [],
+          "inserted_before": [],
+          "phoneme": "ð"
+        },
+        {
+          "stress_mark": 0,
+          "pronunciation": 100,
+          "readType": 0,
+          "span": {
+            "start": 5,
+            "end": 13
+          },
+          "sound_like": "ɪ",
+          "inserted_after": [],
+          "inserted_before": [],
+          "phoneme": "ɪ"
+        },
+        {
+          "stress_mark": 0,
+          "pronunciation": 100,
+          "readType": 0,
+          "span": {
+            "start": 13,
+            "end": 24
+          },
+          "sound_like": "s",
+          "inserted_after": [],
+          "inserted_before": [],
+          "phoneme": "s"
+        }
+      ],
+      "charType": 0,
+      "span": {
+        "start": 0,
+        "end": 24
+      },
+      "linkable_type": 0,
+      "scores": {
+        "overall": 100,
+        "prominence": 1,
+        "pronunciation": 100
+      },
+      "word_parts": [
+        {
+          "beginIndex": 0,
+          "endIndex": 3,
+          "charType": 0,
+          "part": "This"
+        }
+      ],
+      "word": "This",
+      "phonics": [
+        {
+          "overall": 100,
+          "spell": "Th",
+          "phoneme": [
+            "ð"
+          ]
+        },
+        {
+          "overall": 100,
+          "spell": "i",
+          "phoneme": [
+            "ɪ"
+          ]
+        },
+        {
+          "overall": 100,
+          "spell": "s",
+          "phoneme": [
+            "s"
+          ]
+        }
+      ],
+      "linkable": 1,
+      "pause": {
+        "duration": 0,
+        "type": 0
+      }
+    },
+    {
+      "linked": 1,
+      "phonemes": [
+        {
+          "stress_mark": 0,
+          "pronunciation": 100,
+          "readType": 0,
+          "span": {
+            "start": 24,
+            "end": 29
+          },
+          "sound_like": "ɪ",
+          "inserted_after": [],
+          "inserted_before": [],
+          "phoneme": "ɪ"
+        },
+        {
+          "stress_mark": 0,
+          "pronunciation": 100,
+          "readType": 0,
+          "span": {
+            "start": 29,
+            "end": 39
+          },
+          "sound_like": "z",
+          "inserted_after": [],
+          "inserted_before": [],
+          "phoneme": "z"
+        }
+      ],
+      "charType": 0,
+      "span": {
+        "start": 24,
+        "end": 39
+      },
+      "linkable_type": 0,
+      "scores": {
+        "overall": 100,
+        "prominence": 0,
+        "pronunciation": 100
+      },
+      "word_parts": [
+        {
+          "beginIndex": 5,
+          "endIndex": 6,
+          "charType": 0,
+          "part": "is"
+        }
+      ],
+      "word": "is",
+      "phonics": [
+        {
+          "overall": 100,
+          "spell": "i",
+          "phoneme": [
+            "ɪ"
+          ]
+        },
+        {
+          "overall": 100,
+          "spell": "s",
+          "phoneme": [
+            "z"
+          ]
+        }
+      ],
+      "linkable": 1,
+      "pause": {
+        "duration": 0,
+        "type": 0
+      }
+    },
+    {
+      "linked": 0,
+      "phonemes": [
+        {
+          "stress_mark": 0,
+          "pronunciation": 100,
+          "readType": 0,
+          "span": {
+            "start": 39,
+            "end": 43
+          },
+          "sound_like": "ə",
+          "inserted_after": [],
+          "inserted_before": [],
+          "phoneme": "ə"
+        }
+      ],
+      "charType": 0,
+      "span": {
+        "start": 39,
+        "end": 43
+      },
+      "linkable_type": -1,
+      "scores": {
+        "overall": 100,
+        "prominence": 0,
+        "pronunciation": 100
+      },
+      "word_parts": [
+        {
+          "beginIndex": 8,
+          "endIndex": 8,
+          "charType": 0,
+          "part": "a"
+        }
+      ],
+      "word": "a",
+      "phonics": [
+        {
+          "overall": 100,
+          "spell": "a",
+          "phoneme": [
+            "ə"
+          ]
+        }
+      ],
+      "linkable": 0,
+      "pause": {
+        "duration": 0,
+        "type": 0
+      }
+    },
+    {
+      "linked": 1,
+      "phonemes": [
+        {
+          "stress_mark": 0,
+          "pronunciation": 100,
+          "readType": 0,
+          "span": {
+            "start": 43,
+            "end": 54
+          },
+          "sound_like": "r",
+          "inserted_after": [],
+          "inserted_before": [],
+          "phoneme": "r"
+        },
+        {
+          "stress_mark": 0,
+          "pronunciation": 100,
+          "readType": 0,
+          "span": {
+            "start": 54,
+            "end": 61
+          },
+          "sound_like": "ɛ",
+          "inserted_after": [],
+          "inserted_before": [],
+          "phoneme": "ɛ"
+        },
+        {
+          "stress_mark": 0,
+          "pronunciation": 96,
+          "readType": 0,
+          "span": {
+            "start": 61,
+            "end": 67
+          },
+          "sound_like": "d",
+          "inserted_after": [],
+          "inserted_before": [],
+          "phoneme": "d"
+        }
+      ],
+      "charType": 0,
+      "span": {
+        "start": 43,
+        "end": 67
+      },
+      "linkable_type": 0,
+      "scores": {
+        "overall": 99,
+        "prominence": 1,
+        "pronunciation": 99
+      },
+      "word_parts": [
+        {
+          "beginIndex": 10,
+          "endIndex": 12,
+          "charType": 0,
+          "part": "red"
+        }
+      ],
+      "word": "red",
+      "phonics": [
+        {
+          "overall": 100,
+          "spell": "r",
+          "phoneme": [
+            "r"
+          ]
+        },
+        {
+          "overall": 100,
+          "spell": "e",
+          "phoneme": [
+            "ɛ"
+          ]
+        },
+        {
+          "overall": 96,
+          "spell": "d",
+          "phoneme": [
+            "d"
+          ]
+        }
+      ],
+      "linkable": 1,
+      "pause": {
+        "duration": 0,
+        "type": 0
+      }
+    },
+    {
+      "linked": 0,
+      "phonemes": [
+        {
+          "stress_mark": 1,
+          "pronunciation": 79,
+          "readType": 0,
+          "span": {
+            "start": 67,
+            "end": 80
+          },
+          "sound_like": "æ",
+          "inserted_after": [],
+          "inserted_before": [],
+          "phoneme": "æ"
+        },
+        {
+          "stress_mark": 0,
+          "pronunciation": 100,
+          "readType": 0,
+          "span": {
+            "start": 80,
+            "end": 90
+          },
+          "sound_like": "p",
+          "inserted_after": [],
+          "inserted_before": [],
+          "phoneme": "p"
+        },
+        {
+          "stress_mark": 0,
+          "pronunciation": 87,
+          "readType": 0,
+          "span": {
+            "start": 90,
+            "end": 108
+          },
+          "sound_like": "l",
+          "inserted_after": [],
+          "inserted_before": [],
+          "phoneme": "l"
+        }
+      ],
+      "charType": 0,
+      "span": {
+        "start": 67,
+        "end": 108
+      },
+      "linkable_type": -1,
+      "scores": {
+        "overall": 90,
+        "prominence": 1,
+        "pronunciation": 90
+      },
+      "word_parts": [
+        {
+          "beginIndex": 14,
+          "endIndex": 18,
+          "charType": 0,
+          "part": "apple"
+        },
+        {
+          "beginIndex": 19,
+          "endIndex": 19,
+          "charType": 1,
+          "part": "."
+        }
+      ],
+      "word": "apple.",
+      "phonics": [
+        {
+          "overall": 79,
+          "spell": "a",
+          "phoneme": [
+            "æ"
+          ]
+        },
+        {
+          "overall": 100,
+          "spell": "pp",
+          "phoneme": [
+            "p"
+          ]
+        },
+        {
+          "overall": 87,
+          "spell": "le",
+          "phoneme": [
+            "l"
+          ]
+        }
+      ],
+      "linkable": 0,
+      "pause": {
+        "duration": 0,
+        "type": 0
+      }
+    }
+  ],
+  "rear_tone": "fall",
+  "pronunciation": 100,
+  "overall": 100,
+  "intelligibility": 100,
+  "rhythm": 100,
+  "speed": 277,
+  "fluency": 100,
+  "integrity": 100
+}

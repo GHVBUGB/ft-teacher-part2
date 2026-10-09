@@ -1,3 +1,4 @@
+import { enableSyntheticMicrophone } from './synthetic-microphone';
 /// <reference types="vite/client" />
 import { createRoot } from 'react-dom/client';
 import { useState, useRef, useEffect } from 'react';
@@ -22,15 +23,16 @@ const key = `ft-practice:stages:v1:${context.teacherId}:${context.enrollmentId}:
 function result(kind: SpeechKind, text: string, score = 80): SpeechResult {
   const metrics =
     kind === 'word'
-      ? { pronunciation: score, stress: 90, intelligibility: 92 }
-      : { pronunciation: score, fluency: score, rhythm: score, integrity: 100 };
+      ? { pronunciation: score, fluency: 92, completion: 100, suggestedScore: score }
+      : { pronunciation: score, fluency: 92, completion: 100, suggestedScore: score };
   return {
     id: crypto.randomUUID(),
     kind,
     text,
-    provider: 'synthetic',
+    provider: 'tencent',
     duration: 1,
-    result: metrics,
+    metrics,
+    result: { ...metrics, provider: 'tencent', words: [{word: text, pronunciation: score, matchTag: 0, phonemes: [{phoneme: 'ae', pronunciation: score}]}] },
     scale: '0-100',
     qualification: '合成测试，不代表真人评分',
   };
@@ -64,41 +66,7 @@ function Harness() {
     if (mode === 'pending') return new Promise<SpeechResult>(() => {});
     return result(kind, text, score);
   }
-  function enableMic() {
-    navigator.mediaDevices.getUserMedia = async () => {
-      setMicCalls((n) => n + 1);
-      const context = new AudioContext();
-      const oscillator = context.createOscillator();
-      const destination = context.createMediaStreamDestination();
-      oscillator.connect(destination);
-      oscillator.start();
-      await context.resume();
-      const track = destination.stream.getAudioTracks()[0];
-      const stop = track.stop.bind(track);
-      let stopped = false;
-      track.stop = () => {
-        if (stopped) return;
-        stopped = true;
-        stop();
-        oscillator.stop();
-        void context.close();
-      };
-      return destination.stream;
-    };
-  }
-  async function loadAudio() {
-    const response = await fetch('/samples/ft-word-box.wav');
-    const input = document.querySelector<HTMLInputElement>('input[type=file]');
-    if (!input) return;
-    const transfer = new DataTransfer();
-    transfer.items.add(
-      new File([await response.blob()], 'synthetic-example.wav', {
-        type: 'audio/wav',
-      }),
-    );
-    input.files = transfer.files;
-    input.dispatchEvent(new Event('change', { bubbles: true }));
-  }
+  function enableMic() { enableSyntheticMicrophone(() => setMicCalls(n => n + 1)); }
   return (
     <main style={{ maxWidth: 1100, margin: 'auto', padding: '4px 12px 0' }}>
       <aside className="qa-controls" aria-label="合成测试控制台">
@@ -120,7 +88,6 @@ function Harness() {
           <button onClick={()=>{for(const item of words.slice(0,-1))stage.record(item.id,result(item.kind,item.text));window.location.hash=`read/${words.at(-1)!.id}`;}}>准备单词关最后一题</button>
           <button onClick={()=>{const sentences=stage.items.filter(i=>i.kind==='sentence');for(const item of sentences.slice(0,-1))stage.record(item.id,result(item.kind,item.text));window.location.hash=`read/${sentences.at(-1)!.id}`;}}>准备句子关最后一题</button>
           <button onClick={lowEighth}>第8题录入79分</button>
-          <button onClick={loadAudio}>装入合成测试音频</button>
           <button
             onClick={() => {
               localStorage.removeItem(key);
@@ -137,7 +104,7 @@ function Harness() {
           {String(sameBlob)}
         </output>
       </aside>
-      <SpeechSuperPanel stage={stage} assess={assess} checkStatus={false} />
+      <SpeechSuperPanel provider="tencent" stage={stage} assess={assess} checkStatus={false} />
     </main>
   );
 }

@@ -72,11 +72,7 @@
   margin: 16px 0;
   flex-wrap: wrap;
 }
-.ss-upload input {
-  display: block;
-  margin-top: 6px;
-  max-width: 100%;
-}
+
 .ss-submit {
   background: #163f37;
   color: #fff;
@@ -359,8 +355,8 @@
 .ss-reader .ss-actions { justify-content:center; margin:12px 0 18px; gap:22px; }
 .ss-reader .ss-record { height:80px; width:80px; }
 .ss-reader .ss-example { height:65px; width:65px; }
-.ss-reader .ss-upload { width:100%; text-align:center; color:#71839c; font-size:12px; margin-top:12px; }
-.ss-reader .ss-upload input { margin:5px auto; font-size:12px; }
+
+
 .ss-reader > .ss-help { text-align:center; font-size:11px; color:#8090a8; line-height:1.7; }
 .ss-reader > .ss-submit { display:block; min-width:200px; margin:22px auto; padding:14px 26px; border-radius:13px; }
 .ss-reader > div:has(> audio) { text-align:center; }
@@ -374,7 +370,7 @@
   .ss-reader {padding:20px 18px;margin:12px auto 24px;border-radius:18px;}
   .ss-reader-nav {gap:8px;font-size:11px;}.ss-reader-nav button {font-size:12px;}
   .ss-reader .ss-reading-target {padding:35px 0 24px;}.ss-reader .ss-reading-target h1 {font-size:42px;}
-  .ss-reader .ss-actions {gap:20px;}.ss-reader .ss-upload input {width:100%;max-width:255px;}
+  .ss-reader .ss-actions {gap:20px;}
 }
 
 /* Spacious reading first; assessment appears below and is revealed on completion. */
@@ -390,8 +386,8 @@
 .ss-reader .ss-actions { gap:20px; margin:18px 0 12px; }
 .ss-reader .ss-record { width:76px; height:76px; }
 .ss-reader .ss-example { width:64px; height:64px; }
-.ss-reader .ss-upload { width:100%; margin-top:12px; font-size:12px; }
-.ss-reader .ss-upload input { margin:6px auto 0; font-size:12px; max-width:260px; }
+
+
 .ss-reader .ss-practice-controls > .ss-help { text-align:center; font-size:12px; line-height:1.5; color:#8090a8; margin:10px 0; }
 .ss-reader .ss-practice-controls > div:has(> audio) p { font-size:12px; margin:6px 0; color:#7488a8; }
 .ss-reader .ss-practice-controls audio[controls] { width:min(100%,300px); }
@@ -423,10 +419,10 @@
 .ss-reader .ss-practice-controls { min-height:clamp(340px,calc(100dvh - 250px),600px); padding:18px 0; }
 .ss-reader .ss-actions { flex-direction:column; gap:8px; margin:12px 0; }
 .ss-reader .ss-record-prompt { font-size:13px; color:#657e9c; }
-.ss-reader .ss-upload { position:relative; width:auto; align-self:center; margin:6px 0 0; padding:4px 10px; color:#0063f2; cursor:pointer; border-radius:6px; }
-.ss-reader .ss-upload:hover { background:#edf5ff; }
-.ss-reader .ss-upload:focus-within { outline:2px solid #0063f2; outline-offset:3px; }
-.ss-reader .ss-upload input { position:absolute; width:1px; height:1px; margin:0; opacity:0; overflow:hidden; clip-path:inset(50%); }
+
+
+
+
 .ss-reader .ss-own-recording { display:flex; justify-content:center; width:100%; margin:8px 0; }
 .ss-reader .ss-own-recording audio[controls] { display:block; margin:0 auto; }
 .ss-reader[data-has-result='true'] .ss-practice-controls { min-height:0; padding:10px 0; }

@@ -42,7 +42,6 @@
   "系统未检测到麦克风。请连接录音设备后重试。": "No microphone was detected. Connect an audio input device and try again.",
   "浏览器未获麦克风权限。请在此网站的设置中允许麦克风后重试。": "Microphone access is blocked. Allow it in this site's settings and try again.",
   "麦克风无法读取。请检查设备连接，关闭其他正在使用麦克风的应用后重试。": "The microphone cannot be read. Check its connection and close other apps using it.",
-  "无法访问麦克风，请检查设备，或上传录音文件。": "Cannot access the microphone. Check the device or upload an audio file.",
   "无法打开麦克风，请重试。": "The microphone could not be opened. Please try again.",
   "已载入 2 秒静音测试音频。": "Two seconds of silence loaded for input validation.",
   "已载入合成示例音频，可回放并测试评测流程。": "Synthetic sample loaded. Play it back or try the demo assessment.",
@@ -327,7 +326,6 @@
   "录音已保留，重试评测会使用这段录音": "Recording saved. Retry assessment with this audio.",
   "音频已准备好": "Audio is ready",
   "可以先试听，再提交评测": "Listen back, then submit.",
-  "上传音频": "Upload audio",
   "评测最多等待 75 秒": "Assessment may take up to 75 seconds.",
   "结束录音后自动提交": "Submitted automatically when recording ends.",
   "本次评测已完成": "Assessment complete",
@@ -382,5 +380,10 @@
   "打乱题目重新考核": "Shuffle and try again",
   "答对至少24题（80%）通过；未通过重新进入将打乱题序。": "Pass with at least 24 correct answers (80%). Failed retakes use a shuffled order.",
   "30道语法题，每题提交一次；答对24题（80%）通过，未通过重考将打乱题序。": "30 questions, one submission each. Pass with 24 correct (80%). Failed retakes use a shuffled order.",
-  "已答错7题，无法达到80%，请重新考核。": "7 incorrect answers. An 80% score is no longer possible. Please try again."
+  "已答错7题，无法达到80%，请重新考核。": "7 incorrect answers. An 80% score is no longer possible. Please try again.",
+  "无法访问麦克风，请检查设备及浏览器的麦克风权限。": "Cannot access the microphone. Check the device and browser microphone permission.",
+  "点击开始录音，朗读后结束并评测": "Start recording, read aloud, then stop to assess.",
+  "准确度": "Accuracy",
+  "流利度": "Fluency",
+  "完整度": "Completion"
 }

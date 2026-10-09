@@ -214,25 +214,22 @@ export function getScoreDetails(
     kind === 'word'
       ? source.provider === 'tencent'
         ? [
-            ['pronunciation', '发音'],
+            ['pronunciation', '准确度'],
             ['fluency', '流利度'],
-            ['completion', '完整度'],
-            ['suggestedScore', '腾讯建议分'],
           ]
         : [
-            ['pronunciation', '发音'],
+            ['pronunciation', '准确度'],
             ['stress', '重音'],
             ['intelligibility', '可理解性'],
           ]
       : source.provider === 'tencent'
         ? [
-            ['pronunciation', '发音'],
+            ['pronunciation', '准确度'],
             ['fluency', '流利度'],
             ['completion', '完整度'],
-            ['suggestedScore', '腾讯建议分'],
           ]
         : [
-            ['pronunciation', '发音'],
+            ['pronunciation', '准确度'],
             ['fluency', '流利度'],
             ['integrity', '完整度'],
             ['rhythm', '韵律'],

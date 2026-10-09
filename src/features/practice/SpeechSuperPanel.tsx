@@ -249,7 +249,10 @@ export default function SpeechSuperPanel({
         () => {
           if (recorder.state === 'recording') recorder.stop();
         },
-        provider === 'speechace' ? 30000 : kind === 'word' ? 20000 : 90000,
+        // Stop just before Tencent's 20s/60s limit to allow for recorder flush.
+        provider === 'tencent'
+          ? kind === 'word' ? 19000 : 59000
+          : provider === 'speechace' ? 30000 : kind === 'word' ? 20000 : 90000,
       );
     } catch (error) {
       stream.current?.getTracks().forEach((t) => t.stop());
@@ -257,7 +260,7 @@ export default function SpeechSuperPanel({
         setError(
           t(
             microphoneErrorMessage(error) ??
-              '无法访问麦克风，请检查设备，或上传录音文件。',
+              '无法访问麦克风，请检查设备及浏览器的麦克风权限。',
           ),
         );
     } finally {
@@ -549,7 +552,7 @@ export default function SpeechSuperPanel({
           </div>
         )}
         {!result && (
-          <div className="ss-flow-analysis-placeholder">{kind==='sentence'&&<span className="ss-sentence-dimension-labels">{(provider === 'tencent' ? ['发音','流利度','完整度','腾讯建议分'] : ['发音','流利度','完整度','韵律','速度']).map(label=><span key={label}>{t(label)}</span>)}</span>}</div>
+          <div className="ss-flow-analysis-placeholder">{kind==='sentence'&&<span className="ss-sentence-dimension-labels">{(provider === 'tencent' ? ['准确度','流利度','完整度'] : ['发音','流利度','完整度','韵律','速度']).map(label=><span key={label}>{t(label)}</span>)}</span>}</div>
         )}
         <div className="ss-flow-actions">
           <div className="ss-flow-primary-row">
@@ -613,28 +616,7 @@ export default function SpeechSuperPanel({
             ) : error ? (
               t('也可以重新录音')
             ) : (
-              <label className="ss-upload">
-                {t('上传音频')}
-                <input
-                  aria-label="上传录音"
-                  type="file"
-                  accept="audio/*,.wav,.mp3,.m4a,.webm"
-                  disabled={locked}
-                  onChange={(e) => {
-                    const file = e.target.files?.[0];
-                    clear();
-                    if (file) {
-                      if (file.size > 20_000_000)
-                        setError('文件超过 20MB，请缩短录音。');
-                      else {
-                        setBlob(file);
-                        setName(file.name);
-                      }
-                    }
-                    e.target.value = '';
-                  }}
-                />
-              </label>
+              t('点击开始录音，朗读后结束并评测')
             )}
           </div>
         </div>

@@ -19,13 +19,32 @@ function displayDimension(value: number | null): string {
   return value === null ? '未返回' : value.toFixed(1);
 }
 
+function tencentMatchLabel(value: string | number | null | undefined): string {
+  const labels: Record<string, string> = {
+    '0': '已匹配',
+    '1': '多读',
+    '2': '漏读',
+    '3': '错读',
+    '4': '未录入单词',
+  };
+  return value == null
+    ? '未返回'
+    : Object.hasOwn(labels, String(value))
+      ? labels[String(value)]
+      : `匹配标记 ${value}`;
+}
+
 export default function ScoreSummary({
   kind,
   metrics,
   rawResult,
   audioUrl,
 }: Props) {
-  const calculated = calculateScore(kind, metrics, rawResult?.provider as string | undefined);
+  const calculated = calculateScore(
+    kind,
+    metrics,
+    rawResult?.provider as string | undefined,
+  );
   const details = getScoreDetails(kind, metrics, rawResult);
   const [open, setOpen] = useState<Set<number>>(() => new Set());
   const [playing, setPlaying] = useState(false);
@@ -37,7 +56,8 @@ export default function ScoreSummary({
     audio.current = node;
   }, []);
   const id = useId();
-  const tencentSentence = kind === 'sentence' && rawResult?.provider === 'tencent';
+  const isTencent = rawResult?.provider === 'tencent';
+  const tencentSentence = kind === 'sentence' && isTencent;
   const displayScore = calculated.value;
   const passed = calculated.value !== null && calculated.value >= 80;
   function toggle(index: number) {
@@ -64,212 +84,244 @@ export default function ScoreSummary({
   return (
     <section className="assessment-summary" aria-label="发音评测结果">
       <div className="assessment-overview">
-      <div className="assessment-total" aria-live="polite">
-        <h3>{tencentSentence ? '腾讯建议分' : '总分'}</h3>
-        {displayScore === null ? (
-          <output className="assessment-unavailable">
-            {tencentSentence ? '腾讯未返回建议分，本次无法显示分数。' : '评测数据不完整，暂无法计算总分，请重新评测。'}
-          </output>
-        ) : (
-          <>
-            <div className="assessment-score-pill">
-              <strong>{Math.round(displayScore * 10) / 10}</strong>
-              <span className="assessment-score-unit">/ 100</span>
-              {audioUrl && (
-                <button
-                  type="button"
-                  className="assessment-play"
-                  onClick={play}
-                  aria-label={playing ? '暂停本次录音' : '回放本次录音'}
+        <div className="assessment-total" aria-live="polite">
+          <h3>总分</h3>
+          {displayScore === null ? (
+            <output className="assessment-unavailable">
+              {tencentSentence
+                ? '腾讯未返回总分，本次无法显示分数。'
+                : '评测数据不完整，暂无法计算总分，请重新评测。'}
+            </output>
+          ) : (
+            <>
+              <div className="assessment-score-pill">
+                <strong>{Math.round(displayScore * 10) / 10}</strong>
+                <span className="assessment-score-unit">/ 100</span>
+                {audioUrl && (
+                  <button
+                    type="button"
+                    className="assessment-play"
+                    onClick={play}
+                    aria-label={playing ? '暂停本次录音' : '回放本次录音'}
+                  >
+                    {playing ? (
+                      <PauseIcon aria-hidden="true" size={24} />
+                    ) : (
+                      <SpeakerHighIcon aria-hidden="true" size={27} />
+                    )}
+                  </button>
+                )}
+              </div>
+              {tencentSentence ? (
+                <p
+                  className={`assessment-verdict ${passed ? 'is-passed' : 'needs-practice'}`}
                 >
-                  {playing ? (
-                    <PauseIcon aria-hidden="true" size={24} />
-                  ) : (
-                    <SpeakerHighIcon aria-hidden="true" size={27} />
-                  )}
-                </button>
+                  {passed ? '本题通过' : '本题未通过，请再练习'}
+                  <span> · 总分 80 分及以上通过</span>
+                </p>
+              ) : (
+                <p
+                  className={`assessment-verdict ${passed ? 'is-passed' : 'needs-practice'}`}
+                >
+                  {passed ? '本题通过' : '本题未通过，请再练习'}
+                  <span> · 80 分及以上通过</span>
+                </p>
               )}
+            </>
+          )}
+          {audioUrl && (
+            // eslint-disable-next-line jsx-a11y/media-has-caption -- Teacher's own recording; no transcript or captions have been returned.
+            <audio
+              ref={setAudioNode}
+              src={audioUrl}
+              preload="none"
+              aria-label="本次练习录音"
+              onPlay={() => setPlaying(true)}
+              onPause={() => setPlaying(false)}
+              onEnded={() => setPlaying(false)}
+              onError={() => {
+                setPlaying(false);
+                setPlayError(true);
+              }}
+            />
+          )}
+          {playError && (
+            <p role="alert" className="assessment-audio-error">
+              录音暂时无法播放，请重新录音。
+            </p>
+          )}
+        </div>
+        <dl className="assessment-dimensions" aria-label="各维度评分">
+          {details.dimensions.map((d) => (
+            <div key={d.key}>
+              <dt>
+                {d.label}
+                {d.unit && <small>（{d.unit}）</small>}
+              </dt>
+              <dd className={d.value === null ? 'is-missing' : ''}>
+                {displayDimension(d.value)}
+              </dd>
             </div>
-            {tencentSentence ? (
-              <p className={`assessment-verdict ${passed ? 'is-passed' : 'needs-practice'}`}>
-                {passed ? '本题通过' : '本题未通过，请再练习'}
-                <span> · 按腾讯建议分，80 分及以上通过</span>
-              </p>
-            ) : (
-              <p className={`assessment-verdict ${passed ? 'is-passed' : 'needs-practice'}`}>
-                {passed ? '本题通过' : '本题未通过，请再练习'}
-                <span> · 80 分及以上通过</span>
-              </p>
-            )}
-          </>
-        )}
-        {audioUrl && (
-          // eslint-disable-next-line jsx-a11y/media-has-caption -- Teacher's own recording; no transcript or captions have been returned.
-          <audio
-            ref={setAudioNode}
-            src={audioUrl}
-            preload="none"
-            aria-label="本次练习录音"
-            onPlay={() => setPlaying(true)}
-            onPause={() => setPlaying(false)}
-            onEnded={() => setPlaying(false)}
-            onError={() => {
-              setPlaying(false);
-              setPlayError(true);
-            }}
-          />
-        )}
-        {playError && (
-          <p role="alert" className="assessment-audio-error">
-            录音暂时无法播放，请重新录音。
-          </p>
-        )}
-      </div>
-      <dl className="assessment-dimensions" aria-label="各维度评分">
-        {details.dimensions.map((d) => (
-          <div key={d.key}>
-            <dt>
-              {d.label}
-              {d.unit && <small>（{d.unit}）</small>}
-            </dt>
-            <dd className={d.value === null ? 'is-missing' : ''}>
-              {displayDimension(d.value)}
-            </dd>
-          </div>
-        ))}
-      </dl>
+          ))}
+        </dl>
       </div>
       <details className="assessment-analysis">
-        <summary>查看分析 <CaretDownIcon size={18} aria-hidden="true" /></summary>
-      {details.feedback.length > 0 && (
-        <section className="assessment-feedback" aria-label="具体反馈">
-          <h4>具体反馈</h4>
-          <ul>
-            {details.feedback.map((f, i) => (
-              <li key={i}>{f}</li>
-            ))}
-          </ul>
-        </section>
-      )}
-      <section
-        className="assessment-word-results"
-        aria-labelledby={`${id}-words`}
-      >
-        <h3 id={`${id}-words`}>词级评估结果</h3>
-        {details.words.length === 0 ? (
-          <p className="assessment-empty">本次评测未返回词级或音素明细。</p>
-        ) : (
-          <div className="assessment-table-scroll">
-            <table className="assessment-word-table">
-              <thead>
-                <tr>
-                  <th scope="col">单词</th>
-                  <th scope="col">质量评分</th>
-                  <th scope="col">MatchTag</th>
-                  <th scope="col">音素级分析</th>
-                </tr>
-              </thead>
-              <tbody>
-                {details.words.map((w, index) => (
-                  <Fragment key={`${index}-${w.word}`}>
-                    <tr>
-                      <th scope="row" lang="en">
-                        {w.word}
-                      </th>
-                      <td>{displayDimension(w.score)}</td>
-                      <td>{w.matchTag ?? '未返回'}</td>
-                      <td>
-                        <button
-                          type="button"
-                          className="assessment-expand"
-                          aria-expanded={open.has(index)}
-                          aria-controls={`${id}-word-${index}`}
-                          onClick={() => toggle(index)}
-                        >
-                          <span>
-                            {open.has(index) ? '收起分析' : '查看分析'}
-                          </span>
-                          <CaretDownIcon
-                            size={21}
-                            className={open.has(index) ? 'is-open' : ''}
-                            aria-hidden="true"
-                          />
-                          <span className="assessment-visually-hidden">
-                            ：{w.word}
-                          </span>
-                        </button>
-                      </td>
-                    </tr>
-                    <tr
-                      className="assessment-detail-row"
-                      hidden={!open.has(index)}
-                    >
-                      <td colSpan={4} id={`${id}-word-${index}`}>
-                        {w.feedback.length > 0 && (
-                          <ul className="assessment-word-feedback">
-                            {w.feedback.map((f, i) => (
-                              <li key={i}>{f}</li>
-                            ))}
-                          </ul>
-                        )}
-                        {w.phonemes.length === 0 ? (
-                          <p className="assessment-empty">
-                            本次评测未返回该词的音素明细。
-                          </p>
-                        ) : (
-                          <table
-                            className="assessment-phoneme-table"
-                            aria-label={`${w.word} 的音素分析`}
-                          >
-                            <thead>
-                              <tr>
-                                <th scope="col">参考音素</th>
-                                <th scope="col">发音评分</th>
-                                <th scope="col">识别音素</th>
-                                <th scope="col">具体反馈</th>
-                              </tr>
-                            </thead>
-                            <tbody>
-                              {w.phonemes.map((p, i) => (
-                                <tr key={i}>
-                                  <th scope="row">/{p.symbol}/</th>
-                                  <td>{displayDimension(p.score)}</td>
-                                  <td>
-                                    {p.recognized
-                                      ? `/${p.recognized}/`
-                                      : '未返回'}
-                                  </td>
-                                  <td>
-                                    {p.feedback.length ? (
-                                      <ul>
-                                        {p.feedback.map((f, k) => (
-                                          <li key={k}>{f}</li>
-                                        ))}
-                                      </ul>
-                                    ) : (
-                                      '未返回具体问题说明'
-                                    )}
-                                  </td>
-                                </tr>
-                              ))}
-                            </tbody>
-                          </table>
-                        )}
-                      </td>
-                    </tr>
-                  </Fragment>
-                ))}
-              </tbody>
-            </table>
-          </div>
+        <summary>
+          查看分析 <CaretDownIcon size={18} aria-hidden="true" />
+        </summary>
+        {details.feedback.length > 0 && (
+          <section className="assessment-feedback" aria-label="具体反馈">
+            <h4>具体反馈</h4>
+            <ul>
+              {details.feedback.map((f, i) => (
+                <li key={i}>{f}</li>
+              ))}
+            </ul>
+          </section>
         )}
-      </section>
-      {details.tone && (
-        <section className="assessment-tone">
-          <h3>语调</h3>
-          <p>{details.tone}</p>
+        <section
+          className="assessment-word-results"
+          aria-labelledby={`${id}-words`}
+        >
+          <h3 id={`${id}-words`}>词级评估结果</h3>
+          {isTencent && (
+            <p>文本匹配只表示读到了对应单词；发音好坏请看准确度分数。</p>
+          )}
+          {details.words.length === 0 ? (
+            <p className="assessment-empty">本次评测未返回词级或音素明细。</p>
+          ) : (
+            <div className="assessment-table-scroll">
+              <table className="assessment-word-table">
+                <thead>
+                  <tr>
+                    <th scope="col">单词</th>
+                    <th scope="col">{isTencent ? '发音准确度' : '质量评分'}</th>
+                    <th scope="col">{isTencent ? '文本匹配' : 'MatchTag'}</th>
+                    <th scope="col">音素级分析</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {details.words.map((w, index) => (
+                    <Fragment key={`${index}-${w.word}`}>
+                      <tr>
+                        <th scope="row" lang="en">
+                          {w.word}
+                        </th>
+                        <td>{displayDimension(w.score)}</td>
+                        <td>
+                          {isTencent
+                            ? tencentMatchLabel(w.matchTag)
+                            : (w.matchTag ?? '未返回')}
+                        </td>
+                        <td>
+                          <button
+                            type="button"
+                            className="assessment-expand"
+                            aria-expanded={open.has(index)}
+                            aria-controls={`${id}-word-${index}`}
+                            onClick={() => toggle(index)}
+                          >
+                            <span>
+                              {open.has(index) ? '收起分析' : '查看分析'}
+                            </span>
+                            <CaretDownIcon
+                              size={21}
+                              className={open.has(index) ? 'is-open' : ''}
+                              aria-hidden="true"
+                            />
+                            <span className="assessment-visually-hidden">
+                              ：{w.word}
+                            </span>
+                          </button>
+                        </td>
+                      </tr>
+                      <tr
+                        className="assessment-detail-row"
+                        hidden={!open.has(index)}
+                      >
+                        <td colSpan={4} id={`${id}-word-${index}`}>
+                          {w.feedback.some(
+                            (f) => !isTencent || !f.startsWith('匹配情况：'),
+                          ) && (
+                            <ul className="assessment-word-feedback">
+                              {w.feedback
+                                .filter(
+                                  (f) =>
+                                    !isTencent || !f.startsWith('匹配情况：'),
+                                )
+                                .map((f, i) => (
+                                  <li key={i}>{f}</li>
+                                ))}
+                            </ul>
+                          )}
+                          {w.phonemes.length === 0 ? (
+                            <p className="assessment-empty">
+                              本次评测未返回该词的音素明细。
+                            </p>
+                          ) : (
+                            <table
+                              className={`assessment-phoneme-table${isTencent ? ' assessment-phoneme-table--tencent' : ''}`}
+                              aria-label={`${w.word} 的音素分析`}
+                            >
+                              <thead>
+                                <tr>
+                                  <th scope="col">
+                                    {isTencent ? '音素' : '参考音素'}
+                                  </th>
+                                  <th scope="col">
+                                    {isTencent
+                                      ? '发音准确度（0–100 分）'
+                                      : '发音评分'}
+                                  </th>
+                                  {!isTencent && <th scope="col">识别音素</th>}
+                                  {!isTencent && <th scope="col">具体反馈</th>}
+                                </tr>
+                              </thead>
+                              <tbody>
+                                {w.phonemes.map((p, i) => (
+                                  <tr key={i}>
+                                    <th scope="row">/{p.symbol}/</th>
+                                    <td>{displayDimension(p.score)}</td>
+                                    {!isTencent && (
+                                      <td>
+                                        {p.recognized
+                                          ? `/${p.recognized}/`
+                                          : '未返回'}
+                                      </td>
+                                    )}
+                                    {!isTencent && (
+                                      <td>
+                                        {p.feedback.length ? (
+                                          <ul>
+                                            {p.feedback.map((f, k) => (
+                                              <li key={k}>{f}</li>
+                                            ))}
+                                          </ul>
+                                        ) : (
+                                          '未返回具体问题说明'
+                                        )}
+                                      </td>
+                                    )}
+                                  </tr>
+                                ))}
+                              </tbody>
+                            </table>
+                          )}
+                        </td>
+                      </tr>
+                    </Fragment>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          )}
         </section>
-      )}
+        {details.tone && (
+          <section className="assessment-tone">
+            <h3>语调</h3>
+            <p>{details.tone}</p>
+          </section>
+        )}
       </details>
     </section>
   );

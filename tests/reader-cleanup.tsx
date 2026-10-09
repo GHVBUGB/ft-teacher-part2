@@ -1,3 +1,4 @@
+import { enableSyntheticMicrophone } from './synthetic-microphone';
 /// <reference types="vite/client" />
 import { createRoot } from 'react-dom/client';
 import { useState } from 'react';
@@ -24,18 +25,10 @@ function Harness() {
   function seedSeven(){for(const item of words.slice(0,7)) stage.record(item.id,result(item.kind,item.text));}
   function lowEighth(){stage.record(words[7].id,result('word',words[7].text,79));}
   async function assess(kind:SpeechKind,text:string,audio:Blob){if(!audio.size)throw new Error('empty test audio');setCalls(n=>n+1);return result(kind,text,score);}
-  async function loadAudio(){
-    const response=await fetch('/samples/ft-word-box.wav');
-    const input=document.querySelector<HTMLInputElement>('input[type=file]');
-    if(!input)return;
-    const transfer=new DataTransfer();
-    transfer.items.add(new File([await response.blob()],'synthetic-example.wav',{type:'audio/wav'}));
-    input.files=transfer.files;input.dispatchEvent(new Event('change',{bubbles:true}));
-  }
   return <main style={{maxWidth:1100,margin:'auto',padding:24}}>
     <aside className="qa-controls" aria-label="合成测试控制台">
       <strong>合成成绩测试 · 独立测试账号 · 未调用评分供应商</strong>
-      <div><button onClick={()=>setScore(31)}>后续返回31分</button><button onClick={()=>setScore(85)}>后续返回85分</button><button onClick={seedSeven}>前7题录入80分</button><button onClick={lowEighth}>第8题录入79分</button><button onClick={loadAudio}>装入合成测试音频</button><button onClick={()=>{localStorage.removeItem(key);window.location.hash='words';window.location.reload();}}>重置独立测试</button></div>
+      <div><button onClick={()=>setScore(31)}>后续返回31分</button><button onClick={()=>setScore(85)}>后续返回85分</button><button onClick={seedSeven}>前7题录入80分</button><button onClick={lowEighth}>第8题录入79分</button><button onClick={() => enableSyntheticMicrophone()}>启用合成麦克风</button><button onClick={()=>{localStorage.removeItem(key);window.location.hash='words';window.location.reload();}}>重置独立测试</button></div>
       <output>已通过 {stage.status.word.passed}/104 · 本次模拟提交 {calls} 次</output>
     </aside>
     <SpeechSuperPanel stage={stage} assess={assess} checkStatus={false}/>

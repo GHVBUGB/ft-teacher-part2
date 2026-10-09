@@ -1,3 +1,4 @@
+import { enableSyntheticMicrophone } from './synthetic-microphone';
 import React, { useRef, useState } from 'react';
 import { createRoot } from 'react-dom/client';
 import SpeechSuperPanel from '../src/features/practice/SpeechSuperPanel';
@@ -124,44 +125,11 @@ function fixture(
   };
 }
 
-/** One second of quiet tone, solely for exercising the real file-upload UI. */
-function syntheticWav(): File {
-  const samples = 16000;
-  const buffer = new ArrayBuffer(44 + samples * 2);
-  const view = new DataView(buffer);
-  const writeText = (offset: number, value: string) => {
-    for (let i = 0; i < value.length; i++)
-      view.setUint8(offset + i, value.charCodeAt(i));
-  };
-  writeText(0, 'RIFF');
-  view.setUint32(4, buffer.byteLength - 8, true);
-  writeText(8, 'WAVE');
-  writeText(12, 'fmt ');
-  view.setUint32(16, 16, true);
-  view.setUint16(20, 1, true);
-  view.setUint16(22, 1, true);
-  view.setUint32(24, 16000, true);
-  view.setUint32(28, 32000, true);
-  view.setUint16(32, 2, true);
-  view.setUint16(34, 16, true);
-  writeText(36, 'data');
-  view.setUint32(40, samples * 2, true);
-  for (let i = 0; i < samples; i++)
-    view.setInt16(
-      44 + i * 2,
-      Math.round(Math.sin((2 * Math.PI * 220 * i) / 16000) * 1600),
-      true,
-    );
-  return new File([buffer], 'synthetic-tone-not-human-speech.wav', {
-    type: 'audio/wav',
-  });
-}
-
 function Harness({ reset }: { reset: () => void }) {
   const stage = useStageTraining(context, items);
   const [choice, setChoice] = useState<ScoreChoice>('79.9');
   const [notice, setNotice] = useState(
-    '选择合成结果，将测试 WAV 放入真实上传框，然后点击组件内的“提交评测”。',
+    '选择合成结果，启用合成麦克风，再使用组件内的开始录音和结束并评测。',
   );
   const [calls, setCalls] = useState(0);
   const panel = useRef<HTMLDivElement>(null);
@@ -181,21 +149,6 @@ function Harness({ reset }: { reset: () => void }) {
       stage.record(item.id, fixture(item.kind, item.text, '80'));
     setNotice(
       '已向真实进度 Hook 写入前 19 词的合成 80 分。请在下方选择第 20 词 moon；第二关应仍锁定。',
-    );
-  }
-  function uploadSyntheticFile() {
-    const input =
-      panel.current?.querySelector<HTMLInputElement>('input[type="file"]');
-    if (!input || input.disabled) {
-      setNotice('上传框目前不可用，请等待组件就绪并选择已解锁关卡。');
-      return;
-    }
-    const data = new DataTransfer();
-    data.items.add(syntheticWav());
-    input.files = data.files;
-    input.dispatchEvent(new Event('change', { bubbles: true }));
-    setNotice(
-      '已通过真实上传 input 装入 1 秒合成音调。它不是人声，评分由当前选择的合成结果提供。请点击“提交评测”。',
     );
   }
   return (
@@ -218,7 +171,7 @@ function Harness({ reset }: { reset: () => void }) {
               <option value="missing">缺少必需维度 · 无法计算</option>
             </select>
           </label>
-          <button onClick={uploadSyntheticFile}>将合成 WAV 放入上传框</button>
+          <button onClick={() => enableSyntheticMicrophone()}>启用合成麦克风</button>
         </div>
         <output
           className="test-notice"

@@ -208,26 +208,9 @@
   font-size: 12px;
   color: #7c8faa;
 }
-.ss-flow .ss-upload {
-  margin: 0;
-  padding: 0 8px;
-  width: auto;
-  position: relative;
-  cursor: pointer;
-  color: #2468c9;
-  font-size: 12px;
-}
-.ss-flow .ss-upload input {
-  position: absolute;
-  opacity: 0;
-  width: 1px;
-  height: 1px;
-  clip-path: inset(50%);
-}
-.ss-flow .ss-upload:focus-within {
-  outline: 2px solid #72a9ff;
-  outline-offset: 3px;
-}
+
+
+
 .ss-flow .assessment-analysis {
   grid-column: 1;
   grid-row: 3;

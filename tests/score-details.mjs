@@ -5,7 +5,7 @@ import { calculateScore } from '../src/features/practice/lib/score.ts';
 
 let checks = 0;
 const check = (name, fn) => { fn(); checks += 1; console.log(`PASS ${name}`); };
-const fixtures = new URL('../artifacts/testing/2026-09-09-speechsuper-live/', import.meta.url);
+const fixtures = new URL('./fixtures/speechsuper/', import.meta.url);
 const wordRaw = JSON.parse(await readFile(new URL('T01-word-result.json', fixtures), 'utf8'));
 const sentenceRaw = JSON.parse(await readFile(new URL('T02-sentence-result.json', fixtures), 'utf8'));
 
@@ -33,7 +33,7 @@ check('Self-calculated total stays independent from provider overall', () => {
   assert.ok(!data.dimensions.some(d => d.key === 'overall'));
 });
 
-check('Tencent completion, suggested score, and MatchTag stay visible without an unsupported rhythm row', () => {
+check('Tencent sentence shows supported dimensions without duplicating total', () => {
   const data = getScoreDetails(
     'sentence',
     { pronunciation: 81.02, fluency: 97.03, completion: 100, suggestedScore: 81.02 },
@@ -55,21 +55,20 @@ check('Tencent completion, suggested score, and MatchTag stay visible without an
       ['pronunciation', 81.02],
       ['fluency', 97.03],
       ['completion', 100],
-      ['suggestedScore', 81.02],
     ],
   );
   assert.equal(data.words[0].matchTag, 0);
   assert.equal(data.words[0].phonemes[0].matchTag, 0);
   assert.match(data.words[0].feedback[0], /匹配情况：匹配/);
 });
-check('Tencent word shows all returned dimensions and phoneme details', () => {
+check('Tencent word shows accuracy and fluency with original phoneme scores', () => {
   const metrics = { pronunciation: 90.03, fluency: 92.58, completion: 100, suggestedScore: 90.03 };
   const data = getScoreDetails('word', metrics, {
     provider: 'tencent',
     words: [{ word: 'tail', pronunciation: 90.03, matchTag: 0, phonemes: [{ phoneme: 't', pronunciation: 76.5, matchTag: 0 }] }],
   });
   assert.deepEqual(data.dimensions.map(d => [d.key, d.value]), [
-    ['pronunciation', 90.03], ['fluency', 92.58], ['completion', 100], ['suggestedScore', 90.03],
+    ['pronunciation', 90.03], ['fluency', 92.58],
   ]);
   assert.equal(data.words[0].phonemes[0].score, 76.5);
 });
