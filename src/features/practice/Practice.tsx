@@ -60,6 +60,7 @@ import styles from './Practice.module.css';
 import './GrammarFlow.css';
 import { isOpenPreview } from './lib/previewMode';
 import SpeechSuperPanel from './SpeechSuperPanel';
+import { microphoneErrorMessage } from './lib/microphoneError';
 import { useStageTraining } from './useStageTraining';
 import { stageItems } from './lib/stageCatalog';
 import { Link } from 'react-router-dom';
@@ -353,11 +354,10 @@ export default function Practice() {
       setRecording(true);
     } catch (e) {
       streams.current?.getTracks().forEach((t) => t.stop());
+      const message = microphoneErrorMessage(e);
       setError(
-        e instanceof DOMException && e.name === 'NotAllowedError'
-          ? t(
-              '麦克风权限未开启。请在浏览器中允许麦克风后重试；也可载入示例音频测试。',
-            )
+        message
+          ? t(message)
           : e instanceof Error
             ? e.message
             : t('无法打开麦克风，请重试。'),

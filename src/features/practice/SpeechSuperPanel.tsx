@@ -1,4 +1,5 @@
 import { isOpenPreview } from './lib/previewMode';
+import { microphoneErrorMessage } from './lib/microphoneError';
 import StageCompletion from './StageCompletion';
 import {
   useCallback,
@@ -250,10 +251,15 @@ export default function SpeechSuperPanel({
         },
         provider === 'speechace' ? 30000 : kind === 'word' ? 20000 : 90000,
       );
-    } catch {
+    } catch (error) {
       stream.current?.getTracks().forEach((t) => t.stop());
       if (alive.current)
-        setError('无法访问麦克风，请检查权限，或上传录音文件。');
+        setError(
+          t(
+            microphoneErrorMessage(error) ??
+              '无法访问麦克风，请检查设备，或上传录音文件。',
+          ),
+        );
     } finally {
       busyRef.current = false;
       if (alive.current) setBusy(false);
