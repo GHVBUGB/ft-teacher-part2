@@ -15,6 +15,10 @@ type Props = {
   audioUrl?: string;
 };
 
+function displayDimension(value: number | null): string {
+  return value === null ? '未返回' : value.toFixed(1);
+}
+
 export default function ScoreSummary({
   kind,
   metrics,
@@ -129,7 +133,7 @@ export default function ScoreSummary({
               {d.unit && <small>（{d.unit}）</small>}
             </dt>
             <dd className={d.value === null ? 'is-missing' : ''}>
-              {d.value ?? '未返回'}
+              {displayDimension(d.value)}
             </dd>
           </div>
         ))}
@@ -172,7 +176,7 @@ export default function ScoreSummary({
                       <th scope="row" lang="en">
                         {w.word}
                       </th>
-                      <td>{w.score ?? '未返回'}</td>
+                      <td>{displayDimension(w.score)}</td>
                       <td>{w.matchTag ?? '未返回'}</td>
                       <td>
                         <button
@@ -229,7 +233,7 @@ export default function ScoreSummary({
                               {w.phonemes.map((p, i) => (
                                 <tr key={i}>
                                   <th scope="row">/{p.symbol}/</th>
-                                  <td>{p.score ?? '未返回'}</td>
+                                  <td>{displayDimension(p.score)}</td>
                                   <td>
                                     {p.recognized
                                       ? `/${p.recognized}/`
