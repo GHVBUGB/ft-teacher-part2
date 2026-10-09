@@ -215,6 +215,8 @@ export function getScoreDetails(
       ? source.provider === 'tencent'
         ? [
             ['pronunciation', '发音'],
+            ['fluency', '流利度'],
+            ['completion', '完整度'],
             ['suggestedScore', '腾讯建议分'],
           ]
         : [
@@ -227,7 +229,6 @@ export function getScoreDetails(
             ['pronunciation', '发音'],
             ['fluency', '流利度'],
             ['completion', '完整度'],
-            ['rhythm', '韵律'],
             ['suggestedScore', '腾讯建议分'],
           ]
         : [

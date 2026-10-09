@@ -74,6 +74,20 @@ try {
     assert.equal(status.items.w19.attemptCount, 3);
     assert.equal(status.sentence.unlocked, true);
   });
+  check('Tencent sentence uses its returned suggestion, excludes unsupported dimensions, and survives restore', () => {
+    const input = attempt(sentence, 81.38, { provider: 'tencent', metrics: { pronunciation: 81.38, fluency: 97.03, completion: 100, suggestedScore: 81.38, rhythm: 99, integrity: 99 } });
+    const result = addStageAttempt(state, context, items, input);
+    assert.equal(result.accepted, true);
+    const saved = result.state.attempts.at(-1);
+    assert.equal(saved.score, 81.4);
+    assert.equal(saved.rule, 'tencent-sentence-v1');
+    assert.equal(saved.metrics.rhythm, undefined);
+    assert.equal(saved.metrics.integrity, undefined);
+    const restored = restoreStageProgress(JSON.stringify(result.state), context, items);
+    assert.equal(getStageStatus(restored, items).sentence.complete, true);
+    assert.equal(restored.attempts.at(-1).score, 81.4);
+    assert.equal(addStageAttempt(state, context, items, attempt(sentence, 100, { provider: 'tencent', metrics: { pronunciation: 100, completion: 100 } })).accepted, false);
+  });
   check('Missing/invalid required dimensions, error status, unsupported kind and unknown text cannot count', () => {
     for (const extra of [
       { metrics: { overall: 100 } },

@@ -12,6 +12,7 @@ export type StageAttemptInput = {
   itemId: string;
   text: string;
   kind: string;
+  provider?: string;
   metrics: Record<string, unknown>;
   createdAt: string;
   status?: 'scored' | 'error' | 'invalid';
@@ -101,16 +102,13 @@ function sameContext(a: unknown, b: StageContext): boolean {
 /** Only normalized dimension values are retained. Provider total and saved pass flags never enter the calculation. */
 function normalizeMetrics(
   input: Record<string, unknown>,
+  provider?: string,
 ): Record<string, number> {
   const metrics: Record<string, number> = {};
-  for (const field of [
-    'pronunciation',
-    'fluency',
-    'rhythm',
-    'integrity',
-    'intelligibility',
-    'stress',
-  ]) {
+  const fields = provider === 'tencent'
+    ? ['pronunciation', 'fluency', 'completion', 'suggestedScore']
+    : ['pronunciation', 'fluency', 'rhythm', 'integrity', 'intelligibility', 'stress'];
+  for (const field of fields) {
     const value = input[field];
     if (
       typeof value === 'number' &&
@@ -121,7 +119,7 @@ function normalizeMetrics(
       metrics[field] = value;
   }
   const speed = input.speed;
-  if (typeof speed === 'number' && Number.isFinite(speed) && speed >= 0)
+  if (provider !== 'tencent' && typeof speed === 'number' && Number.isFinite(speed) && speed >= 0)
     metrics.speed = speed;
   return metrics;
 }
@@ -147,17 +145,20 @@ function normalizeAttempt(
   )
     return null;
   if (input.status !== undefined && input.status !== 'scored') return null;
+  const provider = input.provider;
+  if (provider !== undefined && (typeof provider !== 'string' || !['tencent', 'speechsuper', 'speechace'].includes(provider))) return null;
   const item = known.get(input.itemId);
   if (!item || input.kind !== item.kind || input.text !== item.text)
     return null;
-  const metrics = normalizeMetrics(input.metrics);
-  const calculated = calculateScore(item.kind, metrics);
+  const metrics = normalizeMetrics(input.metrics, provider);
+  const calculated = calculateScore(item.kind, metrics, provider);
   if (calculated.value === null) return null;
   return {
     attemptId: input.attemptId,
     itemId: item.id,
     text: item.text,
     kind: item.kind,
+    ...(provider !== undefined ? { provider } : {}),
     metrics,
     createdAt: new Date(input.createdAt).toISOString(),
     status: 'scored',

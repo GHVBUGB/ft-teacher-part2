@@ -42,7 +42,7 @@ function createStore(context: StageContext, bank: readonly StageItem[], key: str
     record: (itemId: string, result: SpeechResult) => {
       const item = selectedItems().find(i => i.id === itemId);
       if (!item || (item.kind === 'sentence' && !currentStatus().sentence.unlocked)) return;
-      const next = addStageAttempt(snapshot.progress, context, bank, { attemptId: result.id, itemId, text: result.text, kind: result.kind, metrics: result.metrics ?? result.result, createdAt: new Date().toISOString() }, true);
+      const next = addStageAttempt(snapshot.progress, context, bank, { attemptId: result.id, itemId, text: result.text, kind: result.kind, provider: result.provider, metrics: result.metrics ?? result.result, createdAt: new Date().toISOString() }, true);
       if (next.accepted) save({ ...snapshot, progress: next.state, error: '' });
     },
     canReplace: (id: string) => snapshot.round ? Boolean(replacementFor(snapshot.round, bank, getStageStatus(snapshot.progress, bank, true), id, () => 0)) : false,

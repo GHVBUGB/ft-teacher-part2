@@ -88,9 +88,29 @@ const fixtures = [
     },
     raw: { words: sentenceWords },
   },
+  {
+    name: '腾讯单词：tail 真实返回结构',
+    kind: 'word',
+    metrics: { pronunciation: 90.03, fluency: 92.58, completion: 100, suggestedScore: 90.03 },
+    raw: { provider: 'tencent', words: [{ word: 'tail', pronunciation: 90.03, matchTag: 0, phonemes: [{ phoneme: 't', pronunciation: 76.5, matchTag: 0 }] }] },
+  },
+  {
+    name: '腾讯句子：建议分 81.38',
+    kind: 'sentence',
+    metrics: { pronunciation: 81.38, fluency: 97.03, completion: 100, suggestedScore: 81.38 },
+    raw: { provider: 'tencent', words: [
+      { word: "it's", pronunciation: 83.46, matchTag: 0, phonemes: [{ phoneme: 'ih', pronunciation: 83.46, matchTag: 0 }] },
+      { word: 'a', pronunciation: 58.04, matchTag: 0, phonemes: [{ phoneme: 'ah', pronunciation: 58.04, matchTag: 0 }] },
+      { word: 'cat', pronunciation: 87.07, matchTag: 0, phonemes: [{ phoneme: 'k', pronunciation: 87.07, matchTag: 0 }] },
+    ] },
+  },
 ];
 function Harness() {
-  const [i, setI] = useState(1);
+  const [i, setI] = useState(() => {
+    const param = new URLSearchParams(location.search).get('case');
+    const selected = param === null ? 1 : Number(param);
+    return Number.isInteger(selected) && selected >= 0 && selected < fixtures.length ? selected : 1;
+  });
   const f = fixtures[i];
   return (
     <main

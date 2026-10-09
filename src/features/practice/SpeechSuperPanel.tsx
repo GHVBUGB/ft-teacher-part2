@@ -313,6 +313,7 @@ export default function SpeechSuperPanel({
         calculatedScore: calculateScore(
           value.kind,
           value.metrics ?? value.result,
+          value.provider,
         ),
       };
       setResult(computed);
@@ -390,8 +391,8 @@ export default function SpeechSuperPanel({
   }
   const primaryLabel = busy
     ? processing || '正在请求麦克风…'
-    : recording
-      ? '结束并评测'
+      : recording
+        ? '结束并评测'
       : result
         ? hasPassed
           ? !stage
@@ -548,7 +549,7 @@ export default function SpeechSuperPanel({
           </div>
         )}
         {!result && (
-          <div className="ss-flow-analysis-placeholder">{kind==='sentence'&&<span className="ss-sentence-dimension-labels">{['发音','流利度','完整度','韵律','速度'].map(label=><span key={label}>{t(label)}</span>)}</span>}</div>
+          <div className="ss-flow-analysis-placeholder">{kind==='sentence'&&<span className="ss-sentence-dimension-labels">{(provider === 'tencent' ? ['发音','流利度','完整度','腾讯建议分'] : ['发音','流利度','完整度','韵律','速度']).map(label=><span key={label}>{t(label)}</span>)}</span>}</div>
         )}
         <div className="ss-flow-actions">
           <div className="ss-flow-primary-row">

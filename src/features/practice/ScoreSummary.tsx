@@ -21,7 +21,7 @@ export default function ScoreSummary({
   rawResult,
   audioUrl,
 }: Props) {
-  const calculated = calculateScore(kind, metrics);
+  const calculated = calculateScore(kind, metrics, rawResult?.provider as string | undefined);
   const details = getScoreDetails(kind, metrics, rawResult);
   const [open, setOpen] = useState<Set<number>>(() => new Set());
   const [playing, setPlaying] = useState(false);
@@ -33,6 +33,8 @@ export default function ScoreSummary({
     audio.current = node;
   }, []);
   const id = useId();
+  const tencentSentence = kind === 'sentence' && rawResult?.provider === 'tencent';
+  const displayScore = calculated.value;
   const passed = calculated.value !== null && calculated.value >= 80;
   function toggle(index: number) {
     setOpen((previous) => {
@@ -59,15 +61,15 @@ export default function ScoreSummary({
     <section className="assessment-summary" aria-label="发音评测结果">
       <div className="assessment-overview">
       <div className="assessment-total" aria-live="polite">
-        <h3>总分</h3>
-        {calculated.value === null ? (
+        <h3>{tencentSentence ? '腾讯建议分' : '总分'}</h3>
+        {displayScore === null ? (
           <output className="assessment-unavailable">
-            评测数据不完整，暂无法计算总分，请重新评测。
+            {tencentSentence ? '腾讯未返回建议分，本次无法显示分数。' : '评测数据不完整，暂无法计算总分，请重新评测。'}
           </output>
         ) : (
           <>
             <div className="assessment-score-pill">
-              <strong>{calculated.value}</strong>
+              <strong>{Math.round(displayScore * 10) / 10}</strong>
               <span className="assessment-score-unit">/ 100</span>
               {audioUrl && (
                 <button
@@ -84,12 +86,17 @@ export default function ScoreSummary({
                 </button>
               )}
             </div>
-            <p
-              className={`assessment-verdict ${passed ? 'is-passed' : 'needs-practice'}`}
-            >
-              {passed ? '本题通过' : '本题未通过，请再练习'}
-              <span> · 80 分及以上通过</span>
-            </p>
+            {tencentSentence ? (
+              <p className={`assessment-verdict ${passed ? 'is-passed' : 'needs-practice'}`}>
+                {passed ? '本题通过' : '本题未通过，请再练习'}
+                <span> · 按腾讯建议分，80 分及以上通过</span>
+              </p>
+            ) : (
+              <p className={`assessment-verdict ${passed ? 'is-passed' : 'needs-practice'}`}>
+                {passed ? '本题通过' : '本题未通过，请再练习'}
+                <span> · 80 分及以上通过</span>
+              </p>
+            )}
           </>
         )}
         {audioUrl && (

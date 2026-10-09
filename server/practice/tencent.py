@@ -79,7 +79,7 @@ async def vendor_call(url: str, audio: bytes) -> list[dict[str, Any]]:
     """Send one complete WAV recording and collect Tencent text messages."""
     messages: list[dict[str, Any]] = []
     try:
-        async with websockets.connect(url, open_timeout=10, close_timeout=5, max_size=8_000_000) as ws:
+        async with websockets.connect(url, proxy=None, open_timeout=10, close_timeout=5, max_size=8_000_000) as ws:
             async for message in _messages_after_audio(ws, audio):
                 if isinstance(message, str):
                     try:

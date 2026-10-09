@@ -33,7 +33,7 @@ check('Self-calculated total stays independent from provider overall', () => {
   assert.ok(!data.dimensions.some(d => d.key === 'overall'));
 });
 
-check('Tencent completion, suggested score, and MatchTag stay visible without inventing rhythm', () => {
+check('Tencent completion, suggested score, and MatchTag stay visible without an unsupported rhythm row', () => {
   const data = getScoreDetails(
     'sentence',
     { pronunciation: 81.02, fluency: 97.03, completion: 100, suggestedScore: 81.02 },
@@ -55,13 +55,23 @@ check('Tencent completion, suggested score, and MatchTag stay visible without in
       ['pronunciation', 81.02],
       ['fluency', 97.03],
       ['completion', 100],
-      ['rhythm', null],
       ['suggestedScore', 81.02],
     ],
   );
   assert.equal(data.words[0].matchTag, 0);
   assert.equal(data.words[0].phonemes[0].matchTag, 0);
   assert.match(data.words[0].feedback[0], /匹配情况：匹配/);
+});
+check('Tencent word shows all returned dimensions and phoneme details', () => {
+  const metrics = { pronunciation: 90.03, fluency: 92.58, completion: 100, suggestedScore: 90.03 };
+  const data = getScoreDetails('word', metrics, {
+    provider: 'tencent',
+    words: [{ word: 'tail', pronunciation: 90.03, matchTag: 0, phonemes: [{ phoneme: 't', pronunciation: 76.5, matchTag: 0 }] }],
+  });
+  assert.deepEqual(data.dimensions.map(d => [d.key, d.value]), [
+    ['pronunciation', 90.03], ['fluency', 92.58], ['completion', 100], ['suggestedScore', 90.03],
+  ]);
+  assert.equal(data.words[0].phonemes[0].score, 76.5);
 });
 check('Missing dimensions and word detail remain missing rather than fabricated', () => {
   const data = getScoreDetails('sentence', {pronunciation:90});
